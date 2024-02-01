@@ -1,42 +1,265 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-body  {
-  background-image: url("img_tree.gif");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <style>
+        html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
-</style>
+p {
+    margin-bottom: 1rem;
+    font-size: inherit;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+}
+
+section {
+  padding: 0;
+}
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  margin-top:0;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cell {
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+}
+.medium {
+  width:50%;
+}
+.small {
+  width:25%;
+}
+.container {
+  max-width:80rem;
+  margin: 0 auto;
+  padding-left:15px;
+  padding-right:15px;
+}
+.animeslide-slide {
+  color:#fff;
+}
+
+.animeslide-slide {
+  position: relative;
+  padding: 15px 0;
+  min-height: 500px;
+  background-size: cover;
+}
+.animeslide-slide .container {
+  position: relative;
+}
+.animeslide-slide.swiper-slide-active [data-animate] {
+  opacity: 1;
+  transform: none;
+}
+.animeslide-slide.swiper-slide-active .animeslide-heading {
+  transition-delay: 0.6s;
+}
+.animeslide-slide.swiper-slide-active .animeslide-desc {
+  transition-delay: 1s;
+}
+.animeslide-heading {
+  margin-bottom: 25px;
+  transition-delay: 3s;
+}
+.animeslide-heading span {
+  font-size: 16px;
+  background-color: #f08723;
+  padding: 6px 12px 7px;
+  border-radius: 8px;
+  font-weight: normal;
+}
+.animeslide-desc {
+  padding: 15px 22px;
+  border-radius: 8px;
+  background-color: #202238;
+  max-width: 480px;
+  opacity: 0.9;
+}
+
+[data-animate] {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+[data-animate="bottom"] {
+  transform: translate3d(0, 15px, 0);
+}
+
+.animeslide-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #202238;
+  max-width: 600px;
+  z-index: 1;
+  padding: 35px 35px;
+  right: 0;
+  font-size: 14px;
+}
+.animeslide-bottom .cell {
+  position: relative;
+  opacity: 1;
+  z-index: 2;
+  height: 40px;
+  bottom: inherit;
+}
+.animeslide-bottom .animeslide-scrollbar {
+  margin-top: 16px;
+}
+.animeslide-bottom .animeslide-scrollbar-drag {
+  height: 6px;
+}
+.animeslide-bottom .animeslide-pagination {
+  font-size: 25px;
+  bottom: inherit;
+  color:#fff;
+}
+.animeslide-bottom .animeslide-pagination b {
+  font-size: 28px;
+  margin-top: -5px;
+}
+
+.animeslide-bottom .animeslide-pagination span {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.animeslide-button-next,
+.animeslide-button-prev {
+  outline: none;
+}
+.animeslide-button-next::after,
+.animeslide-button-prev::after {
+  font-size: 22px;
+  color: #fff;
+}
+    </style>
 </head>
 <body>
-
-<h1>The background-attachment Property</h1>
-
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>The background-image is fixed. Try to scroll down the page.</p>
-<p>If you do not see any scrollbars, try to resize the browser window.</p>
-
+    <section>
+        <div class="swiper animeslide">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div
+              class="swiper-slide animeslide-slide"
+              style="background-image: url(https://i.postimg.cc/hvWNG7wV/ruoa-bg-slide.png);"
+            >
+              <div class="container">
+                <h2 data-animate="bottom" class="animeslide-heading">
+                  Why do we use it <br />
+                  <span>Lorem Ipsum is simply dummy text </span>
+                </h2>
+  
+                <p data-animate="bottom" class="animeslide-desc">
+                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five 
+                </p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide animeslide-slide"
+              style="background-image: url(https://i.postimg.cc/ZRy1ZLfT/home.png);"
+            >
+              <div class="container">
+                <h2 data-animate="bottom" class="animeslide-heading">
+                  Lorem Ipsum is simply <br />
+                  <span>dummy text of the printing </span>
+                </h2>
+  
+                <p data-animate="bottom" class="animeslide-desc">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only 
+                </p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide animeslide-slide"
+              style="background-image: url(https://i.postimg.cc/q7qPDry6/bg-docs.png);"
+            >
+              <div class="container">
+                <h2 data-animate="bottom" class="animeslide-heading">
+                  Lorem Ipsum is<br />
+                  <span>Lorem Ipsum has</span>
+                </h2>
+  
+                <p data-animate="bottom" class="animeslide-desc">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic 
+                </p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide animeslide-slide"
+              style="background-image: url(https://i.postimg.cc/cJzVVzB9/accreditaion.png);"
+            >
+              <div class="container">
+                <h2 data-animate="bottom" class="animeslide-heading">
+                  Where can I get some? <br />
+                  <span> There are many variations</span>
+                </h2>
+  
+                <p data-animate="bottom" class="animeslide-desc">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex animeslide-bottom">
+            <div class="cell small">
+              <div class="animeslide-pagination swiper-pagination"></div>
+            </div>
+            <div class="cell medium">
+              <div class="animeslide-scrollbar swiper-scrollbar"></div>
+            </div>
+            <div class="cell small">
+              <div class="animeslide-button-prev swiper-button-prev"></div>
+              <div class="animeslide-button-next swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+      <script>
+        const swiperQuiz = new Swiper(".animeslide", {
+  // Optional parameters
+  effect: "fade",
+  loop: true,
+  speed: 900,
+  centeredSlides: true,
+  pagination: {
+    el: ".animeslide-pagination",
+    type: "custom",
+    renderCustom: function (swiper, current, total) {
+      let indT = total >= 5 ? total : `${total}`;
+      let indC = current >= 5 ? current : `${current}`;
+      return `<b>${indC}</b><span>/</span>${indT}`;
+    }
+  },
+  navigation: {
+    nextEl: ".animeslide-button-next",
+    prevEl: ".animeslide-button-prev"
+  },
+  scrollbar: {
+    el: ".animeslide-scrollbar",
+    draggable: true
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false
+  },
+  runCallbacksOnInit: true
+});
+      </script>
 </body>
 </html>

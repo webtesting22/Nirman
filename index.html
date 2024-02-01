@@ -8,214 +8,324 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
 
 <body>
-    
-    <div id="preloader">
-        <div class="loader_line"></div>
-      </div>
-    <section id="scroll-container">
-
-        <div id="hero">
-            <section id="nav-section">
-                <div class="container">
-                    <div id="top-main-header">
-                        <div class="logo-container">
-                            <a href=""><img src="./nirman.JPG" alt="Nirman-logo-img"></a>
-                        </div>
-                        <div class="bars"><i class='bx bx-menu' style="font-size: 30px;"></i></div>
-                    </div>
-
-                </div>
-
-
-                <nav>
-                    <h2>Nirman</h2>
-                    <div class="close">
-                        <i class='bx bx-x-circle' style="font-size: 30px;"></i>
-                        <!-- <div></div> -->
-                    </div>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </section>
-
-            <section>
-                <div id="home-hero">
-                    <div class="hello">
-                        <svg stroke="#ffffff" stroke-width="2" class="text-line" width="100%"><text x="50%"
-                                dominant-baseline="middle" text-anchor="middle" y="50%">Nirman</text></svg>
-                    </div>
-
-
-                </div>
-            </section>
-
+    <header>
+        <div id="logo">
+            <img src="./projects-images/nirman.JPG" alt="">
 
         </div>
-        <section style="background-color: black;">
-            <!-- <div class="section"></div> -->
-            <div class="section"></div>
-            <h1 id="section-title"><span>Foundations</span> of Excellence</h1> 
-            <div class="section"></div>
-            <div id="cards-section">
-                
+        <input type="checkbox" id="active">
+        <label for="active" class="menu-btn"><i class='bx bx-menu'></i></label>
+        <div class="wrapper">
+            <ul>
+                <li class="active"><a href="./Index.html">Home</a></li>
+                <li><a href="./nirman-about.html">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="./nirman-contact.html">Contact&nbsp;Us</a></li>
+                <!-- <li><a href="#">Gallery</a></li>
+                <li><a href="#">Feedback</a></li> -->
+            </ul>
+        </div>
 
-                <figure class="snip1163">
-                    <img src="https://images.unsplash.com/photo-1564995408557-f12ea1e4ecf1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="sample48" />
-                    <figcaption>
-                        <h2>Quality </h2>
-                        <div>
-                            <p>Our commitment to quality is unwavering. We strive for excellence in every detail, ensuring that each project meets the highest standards of craftsmanship. From materials to construction processes, our dedication to quality is the cornerstone of our work.</p>
-                        </div>
-                        <a href="#"></a>
-                    </figcaption>
-                </figure>
-                <figure class="snip1163 hover">
-                    <img src="https://images.unsplash.com/photo-1564995408557-f12ea1e4ecf1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="sample68" />
-                    <figcaption>
-                        <h2>Sustainability</h2>
-                        <div>
-                            <p>Embracing a sustainable approach, we integrate eco-friendly practices into every project. Our focus extends beyond the present, aiming to create spaces that harmonize with the environment and contribute to a sustainable future. We believe in building responsibly, leaving a positive impact on both the community and the planet.</p>
-                        </div>
-                        <a href="#"></a>
-                    </figcaption>
-                </figure>
-                <figure class="snip1163">
-                    <img src="https://images.unsplash.com/photo-1564995408557-f12ea1e4ecf1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="sample2" />
-                    <figcaption>
-                        <h2>Design</h2>
-                        <div>
-                            <p>At the heart of our projects lies a passion for innovative design. We believe in the power of thoughtful and purposeful design to elevate living spaces. Collaborating closely with our clients, we bring visions to life, creating homes and structures that are not only aesthetically pleasing but also functional and tailored to individual needs.</p>
-                        </div>
-                        <a href="#"></a>
-                    </figcaption>
-                </figure>
+
+        <section>
+            <div id="nav">
 
             </div>
-            <div class="section"></div>
-            <div class="section"></div>
-        </section>
-        <section id="project-section">
-            <div class="section"></div>
-            <h1 id="section-title"><span>Our</span> Projects</h1>
-  
-            <div class="swiper" id="js-swiper-hotels">
-                <div class="swiper-wrapper">
-                    <!-- ITEM 1 -->
-                    <div class="swiper-slide" >
-                        <div class="c-swiper__text">
-                            <div class="c-swiper__title">Nirman Habitat</div>
+            <section>
+                <div class="swiper animeslide" style="height: 100vh;">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper" id="swiper-home" >
+                        <!-- Slides -->
+                        <div class="swiper-slide animeslide-slide" 
+                            style="background-image: url(./projects-images/our\ project\ back.jpg);">
+                            <div class="container">
+                                <h2 data-animate="bottom" class="animeslide-heading">
+                                    Why do we use it <br />
+                                    <span>Lorem Ipsum is simply dummy text </span>
+                                </h2>
 
-                            <a href="#" class="c-swiper__link">View Details</a>
+                                <p data-animate="bottom" class="animeslide-desc">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    It has survived not only five
+                                </p>
+                            </div>
                         </div>
+                        <div class="swiper-slide animeslide-slide"
+                            style="background-image: url(./projects-images/our\ project\ back.jpg);">
+                            <div class="container">
+                                <h2 data-animate="bottom" class="animeslide-heading">
+                                    Lorem Ipsum is simply <br />
+                                    <span>dummy text of the printing </span>
+                                </h2>
 
-                        <div class="c-swiper__image-container">
-                            <img src="./projects-images/nirman-habitat.jpeg"
-                                alt="nirman-habitat-img">
+                                <p data-animate="bottom" class="animeslide-desc">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    It has survived not only
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide animeslide-slide"
+                            style="background-image: url(./projects-images/our\ project\ back.jpg);">
+                            <div class="container">
+                                <h2 data-animate="bottom" class="animeslide-heading">
+                                    Lorem Ipsum is<br />
+                                    <span>Lorem Ipsum has</span>
+                                </h2>
+
+                                <p data-animate="bottom" class="animeslide-desc">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    It has survived not only five centuries, but also the leap into electronic
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide animeslide-slide"
+                            style="background-image: url(./projects-images/our\ project\ back.jpg);">
+                            <div class="container">
+                                <h2 data-animate="bottom" class="animeslide-heading">
+                                    Where can I get some? <br />
+                                    <span> There are many variations</span>
+                                </h2>
+
+                                <p data-animate="bottom" class="animeslide-desc">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    It has survived not only five centuries, but also the leap into.
+                                </p>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- ITEM 2 -->
-                    <div class="swiper-slide" >
-                        <div class="c-swiper__text">
-                            <div class="c-swiper__title">Nirman Greens</div>
-
-                            <a href="#" class="c-swiper__link">View Details</a>
+                    <div class="flex animeslide-bottom">
+                        <div class="cell small">
+                            <div class="animeslide-pagination swiper-pagination"></div>
                         </div>
-
-                        <div class="c-swiper__image-container">
-                            <img src="./projects-images/nirman-greens.jpeg"
-                                alt="nirman-greens-img">
+                        <div class="cell medium">
+                            <div class="animeslide-scrollbar swiper-scrollbar"></div>
                         </div>
-                    </div>
-
-                    <!-- ITEM 3 -->
-                    <div class="swiper-slide" >
-                        <div class="c-swiper__text">
-                            <div class="c-swiper__title">Ivory Springs</div>
-
-                            <a href="#" class="c-swiper__link">View Details</a>
-                        </div>
-
-                        <div class="c-swiper__image-container">
-                            <img src="https://images.pexels.com/photos/6474917/pexels-photo-6474917.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                                alt="nirman-ivory-springs-img">
-                        </div>
-                    </div>
-
-                    <!-- ITEM 4 -->
-                    <div class="swiper-slide">
-                        <div class="c-swiper__text">
-                            <div class="c-swiper__title">Ivory Orchards</div>
-
-                            <a href="#" class="c-swiper__link">View Details</a>
-                        </div>
-
-                        <div class="c-swiper__image-container">
-                            <img src="https://images.pexels.com/photos/1591361/pexels-photo-1591361.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                                alt="nirman-ivory-springs-img">
+                        <div class="cell small">
+                            <div class="animeslide-button-prev swiper-button-prev"></div>
+                            <div class="animeslide-button-next swiper-button-next"></div>
                         </div>
                     </div>
                 </div>
+            </section>
+            <!-- <div id="Home-text">
+                <p>
 
-                <div class="swiper-pagination"></div>
-            </div> <div class="section"></div>
+                    <span>
+                        Nirman
+                    </span>
+                    &mdash; &mdash;
+                </p>
+            </div> -->
+
         </section>
-        <section style="background-color: #121212;">
-            <div id="Footer">
-                <div class="section"></div>
-                <div class="section"></div>
-                <div class="row w-100 text-center">
-                    <div class="col-lg-12">
-                        <div id="footer-menu">
-                            <li><a href="">About <span>Us</span></a></li>
-                            <li><a href="">Our <span>Projects</span></a></li>
-                            <li><a href="">Contact <span>Us</span></a></li>
-                            <!-- <li></li> -->
-                        </div>
-                    </div>
-                    <div class="section"></div>
-                    <div class="col-lg-12">
-                        <div id="Social-icons">
-                            <li><a href=""><i class='bx bxl-instagram-alt'></i></a></li>
-                            <li><a href=""><i class='bx bxl-facebook-circle'></i></a></li>
-                        </div>
-                    </div>
-                    
+
+    </header>
+
+    <main>
+        <section>
+            <div class="section-padding"></div>
+
+            <div id="Foundations-Section">
+                <div id="Section-title">
+                    <h1>Foundations <span>of Excellence</span></h1>
+
                 </div>
-                
-      
-                <div class="section"></div>
-            </div>
+                <div class="section-padding"></div>
+                <!-- <div class="section-padding"></div> -->
 
+                <div id="cards-section">
+
+
+                    <figure class="snip1163">
+                        <img src="https://images.unsplash.com/photo-1564995408557-f12ea1e4ecf1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="sample48" />
+                        <figcaption>
+                            <h2>Quality </h2>
+                            <div>
+                                <p>Our commitment to quality is unwavering. We strive for excellence in every detail,
+                                    ensuring that each project meets the highest standards of craftsmanship. From
+                                    materials
+                                    to construction processes, our dedication to quality is the cornerstone of our work.
+                                </p>
+                            </div>
+                            <a href="#"></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="snip1163 hover">
+                        <img src="https://images.unsplash.com/photo-1564995408557-f12ea1e4ecf1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="sample68" />
+                        <figcaption>
+                            <h2>Sustainability</h2>
+                            <div>
+                                <p>Embracing a sustainable approach, we integrate eco-friendly practices into every
+                                    project.
+                                    Our focus extends beyond the present, aiming to create spaces that harmonize with
+                                    the
+                                    environment and contribute to a sustainable future. We believe in building
+                                    responsibly,
+                                    leaving a positive impact on both the community and the planet.</p>
+                            </div>
+                            <a href="#"></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="snip1163">
+                        <img src="https://images.unsplash.com/photo-1564995408557-f12ea1e4ecf1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="sample2" />
+                        <figcaption>
+                            <h2>Design</h2>
+                            <div>
+                                <p>At the heart of our projects lies a passion for innovative design. We believe in the
+                                    power of thoughtful and purposeful design to elevate living spaces. Collaborating
+                                    closely with our clients, we bring visions to life, creating homes and structures
+                                    that
+                                    are not only aesthetically pleasing but also functional and tailored to individual
+                                    needs.</p>
+                            </div>
+                            <a href="#"></a>
+                        </figcaption>
+                    </figure>
+
+                </div>
+            </div>
+            <div class="section-padding"></div>
+            <div class="section-padding"></div>
         </section>
-    </section>
+        <section id="Project-back">
+            <!-- <div class="section-padding"></div> -->
+            <div class="section-padding"></div>
+            <div id="Section-title">
+                <h1>Our <span>Projects</span></h1>
+
+            </div>
+            <div class="section-padding"></div>
+            <div id="project-section">
+
+                <div class="swiper" id="js-swiper-hotels">
+                    <div class="swiper-wrapper">
+                        <!-- ITEM 1 -->
+                        <div class="swiper-slide">
+                            <div class="c-swiper__text">
+                                <div class="c-swiper__title">Nirman Habitat</div>
+
+                                <a href="#" class="c-swiper__link">View Details</a>
+                            </div>
+
+                            <div class="c-swiper__image-container">
+                                <img src="./projects-images/nirman-habitat.jpeg" alt="nirman-habitat-img">
+                            </div>
+                        </div>
+
+                        <!-- ITEM 2 -->
+                        <div class="swiper-slide">
+                            <div class="c-swiper__text">
+                                <div class="c-swiper__title">Nirman Greens</div>
+
+                                <a href="#" class="c-swiper__link">View Details</a>
+                            </div>
+
+                            <div class="c-swiper__image-container">
+                                <img src="./projects-images/nirman-greens.jpeg" alt="nirman-greens-img">
+                            </div>
+                        </div>
+
+                        <!-- ITEM 3 -->
+                        <div class="swiper-slide">
+                            <div class="c-swiper__text">
+                                <div class="c-swiper__title">Ivory Springs</div>
+
+                                <a href="#" class="c-swiper__link">View Details</a>
+                            </div>
+
+                            <div class="c-swiper__image-container">
+                                <img src="https://images.pexels.com/photos/6474917/pexels-photo-6474917.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                                    alt="nirman-ivory-springs-img">
+                            </div>
+                        </div>
+
+                        <!-- ITEM 4 -->
+                        <div class="swiper-slide">
+                            <div class="c-swiper__text">
+                                <div class="c-swiper__title">Ivory Orchards</div>
+
+                                <a href="#" class="c-swiper__link">View Details</a>
+                            </div>
+
+                            <div class="c-swiper__image-container">
+                                <img src="https://images.pexels.com/photos/1591361/pexels-photo-1591361.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                                    alt="nirman-ivory-springs-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="section-padding"></div>
+            <!-- <div class="section-padding"></div> -->
+        </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  
- 
+    <footer>
+        <div id="Footer">
+            <div class="section-padding"></div>
+            <div class="section-padding"></div>
+            <div class="container">
+                <div class="row w-100 text-center">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div id="Footer-links">
+                            <div><a href="./nirman-about.html">About <span>Us</span></a></div>
+                            <div><a href="">Project <span>Us</span></a></div>
+                            <div><a href="">Contact <span>Us</span></a></div>
+
+                        </div>
+                    </div>
+                    <div class="section-padding"></div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div id="Socials-links">
+                            <div><a href=""><i class='bx bxl-instagram-alt'></i></a></div>
+                            <div><a href=""><i class='bx bxl-facebook-circle'></i></a></div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-padding"></div>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-    
-    <script src="../script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+    <script src="./script.js"></script>
+
+
 
 </body>
 
