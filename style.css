@@ -1143,9 +1143,9 @@ input[type="checkbox"] {
     border: none;
 }
 
-/* #exTab2 .nav-tabs li{
-    margin: 0px 3rem;
-} */
+#exTab2 .nav-tabs li{
+    margin: 10px 5px;
+}
 #exTab2 .nav-tabs li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
