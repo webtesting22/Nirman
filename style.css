@@ -1267,3 +1267,7 @@ input[type="checkbox"] {
     color: white;
     font-size: 1rem;
 }
+#exTab1 .nav-tabs .active a,
+#exTab2 .nav-tabs .active a{
+    background-color: red;
+}
