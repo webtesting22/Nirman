@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./about-us.css">
+    <!-- <link rel="stylesheet" href="./about-us.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -33,6 +33,34 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .marquee {
+            position: relative;
+            width: 100vw;
+            max-width: 100%;
+            height: 200px;
+            overflow-x: hidden;
+            color: rgb(44, 44, 44);
+            font-size: 144px;
+            font-weight: bold;
+        }
+
+        .track {
+            position: absolute;
+            white-space: nowrap;
+            will-change: transform;
+            animation: marquee 32s linear infinite;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
         }
     </style>
 </head>
@@ -610,7 +638,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -627,7 +655,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -644,7 +672,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -661,7 +689,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -678,7 +706,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -695,7 +723,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -712,7 +740,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -729,7 +757,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -746,7 +774,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -764,7 +792,7 @@
                                 <div class="control">
                                     <div class="swiper-button-prev tabprev4" id="prev"><span>Prev</span></div>
                                     <div class="swiper-button-next tabnext4" id="next"><span> Next</span></div>
-            
+
                                 </div>
                             </div>
                             <div class="tab-pane" id="2b">
@@ -775,7 +803,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -792,7 +820,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -809,7 +837,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -826,7 +854,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -843,7 +871,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -860,7 +888,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -877,7 +905,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -894,7 +922,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -911,7 +939,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -929,7 +957,7 @@
                                 <div class="control">
                                     <div class="swiper-button-prev tabprev5" id="prev"><span>Prev</span></div>
                                     <div class="swiper-button-next tabnext5" id="next"><span> Next</span></div>
-            
+
                                 </div>
 
                             </div>
@@ -942,7 +970,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1506749547535-fe88ffa57a7a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -959,7 +987,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1506749547535-fe88ffa57a7a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -976,7 +1004,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1506749547535-fe88ffa57a7a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -993,7 +1021,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1506749547535-fe88ffa57a7a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -1010,7 +1038,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1506749547535-fe88ffa57a7a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -1027,7 +1055,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1506749547535-fe88ffa57a7a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -1044,7 +1072,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1506749547535-fe88ffa57a7a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -1061,7 +1089,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1506749547535-fe88ffa57a7a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -1078,7 +1106,7 @@
                                                 <div style="overflow: hidden;">
                                                     <img src="https://images.unsplash.com/photo-1506749547535-fe88ffa57a7a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         class="card-img-top" alt="...">
-            
+
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Card <span>title</span></h5>
@@ -1096,12 +1124,12 @@
                                 <div class="control">
                                     <div class="swiper-button-prev tabprev6" id="prev"><span>Prev</span></div>
                                     <div class="swiper-button-next tabnext6" id="next"><span> Next</span></div>
-            
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="section-padding"></div>
             </div>
@@ -1109,7 +1137,12 @@
 
 
             <div class="section-padding"></div>
-            <div class="section-padding"></div>
+            <!-- <div class="section-padding"></div> -->
+            <div class="marquee">
+                <div class="track">
+                    <div class="hello">.Nirman .Nirman .Nirman .Nirman .Nirman .Nirman .Nirman</div>
+                </div>
+            </div>
         </section>
 
 
@@ -1117,7 +1150,9 @@
 
     </main>
     <footer>
+        
         <div id="Footer">
+            
             <div class="section-padding"></div>
             <div class="section-padding"></div>
             <div class="container">
@@ -1259,7 +1294,7 @@
                 },
             },
         });
-        
+
         var swiper6 = new Swiper(".mySwiper6", {
             slidesPerView: 1,
             loop: true,
@@ -1283,7 +1318,7 @@
                 },
             },
         });
-        
+
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
             loop: true,
