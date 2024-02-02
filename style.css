@@ -1137,16 +1137,19 @@ input[type="checkbox"] {
     }
 }
 
-#exTab2 .nav-tabs {
+#exTab2 .nav-tabs,
+#exTab1 .nav-tabs {
     display: flex;
     justify-content: center;
     border: none;
 }
 
-#exTab2 .nav-tabs li{
+#exTab2 .nav-tabs li,
+#exTab1 .nav-tabs li{
     margin: 10px 5px;
 }
-#exTab2 .nav-tabs li a {
+#exTab2 .nav-tabs li a,
+#exTab1 .nav-tabs li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
@@ -1161,7 +1164,8 @@ input[type="checkbox"] {
 
 }
 
-#exTab2 .tab-content {
+#exTab2 .tab-content,
+#exTab1 .tab-content {
     margin: 2rem 0rem;
     /* background-color: red; */
     color: white;
@@ -1212,7 +1216,9 @@ input[type="checkbox"] {
     /* background-color: black; */
     border: 1px solid white;
     color: white;
+    border-radius: 2px;
     transition: .5s;
+    width: 100%;
 }
 .swiper-slide .project-card-btn:hover{
     background-color: rgb(255, 255, 255);
