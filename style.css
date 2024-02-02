@@ -1259,6 +1259,10 @@ input[type="checkbox"] {
     color: rgb(148, 148, 148);
     transition: .5s;
 }
+.swiper-slide:hover .card-title span{
+    color: rgb(255, 255, 255);
+    transition: .5s;
+}
 .swiper-slide .card-text{
     color: white;
     font-size: 1rem;
