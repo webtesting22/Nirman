@@ -716,7 +716,7 @@ input[type="checkbox"] {
 }
 
 @media(max-width:800px) {
-    #about-para p {
+    #about-para{
         margin-top: 60px;
         font-size: 1.4rem;
         color: rgb(224, 224, 224);
