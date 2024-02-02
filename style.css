@@ -1198,3 +1198,55 @@ input[type="checkbox"] {
 #next::after, #prev::after{
     content: "";
 }
+.swiper-slide {
+    background-color: transparent;
+    border-radius: 5px;
+}
+.swiper-slide .card{
+    overflow: hidden;
+    border: none;
+    /* border-radius: 10px; */
+   
+}
+.swiper-slide .project-card-btn{
+    /* background-color: black; */
+    border: 1px solid white;
+    color: white;
+    transition: .5s;
+}
+.swiper-slide .project-card-btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: .5s;
+}
+.swiper-slide .card-body
+{
+    background-color: #202020;
+    border: none;
+}
+.swiper-slide:hover .card-img-top{
+    transform: scale(1.1);
+    transition: .5s;
+}
+.swiper-slide .card-img-top{
+    /* transform: scale(1.1); */
+    transition: .5s;
+}
+.swiper-slide:hover .card-body
+{
+    background-color: #383838;
+    border: none;
+    transition: .5s;
+    border-bottom: 1px solid white;
+}
+.swiper-slide:hover .card-title{
+    color: red;
+    transition: .5s;
+}
+.swiper-slide .card-title{
+    color: rgb(255, 255, 255);
+    transition: .5s;
+}
+.swiper-slide .card-text{
+    color: white;
+}
