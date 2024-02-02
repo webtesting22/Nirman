@@ -953,7 +953,7 @@ input[type="checkbox"] {
     margin-bottom: 25px;
     transition-delay: 3s;
   }
-  .animeslide-heading span {
+  .animeslide-slide span {
     font-size: 16px;
     background-color: #f08723;
     padding: 6px 12px 7px;
