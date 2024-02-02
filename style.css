@@ -1252,7 +1252,14 @@ input[type="checkbox"] {
 .swiper-slide .card-title{
     color: rgb(255, 255, 255);
     transition: .5s;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.6rem;
+}
+.swiper-slide .card-title span{
+    color: rgb(148, 148, 148);
+    transition: .5s;
 }
 .swiper-slide .card-text{
     color: white;
+    font-size: 1rem;
 }
