@@ -696,7 +696,7 @@ input[type="checkbox"] {
 }
 
 
-#about-para p {
+#about-para {
     font-size: 1.4rem;
     color: white;
     font-family: 'Playfair', serif;
@@ -705,7 +705,7 @@ input[type="checkbox"] {
 
 }
 
-#about-para p span {
+#about-para span {
     font-size: 5rem;
 
     line-height: 0px;
@@ -784,7 +784,7 @@ input[type="checkbox"] {
 .projectFactsWrap .item {
     width: 50%;
     height: 100%;
-    /* padding: 50px 0px; */
+    padding: 20px 0px;
     text-align: center;
 
 }
