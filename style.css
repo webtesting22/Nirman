@@ -1593,6 +1593,9 @@ input[type="checkbox"] {
   }
   
   @media (max-width: 768px) {
+    #our-team .col-lg-6{
+        padding: 0px;
+      }
     .timeline .timeline-continue::after {
       left: 40px;
     }
@@ -1639,3 +1642,4 @@ input[type="checkbox"] {
       margin-left: 0;
     }
   }
+
