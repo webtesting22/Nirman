@@ -856,9 +856,22 @@ input[type="checkbox"] {
 }
 
 .small {
-    width: 25%;
+    width: 20%;
 }
-
+.swiper-button-next:after{
+    font-family: swiper-icons;
+    font-size: 16px;
+    text-transform: none!important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+}
+#swiper-button-next:after{
+    font-size: 10px;
+}
+#swiper-button-prev:after{
+    font-size: 10px;
+}
 #swiper-home .container {
     /* max-width:80rem; */
     margin: 0 auto;
@@ -945,7 +958,7 @@ input[type="checkbox"] {
     background-color: #1b1b1b;
     max-width: 600px;
     z-index: 1;
-    padding: 20px 35px;
+    padding: 0px 35px;
     right: 0;
     font-size: 14px;
 }
@@ -1247,6 +1260,21 @@ input[type="checkbox"] {
     font-size: 144px;
     font-weight: bold;
 }
+@media (max-width:600px){
+    
+.marquee {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: rgb(44, 44, 44);
+    font-size: 90px;
+    font-weight: bold;
+}
+
+}
 
 .track {
     position: absolute;
@@ -1486,11 +1514,25 @@ input[type="checkbox"] {
     display: inline-block;
     margin: 15px;
     padding: 20px;
+    /* width: 80%; */
     border: 1px solid #dddddd;
     border-radius: 6px;
     background: #ffffff;
   }
   
+  @media (max-width:600px){
+    .timeline .timeline-box,
+    .timeline .timeline-launch {
+      position: relative;
+      display: inline-block;
+      margin: 15px;
+      padding: 20px;
+      width: 80%;
+      border: 1px solid #dddddd;
+      border-radius: 6px;
+      background: #ffffff;
+    }
+  }
   .timeline .timeline-launch {
     width: 100%;
     margin: 15px 0;

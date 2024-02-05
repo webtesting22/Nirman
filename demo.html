@@ -5,453 +5,348 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+
   <style>
 body {
-  color: #213546;
-  background: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.title {
-  position: relative;
-  margin-top: 30px;
-  width: 100%;
-  text-align: center;
-}
-
-.timeline {
-  position: relative;
-  width: 100%;
-  padding: 30px 0;
-}
-
-.timeline .timeline-container {
-  position: relative;
-  width: 100%;
-}
-
-.timeline .timeline-end,
-.timeline .timeline-start,
-.timeline .timeline-year {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  z-index: 1;
-}
-
-.timeline .timeline-end p,
-.timeline .timeline-start p,
-.timeline .timeline-year p {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
   margin: 0;
-  padding: 30px 0;
-  text-align: center;
-  background: linear-gradient(#4F84C4, #00539C);
-  border-radius: 100px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, .4);
-  color: #ffffff;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-.timeline .timeline-year {
-  margin: 30px 0;
-}
-
-.timeline .timeline-continue {
-  position: relative;
-  width: 100%;
-  padding: 60px 0;
-}
-
-.timeline .timeline-continue::after {
-  position: absolute;
-  content: "";
-  width: 1px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  margin-left: -1px;
-  background: #4F84C4;
-}
-
-.timeline .row.timeline-left,
-.timeline .row.timeline-right .timeline-date {
-  text-align: right;
-}
-
-.timeline .row.timeline-right,
-.timeline .row.timeline-left .timeline-date {
-  text-align: left;
-}
-
-.timeline .timeline-date {
-  font-size: 14px;
-  font-weight: 600;
-  margin: 41px 0 0 0;
-}
-
-.timeline .timeline-date::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  top: 45px;
-  background: linear-gradient(#4F84C4, #00539C);
-  box-shadow: 0 0 5px rgba(0, 0, 0, .4);
-  border-radius: 15px;
-  z-index: 1;
-}
-
-.timeline .row.timeline-left .timeline-date::after {
-  left: -7px;
-}
-
-.timeline .row.timeline-right .timeline-date::after {
-  right: -7px;
-}
-
-.timeline .timeline-box,
-.timeline .timeline-launch {
-  position: relative;
-  display: inline-block;
-  margin: 15px;
-  padding: 20px;
-  border: 1px solid #dddddd;
-  border-radius: 6px;
-  background: #ffffff;
-}
-
-.timeline .timeline-launch {
-  width: 100%;
-  margin: 15px 0;
   padding: 0;
-  border: none;
-  text-align: center;
-  background: transparent;
+  background-color: #000;
+  padding-bottom: 100px;
 }
 
-.timeline .timeline-box::after,
-.timeline .timeline-box::before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.timeline .row.timeline-left .timeline-box::after,
-.timeline .row.timeline-left .timeline-box::before {
-  left: 100%;
-}
-
-.timeline .row.timeline-right .timeline-box::after,
-.timeline .row.timeline-right .timeline-box::before {
-  right: 100%;
-}
-
-.timeline .timeline-launch .timeline-box::after,
-.timeline .timeline-launch .timeline-box::before {
-  left: 50%;
-  margin-left: -10px;
-}
-
-.timeline .timeline-box::after {
-  top: 26px;
-  border-color: transparent transparent transparent #ffffff;
-  border-width: 10px;
-}
-
-.timeline .timeline-box::before {
-  top: 25px;
-  border-color: transparent transparent transparent #dddddd;
-  border-width: 11px;
-}
-
-.timeline .row.timeline-right .timeline-box::after {
-  border-color: transparent #ffffff transparent transparent;
-}
-
-.timeline .row.timeline-right .timeline-box::before {
-  border-color: transparent #dddddd transparent transparent;
-}
-
-.timeline .timeline-launch .timeline-box::after {
-  top: -20px;
-  border-color: transparent transparent #dddddd transparent;
-}
-
-.timeline .timeline-launch .timeline-box::before {
-  top: -19px;
-  border-color: transparent transparent #ffffff transparent;
-  border-width: 10px;
-  z-index: 1;
-}
-
-.timeline .timeline-box .timeline-icon {
-  position: relative;
-  width: 40px;
-  height: auto;
-  float: left;
-}
-
-.timeline .timeline-icon i {
-  font-size: 25px;
-  color: #4F84C4;
-}
-
-.timeline .timeline-box .timeline-text {
-  position: relative;
-  width: calc(100% - 40px);
-  float: left;
-}
-
-.timeline .timeline-launch .timeline-text {
+#contact {
   width: 100%;
+  height: 100%;
 }
 
-.timeline .timeline-text h3 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 3px;
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px 'Oswald', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
 }
 
-.timeline .timeline-text p {
-  font-size: 14px;
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+/* Left contact page */
+.form-horizontal {
+  /*float: left;*/
+  max-width: 400px;
+  font-family: 'Lato';
   font-weight: 400;
-  margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
-  .timeline .timeline-continue::after {
-    left: 40px;
-  }
+.form-control, 
+textarea {
+  max-width: 400px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+}
 
-  .timeline .timeline-end,
-  .timeline .timeline-start,
-  .timeline .timeline-year,
-  .timeline .row.timeline-left,
-  .timeline .row.timeline-right .timeline-date,
-  .timeline .row.timeline-right,
-  .timeline .row.timeline-left .timeline-date,
-  .timeline .timeline-launch {
-    text-align: left;
-  }
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
 
-  .timeline .row.timeline-left .timeline-date::after,
-  .timeline .row.timeline-right .timeline-date::after {
-    left: 47px;
-  }
+.alt-send-button {
+  width: 400px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
 
-  .timeline .timeline-box,
-  .timeline .row.timeline-right .timeline-date,
-  .timeline .row.timeline-left .timeline-date {
-    margin-left: 55px;
-  }
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px 'Lato', sans-serif;
+  letter-spacing: 2px;
+}
 
-  .timeline .timeline-launch .timeline-box {
-    margin-left: 0;
-  }
+.alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
 
-  .timeline .row.timeline-left .timeline-box::after {
-    left: -20px;
-    border-color: transparent #ffffff transparent transparent;
-  }
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+}
 
-  .timeline .row.timeline-left .timeline-box::before {
-    left: -22px;
-    border-color: transparent #dddddd transparent transparent;
-  }
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
 
-  .timeline .timeline-launch .timeline-box::after,
-  .timeline .timeline-launch .timeline-box::before {
-    left: 30px;
-    margin-left: 0;
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px 'Lato', sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative; 
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27,27,27);
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff; 
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 200 14px 'Oswald', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255,255,255,.6);
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .direct-contact-container, .form-horizontal {
+    margin: 0 auto;
+  }  
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }    
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
   }
 }
 
+@media screen and (max-width: 569px) {
+
+  .direct-contact-container, .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }  
+  .form-control, textarea {
+    
+    margin: 0 auto;
+  }
+ 
+  
+  .name, .email, textarea {
+    width: 280px;
+  } 
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }  
+  .social-media-list {
+    left: 0;
+  }
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+  .social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+  
+}
+
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
+}
   </style>
 </head>
 <body>
-  <div class="title">
-    <h2>Responsive Vertical Timeline</h2>
-    <p><a href="https://htmlcodex.com/css-timeline">More timeline designs</a></p>
-  </div>
-  <div class="timeline">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="timeline-container">
-            <div class="timeline-end">
-              <p>Now</p>
-            </div>
-            <div class="timeline-continue">
+  <section id="contact">
   
-              <div class="row timeline-right">
-                <div class="col-md-6">
-                  <p class="timeline-date">
-                    01 Jun 2020
-                  </p>
-                </div>
-                <div class="col-md-6">
-                  <div class="timeline-box">
-                    <div class="timeline-icon">
-                      <i class="fa fa-gift"></i>
-                    </div>
-                    <div class="timeline-text">
-                      <h3>Lorem ipsum dolor</h3>
-                      <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="row timeline-left">
-                <div class="col-md-6 d-md-none d-block">
-                  <p class="timeline-date">
-                    01 Jan 2020
-                  </p>
-                </div>
-                <div class="col-md-6">
-                  <div class="timeline-box">
-                    <div class="timeline-icon d-md-none d-block">
-                      <i class="fa fa-business-time"></i>
-                    </div>
-                    <div class="timeline-text">
-                      <h3>Lorem ipsum dolor</h3>
-                      <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                    </div>
-                    <div class="timeline-icon d-md-block d-none">
-                      <i class="fa fa-business-time"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 d-md-block d-none">
-                  <p class="timeline-date">
-                    01 Jan 2020
-                  </p>
-                </div>
-              </div>
-  
-              <div class="row">
-                <div class="col-12">
-                  <div class="timeline-year">
-                    <p>2020</p>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="row timeline-right">
-                <div class="col-md-6">
-                  <p class="timeline-date">
-                    01 Dec 2019
-                  </p>
-                </div>
-                <div class="col-md-6">
-                  <div class="timeline-box">
-                    <div class="timeline-icon">
-                      <i class="fa fa-briefcase"></i>
-                    </div>
-                    <div class="timeline-text">
-                      <h3>Lorem ipsum dolor</h3>
-                      <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="row timeline-left">
-                <div class="col-md-6 d-md-none d-block">
-                  <p class="timeline-date">
-                    01 Sep  2019
-                  </p>
-                </div>
-                <div class="col-md-6">
-                  <div class="timeline-box">
-                    <div class="timeline-icon d-md-none d-block">
-                      <i class="fa fa-cogs"></i>
-                    </div>
-                    <div class="timeline-text">
-                      <h3>Lorem ipsum dolor</h3>
-                      <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                    </div>
-                    <div class="timeline-icon d-md-block d-none">
-                      <i class="fa fa-cogs"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 d-md-block d-none">
-                  <p class="timeline-date">
-                    01 Sep  2019
-                  </p>
-                </div>
-              </div>
-  
-              <div class="row timeline-right">
-                <div class="col-md-6">
-                  <p class="timeline-date">
-                    01 Jun 2019
-                  </p>
-                </div>
-                <div class="col-md-6">
-                  <div class="timeline-box">
-                    <div class="timeline-icon">
-                      <i class="fa fa-running"></i>
-                    </div>
-                    <div class="timeline-text">
-                      <h3>Lorem ipsum dolor</h3>
-                      <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="row timeline-left">
-                <div class="col-md-6 d-md-none d-block">
-                  <p class="timeline-date">
-                    01 Mar 2019
-                  </p>
-                </div>
-                <div class="col-md-6">
-                  <div class="timeline-box">
-                    <div class="timeline-icon d-md-none d-block">
-                      <i class="fa fa-home"></i>
-                    </div>
-                    <div class="timeline-text">
-                      <h3>Lorem ipsum dolor</h3>
-                      <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                    </div>
-                    <div class="timeline-icon d-md-block d-none">
-                      <i class="fa fa-home"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 d-md-block d-none">
-                  <p class="timeline-date">
-                    01 Mar 2019
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="timeline-start">
-              <p>Launch</p>
-            </div>
-            <div class="timeline-launch">
-              <div class="timeline-box">
-                <div class="timeline-text">
-                  <h3>Launched our company on 01 Jan 2019</h3>
-                  <p>Lorem ipsum dolor sit amet</p>
-                </div>
-              </div>
-            </div>
+    <h1 class="section-header">Contact</h1>
+    
+    <div class="contact-wrapper">
+    
+    <!-- Left contact page --> 
+      
+      <form id="contact-form" class="form-horizontal" role="form">
+         
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
           </div>
         </div>
-      </div>
+  
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+          </div>
+        </div>
+  
+        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+        
+        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+          <div class="alt-send-button">
+            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+          </div>
+        
+        </button>
+        
+      </form>
+      
+    <!-- Left contact page --> 
+      
+        <div class="direct-contact-container">
+  
+          <ul class="contact-list">
+            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City, State</span></i></li>
+            
+            <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+            
+            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
+            
+          </ul>
+  
+          <hr>
+          <ul class="social-media-list">
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-github" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-codepen" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>       
+          </ul>
+          <hr>
+  
+          <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+  
+        </div>
+      
     </div>
-  </div>
+    
+  </section>  
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+      document.querySelector('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.target.elements.name.value = '';
+    e.target.elements.email.value = '';
+    e.target.elements.message.value = '';
+  });
+
+    </script>
 </body>
 </html>
