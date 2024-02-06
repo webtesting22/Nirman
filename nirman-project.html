@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./about-us.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="./project-single.css">
+
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+    <script>
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        function updateContent() {
+            const contentParam = getQueryParam('content');
+            const contentDiv = document.getElementById('content');
+
+            if (contentParam === 'link1') {
+                contentDiv.innerHTML = `
+                <section class="ftco-section" id="back-overlay">
+        <section style="background-color: transparent;">
+            <div class="section-padding"></div>
+            <div class="container">
+                <div id="single-project-title">
+                    <h1>Nirman <span>Habitat</span>
+                    </h1>
+                </div>
+                <!-- <div class="section-padding"></div>  -->
+
+
+            </div>
+        </section>
+        <div class="section-padding"></div>
+        <div class="section-padding"></div>
+        <div class="Project-container">
+            <div class="container">
+                <h2 class="Project-title">Project <span>Details</span></h2>
+                <div class="ftco-section ftco-no-pt ftco-no-pb ftco-services-2" id="project-details">
+                    <!-- <div class="container"> -->
+                    <div class="row m-0" id="project-detail-box">
+                        <div class="col-lg-4" style="background-color: #000000a3; display: flex; align-items: center;">
+                            <div class="container">
+                                <h4 class="project-box-title"><span>P</span>roject Title</h4>
+                                <hr
+                                    style="background-color: #fc5e28; border: 2px solid #fc5e28; opacity: 1; width: 40px;">
+                                <span class="text-white">Project Type</span>
+                                <p class="text-white">Project Description</p>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-8" style="padding: 0px; background-color: #2d2d2dd4; padding: 15px 15px;">
+                            <div class="row no-gutters d-flex">
+                                <div class="col-lg-6 d-flex align-self-stretch ftco-animate">
+                                    <div class="media block-6 services services-1 d-flex w-100 ">
+                                        <div class="icon justify-content-center align-items-center d-flex"><span
+                                                class="flaticon-engineer-1"></span></div>
+                                        <div class="media-body ms-4">
+                                            <h3 class="heading mb-3">Uska Title</h3>
+                                            <p>Uska Description.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-flex align-self-stretch ftco-animate">
+                                    <div class="media block-6 services services-2 d-flex w-100 ">
+                                        <div class="icon justify-content-center align-items-center d-flex"><span
+                                                class="flaticon-worker-1"></span></div>
+                                        <div class="media-body ms-4">
+                                            <h3 class="heading mb-3">Uska Title</h3>
+                                            <p>Uska Description.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-flex align-self-stretch ftco-animate">
+                                    <div class="media block-6 services services-2 d-flex w-100 ">
+                                        <div class="icon justify-content-center align-items-center d-flex"><span
+                                                class="flaticon-worker-1"></span></div>
+                                        <div class="media-body ms-4">
+                                            <h3 class="heading mb-3">Uska Title</h3>
+                                            <p>Uska Description.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-flex align-self-stretch ftco-animate">
+                                    <div class="media block-6 services services-1 d-flex w-100 ">
+                                        <div class="icon justify-content-center align-items-center d-flex"><span
+                                                class="flaticon-engineer-1"></span></div>
+                                        <div class="media-body ms-4">
+                                            <h3 class="heading mb-3">Uska Title</h3>
+                                            <p>Uska Description.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-4 d-flex align-self-stretch ftco-animate">
+                                        <div class="media block-6 services d-flex w-100">
+                                            <div class="icon justify-content-center align-items-center d-flex"><span
+                                                    class="flaticon-engineer"></span></div>
+                                            <div class="media-body pl-4">
+                                                <h3 class="heading mb-3">Uska Title</h3>
+                                                <p>Uska Description.</p>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- </div> -->
+                </div>
+            </div>
+            <div class="container">
+                <h2 class="Project-title">Floor <span>Plans</span></h2>
+                <div class="floor-plan-section">
+
+
+                    <br>
+                    <div id="exTab3">
+
+                        <div class="row m-0" style="background-color: #000000a3; padding: 20px;">
+
+
+                            <div class="col-lg-4 col-sm-6" style="border-radius: 5px;">
+                                <ul class="nav nav-pills">
+
+                                    <a href="#1b" data-toggle="tab" style="background-color: rgb(255, 0, 0);"
+                                        class="active" onclick="changeColor(this)">Project 1</a>
+
+                                    <a href="#2b" data-toggle="tab" onclick="changeColor(this)">Project 2</a>
+
+                                    <a href="#3b" data-toggle="tab" onclick="changeColor(this)">Project 3</a>
+
+                                    <a href="#4b" data-toggle="tab" onclick="changeColor(this)">Project 4</a>
+
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-8 col-sm-6 p-0">
+                                <div class="tab-content clearfix">
+                                    <div class="tab-pane active" id="1b">
+                                        <h3>Same as example 1 but we have now styled the tab's corner</h3>
+                                    </div>
+                                    <div class="tab-pane" id="2b">
+                                        <h3>We use the class nav-pills instead of nav-tabs which automatically creates a
+                                            background color for the tab</h3>
+                                    </div>
+                                    <div class="tab-pane" id="3b">
+                                        <h3>We applied clearfix to the tab-content to rid of the gap between the tab and
+                                            the
+                                            content</h3>
+                                    </div>
+                                    <div class="tab-pane" id="4b">
+                                        <h3>We use css to change the background color of the content to be equal to the
+                                            tab</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <br><br><br>
+
+            <div class="container">
+                <h2 class="Project-title">Project <span>Ameneties</span></h2>
+                <br>
+                <div class="row m-0" style="background-color: #000000a3;padding: 7px;">
+                    <div class="col-lg-4 col-md-6"
+                        style="display: flex; justify-content: center; align-items: center; padding: 0px;">
+                        <div class="Ameneties-card">
+                            <span>Ameneties 1</span>
+                            <img src="https://plus.unsplash.com/premium_photo-1678379473620-db6bc7ff8a11?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6"
+                        style="display: flex; justify-content: center; align-items: center; padding: 0px;">
+                        <div class="Ameneties-card">
+                            <span>Ameneties 2</span>
+                            <img src="https://plus.unsplash.com/premium_photo-1678379473620-db6bc7ff8a11?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6"
+                        style="display: flex; justify-content: center; align-items: center; padding: 0px;">
+                        <div class="Ameneties-card">
+                            <span>Ameneties 3</span>
+                            <img src="https://plus.unsplash.com/premium_photo-1678379473620-db6bc7ff8a11?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6"
+                        style="display: flex; justify-content: center; align-items: center; padding: 0px;">
+                        <div class="Ameneties-card">
+                            <span>Ameneties 4</span>
+                            <img src="https://plus.unsplash.com/premium_photo-1678379473620-db6bc7ff8a11?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6"
+                        style="display: flex; justify-content: center; align-items: center; padding: 0px;">
+                        <div class="Ameneties-card">
+                            <span>Ameneties 5</span>
+                            <img src="https://plus.unsplash.com/premium_photo-1678379473620-db6bc7ff8a11?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6"
+                        style="display: flex; justify-content: center; align-items: center; padding: 0px;">
+                        <div class="Ameneties-card">
+                            <span>Ameneties 6</span>
+                            <img src="https://plus.unsplash.com/premium_photo-1678379473620-db6bc7ff8a11?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                width="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br><br><br>
+            <div class="container">
+                <h2 class="Project-title">Project <span>Gallery</span></h2> 
+                <br>    
+            <div class="gallery-container">
+        <div class="gallery-item" data-index="1">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="2">
+          <img
+            src="https://images.unsplash.com/photo-1707001853042-70d96b7a64f0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="3">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="4">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dt="
+            VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="5">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="6">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="7">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="8">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="9">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="10">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="11">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="12">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="13">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="14">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="15">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="16">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="17">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="18">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="19">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        </div>
+      </div>
+
+            
+            <br><br><br>
+            <div class="container">
+                <h2 class="Project-title">Know More About <span>Project</span></h2>
+                <br>
+                <div class="row contact-container m-0" style="background-color: #ffffff;">
+                    <div class="col-lg-6 border-related">
+                        <div class="project-contact-icon">
+                            <a href="tel:0000009876541"><i class='bx bxs-phone-call'></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" style="display: flex; justify-content: center; align-items: center;">
+
+                        <a href="" class="download-btn">Download Brochure</a>
+
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+
+        </div>
+        <div class="section-padding"></div>
+        <div class="section-padding"></div>
+    </section>
+                `;
+            }
+            else {
+                contentDiv.innerHTML = 'Default Content';
+            }
+        }
+
+        // Call the function to update content when the page loads
+        window.onload = updateContent;
+    </script>
+</head>
+
+<body>
+
+
+    <a href="" class="btn-whatsapp-pulse btn-whatsapp-pulse-border">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <header>
+        <div id="logo">
+            <a href="./index.html"><img src="./projects-images/nirman.JPG" alt=""></a>
+
+        </div>
+        <input type="checkbox" id="active">
+        <label for="active" class="menu-btn"><i class='bx bx-menu'></i></label>
+        <div class="wrapper">
+            <ul>
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./nirman-about.html">About</a></li>
+                <li><a href="./nirman-projects.html">Projects</a></li>
+                <li><a href="./nirman-contact.html">Contact&nbsp;Us</a></li>
+            </ul>
+        </div>
+
+        <section>
+            <div id="nav">
+
+            </div>
+            <div id="home-back">
+
+            </div>
+            <div id="Home-text">
+                <p>
+
+                    <span>
+                        Projects Details
+                    </span>
+                    &mdash; &mdash;
+                </p>
+            </div>
+
+        </section>
+
+
+
+    </header>
+
+    <section id="main-container" class="main-container" style="background-color: black;">
+
+        <div id="content">
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <div id="Footer">
+
+            <div class="section-padding"></div>
+            <div class="section-padding"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-logo">
+                            <a href="./index.html"><img src="./projects-images/nirman.JPG" alt=""></a>
+                        </div>
+                        <div class="Footer-social-links">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./nirman-about.html">About Us</a></li>
+                            <li><a href="./nirman-projects.html">Projects</a></li>
+                            <li><a href="./nirman-contact.html">Contact Us</a></li>
+                        </div>
+                        <div class="social-links">
+                            <li><a href=""><i class='bx bxl-instagram-alt'></i></a></li>
+                            <li><a href=""><i class='bx bxl-meta'></i></a></li>
+                            <li><a href=""><i class='bx bxl-linkedin-square'></i></a></li>
+
+                        </div>
+                        <div class="section-padding"></div>
+                        <div class="copyright-text">
+                            <span>@2024 <a href="https://outleadsolutions.com/" target="_blank">Outlead solution.</a>
+                                All rights reserved</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+    </footer>
+
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> -->
+
+
+
+
+    <script src="./script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const galleryItems = document.querySelectorAll(".gallery-item");
+            const lightBoxContainer = document.createElement("div");
+            const lightBoxContent = document.createElement("div");
+            const lightBoxImg = document.createElement("img");
+            const lightBoxPrev = document.createElement("div");
+            const lightBoxNext = document.createElement("div");
+
+            lightBoxContainer.classList.add("lightbox");
+            lightBoxContent.classList.add("lightbox-content");
+            lightBoxPrev.classList.add("fa", "fa-angle-left", "lightbox-prev");
+            lightBoxNext.classList.add("fa", "fa-angle-right", "lightbox-next");
+
+            lightBoxContainer.appendChild(lightBoxContent);
+            lightBoxContent.appendChild(lightBoxImg);
+            lightBoxContent.appendChild(lightBoxPrev);
+            lightBoxContent.appendChild(lightBoxNext);
+
+            document.body.appendChild(lightBoxContainer);
+
+            let currentIndex = 0;
+
+            function showLightBox(index) {
+                if (index < 0 || index >= galleryItems.length) {
+                    return;
+                }
+                const imageSrc = galleryItems[index].querySelector("img").getAttribute("src");
+                lightBoxImg.setAttribute("src", imageSrc);
+                currentIndex = index;
+                lightBoxContainer.style.display = "block";
+            }
+
+            function closeLightBox() {
+                lightBoxContainer.style.display = "none";
+            }
+
+            function prevImage() {
+                showLightBox(currentIndex - 1);
+            }
+
+            function nextImage() {
+                showLightBox(currentIndex + 1);
+            }
+
+            galleryItems.forEach(function (item, index) {
+                item.addEventListener("click", function () {
+                    showLightBox(index);
+                });
+            });
+
+            lightBoxContainer.addEventListener("click", function (event) {
+                if (event.target === lightBoxContainer || event.target === lightBoxPrev || event.target === lightBoxNext) {
+                    closeLightBox();
+                }
+            });
+
+            lightBoxPrev.addEventListener("click", prevImage);
+            lightBoxNext.addEventListener("click", nextImage);
+        });
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

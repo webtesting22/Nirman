@@ -57,7 +57,7 @@ section {
 #Section-title h1 span {
     font-size: 2rem;
     text-align: center;
-    color: rgb(212, 41, 41);
+    color: #db2112;
     font-family: 'Roboto Condensed', sans-serif;
 
 }
@@ -1706,4 +1706,15 @@ input[type="checkbox"] {
         left: 30px;
         margin-left: 0;
     }
+}
+.copyright-text {
+    display: flex;
+    justify-content: center;
+}
+.copyright-text span{
+    color: white;
+}
+.copyright-text span a{
+    color: white;
+    text-decoration: none;
 }

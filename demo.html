@@ -1,352 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
-
   <style>
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  padding-bottom: 100px;
-}
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color: #fff;
+      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+      /* width: 80%; */
+      margin: 0 auto;
+      padding: 10px;
+    }
 
-#contact {
-  width: 100%;
-  height: 100%;
-}
+    .gallery-item {
+      flex-basis: 32.7%;
+      margin-bottom: 6px;
+      opacity: .85;
+      cursor: pointer;
+    }
 
-.section-header {
-  text-align: center;
-  margin: 0 auto;
-  padding: 40px 0;
-  font: 300 60px 'Oswald', sans-serif;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-}
+    .gallery-item:hover {
+      opacity: 1;
+    }
 
-.contact-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 20px;
-  position: relative;
-  max-width: 840px;
-}
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-/* Left contact page */
-.form-horizontal {
-  /*float: left;*/
-  max-width: 400px;
-  font-family: 'Lato';
-  font-weight: 400;
-}
+    .gallery-content {
+      font-size: .8em;
+    }
 
-.form-control, 
-textarea {
-  max-width: 400px;
-  background-color: #000;
-  color: #fff;
-  letter-spacing: 1px;
-}
+    .lightbox {
+      position: fixed;
+      display: none;
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      top: 0;
+      left: 0;
+    }
 
-.send-button {
-  margin-top: 15px;
-  height: 34px;
-  width: 400px;
-  overflow: hidden;
-  transition: all .2s ease-in-out;
-}
-
-.alt-send-button {
-  width: 400px;
-  height: 34px;
-  transition: all .2s ease-in-out;
-}
-
-.send-text {
-  display: block;
-  margin-top: 10px;
-  font: 700 12px 'Lato', sans-serif;
-  letter-spacing: 2px;
-}
-
-.alt-send-button:hover {
-  transform: translate3d(0px, -29px, 0px);
-}
-
-/* Begin Right Contact Page */
-.direct-contact-container {
-  max-width: 400px;
-}
-
-/* Location, Phone, Email Section */
-.contact-list {
-  list-style-type: none;
-  margin-left: -30px;
-  padding-right: 20px;
-}
-
-.list-item {
-  line-height: 4;
-  color: #aaa;
-}
-
-.contact-text {
-  font: 300 18px 'Lato', sans-serif;
-  letter-spacing: 1.9px;
-  color: #bbb;
-}
-
-.place {
-  margin-left: 62px;
-}
-
-.phone {
-  margin-left: 56px;
-}
-
-.gmail {
-  margin-left: 53px;
-}
-
-.contact-text a {
-  color: #bbb;
-  text-decoration: none;
-  transition-duration: 0.2s;
-}
-
-.contact-text a:hover {
-  color: #fff;
-  text-decoration: none;
-}
+    .lightbox-content {
+      position: relative;
+      width: 58%;
+      /* height: 70%; */
+      margin: 6% auto;
+    }
 
 
-/* Social Media Icons */
-.social-media-list {
-  position: relative;
-  font-size: 22px;
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-}
+    .lightbox-content img {
+      border-radius: 7px;
+      box-shadow: 0 0 3px 0 rgba(225, 225, 225, .25);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.social-media-list li a {
-  color: #fff;
-}
+    .lightbox-prev,
+    .lightbox-next {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 7px;
+      top: 45%;
+      cursor: pointer;
+    }
 
-.social-media-list li {
-  position: relative; 
-  display: inline-block;
-  height: 60px;
-  width: 60px;
-  margin: 10px 3px;
-  line-height: 60px;
-  border-radius: 50%;
-  color: #fff;
-  background-color: rgb(27,27,27);
-  cursor: pointer; 
-  transition: all .2s ease-in-out;
-}
+    .lightbox-prev {
+      left: 0;
+    }
 
-.social-media-list li:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  border-radius: 50%;
-  opacity: 0;
-  box-shadow: 0 0 0 1px #fff;
-  transition: all .2s ease-in-out;
-}
+    .lightbox-next {
+      right: 0;
+    }
 
-.social-media-list li:hover {
-  background-color: #fff; 
-}
+    .lightbox-prev:hover,
+    .lightbox-next:hover {
+      opacity: .8;
+    }
 
-.social-media-list li:hover:after {
-  opacity: 1;  
-  transform: scale(1.12);
-  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
-}
+    @media (max-width: 767px) {
+      .gallery-container {
+        width: 100%;
+      }
 
-.social-media-list li:hover a {
-  color: #000;
-}
+      .gallery-item {
+        flex-basis: 49.80%;
+        margin-bottom: 3px;
+      }
 
-.copyright {
-  font: 200 14px 'Oswald', sans-serif;
-  color: #555;
-  letter-spacing: 1px;
-  text-align: center;
-}
+      .lightbox-content {
+        width: 80%;
+        height: 60%;
+        margin: 15% auto;
+      }
 
-hr {
-  border-color: rgba(255,255,255,.6);
-}
+      .gallery-heading {
+        text-align: center;
+      }
+    }
 
-/* Begin Media Queries*/
-@media screen and (max-width: 850px) {
-  .contact-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  .direct-contact-container, .form-horizontal {
-    margin: 0 auto;
-  }  
-  
-  .direct-contact-container {
-    margin-top: 60px;
-    max-width: 300px;
-  }    
-  .social-media-list li {
-    height: 60px;
-    width: 60px;
-    line-height: 60px;
-  }
-  .social-media-list li:after {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-  }
-}
+    @media (max-width: 480px) {
+      .gallery-item {
+        flex-basis: 100%;
+        margin-bottom: 1px;
+      }
 
-@media screen and (max-width: 569px) {
-
-  .direct-contact-container, .form-wrapper {
-    float: none;
-    margin: 0 auto;
-  }  
-  .form-control, textarea {
-    
-    margin: 0 auto;
-  }
- 
-  
-  .name, .email, textarea {
-    width: 280px;
-  } 
-  
-  .direct-contact-container {
-    margin-top: 60px;
-    max-width: 280px;
-  }  
-  .social-media-list {
-    left: 0;
-  }
-  .social-media-list li {
-    height: 55px;
-    width: 55px;
-    line-height: 55px;
-    font-size: 2rem;
-  }
-  .social-media-list li:after {
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-  }
-  
-}
-
-@media screen and (max-width: 410px) {
-  .send-button {
-    width: 99%;
-  }
-}
+      .lightbox-content {
+        width: 90%;
+        margin: 32% auto;
+      }
+    }
   </style>
 </head>
-<body>
-  <section id="contact">
-  
-    <h1 class="section-header">Contact</h1>
-    
-    <div class="contact-wrapper">
-    
-    <!-- Left contact page --> 
-      
-      <form id="contact-form" class="form-horizontal" role="form">
-         
-        <div class="form-group">
-          <div class="col-sm-12">
-            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
-          </div>
-        </div>
-  
-        <div class="form-group">
-          <div class="col-sm-12">
-            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
-          </div>
-        </div>
-  
-        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
-        
-        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-          <div class="alt-send-button">
-            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
-          </div>
-        
-        </button>
-        
-      </form>
-      
-    <!-- Left contact page --> 
-      
-        <div class="direct-contact-container">
-  
-          <ul class="contact-list">
-            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City, State</span></i></li>
-            
-            <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
-            
-            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
-            
-          </ul>
-  
-          <hr>
-          <ul class="social-media-list">
-            <li><a href="#" target="_blank" class="contact-icon">
-              <i class="fa fa-github" aria-hidden="true"></i></a>
-            </li>
-            <li><a href="#" target="_blank" class="contact-icon">
-              <i class="fa fa-codepen" aria-hidden="true"></i></a>
-            </li>
-            <li><a href="#" target="_blank" class="contact-icon">
-              <i class="fa fa-twitter" aria-hidden="true"></i></a>
-            </li>
-            <li><a href="#" target="_blank" class="contact-icon">
-              <i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </li>       
-          </ul>
-          <hr>
-  
-          <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
-  
-        </div>
-      
-    </div>
-    
-  </section>  
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script>
-      document.querySelector('#contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    e.target.elements.name.value = '';
-    e.target.elements.email.value = '';
-    e.target.elements.message.value = '';
-  });
 
-    </script>
+<body>
+
+  <section>
+    <div class="container">
+      <div class="section-title gallery-heading">
+        <h2 class="title-color">Gallery</h2>
+        <h1>Gallery</h1>
+      </div>
+      <br><br>
+      <div class="gallery-container">
+        <div class="gallery-item" data-index="1">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="2">
+          <img
+            src="https://images.unsplash.com/photo-1707001853042-70d96b7a64f0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="3">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="4">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dt="
+            VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="5">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="6">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="7">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="8">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="9">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="10">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="11">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="12">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="13">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="14">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="15">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="16">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="17">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="18">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+        <div class="gallery-item" data-index="19">
+          <img
+            src="https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="VIBGYOR-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const galleryItem = document.getElementsByClassName("gallery-item");
+    const lightBoxContainer = document.createElement("div");
+    const lightBoxContent = document.createElement("div");
+    const lightBoxImg = document.createElement("img");
+    const lightBoxPrev = document.createElement("div");
+    const lightBoxNext = document.createElement("div");
+
+    lightBoxContainer.classList.add("lightbox");
+    lightBoxContent.classList.add("lightbox-content");
+    lightBoxPrev.classList.add("fa", "fa-angle-left", "lightbox-prev");
+    lightBoxNext.classList.add("fa", "fa-angle-right", "lightbox-next");
+
+    lightBoxContainer.appendChild(lightBoxContent);
+    lightBoxContent.appendChild(lightBoxImg);
+    lightBoxContent.appendChild(lightBoxPrev);
+    lightBoxContent.appendChild(lightBoxNext);
+
+    document.body.appendChild(lightBoxContainer);
+
+    let index = 1;
+
+    function showLightBox(n) {
+      if (n > galleryItem.length) {
+        index = 1;
+      } else if (n < 1) {
+        index = galleryItem.length;
+      }
+      let imageLocation = galleryItem[index - 1].children[0].getAttribute("src");
+      lightBoxImg.setAttribute("src", imageLocation);
+    }
+
+    function currentImage() {
+      lightBoxContainer.style.display = "block";
+
+      let imageIndex = parseInt(this.getAttribute("data-index"));
+      showLightBox(index = imageIndex);
+    }
+    for (let i = 0; i < galleryItem.length; i++) {
+      galleryItem[i].addEventListener("click", currentImage);
+    }
+
+    function slideImage(n) {
+      showLightBox(index += n);
+    }
+    function prevImage() {
+      slideImage(-1);
+    }
+    function nextImage() {
+      slideImage(1);
+    }
+    lightBoxPrev.addEventListener("click", prevImage);
+    lightBoxNext.addEventListener("click", nextImage);
+
+    function closeLightBox() {
+      if (this === event.target) {
+        lightBoxContainer.style.display = "none";
+      }
+    }
+    lightBoxContainer.addEventListener("click", closeLightBox);
+    $(function () {
+      // Show the first 3 items by default
+      $(".col-md-4").slice(0, 3).slideDown();
+
+      // Set up the click/touchstart event
+      $("body").on('click touchstart', '.load-more', function (e) {
+        e.preventDefault();
+        // Show the next 3 hidden items on each click
+        $(".col-md-4:hidden").slice(0, 3).slideDown();
+
+        // If no more hidden items, hide the "load-more" button
+        if ($(".col-md-4:hidden").length == 0) {
+          $(".load-more").css('visibility', 'hidden');
+        }
+
+        // Optional: Scroll to the top of the newly shown items
+        // $('html,body').animate({
+        //     scrollTop: $(this).offset().top
+        // }, 500);
+      });
+    });
+    $(document).ready(function () {
+      /*
+       *  Button helper. Disable animations, hide close button, change title type and content
+       */
+      $('.fancybox-buttons').fancybox({
+        openEffect: 'none',
+        closeEffect: 'none',
+        prevEffect: 'none',
+        nextEffect: 'none',
+        closeBtn: false,
+        helpers: {
+          title: {
+            type: 'inside'
+          },
+          buttons: {}
+        },
+        afterLoad: function () {
+          this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+        },
+        // Add navigation buttons
+        tpl: {
+          prev: '<a class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>',
+          next: '<a class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>'
+        }
+      });
+    });
+
+
+  </script>
 </body>
+
 </html>

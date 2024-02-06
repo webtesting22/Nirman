@@ -135,3 +135,14 @@ const swiperQuiz = new Swiper(".animeslide", {
   },
   runCallbacksOnInit: true
 });
+function changeColor(element) {
+  // Remove background color from all anchor links
+  var anchorLinks = document.querySelectorAll('.nav-pills a');
+  anchorLinks.forEach(function (link) {
+      link.style.backgroundColor = '';
+  });
+
+  // Set background color to red for the clicked anchor link
+  element.style.backgroundColor = 'rgb(255, 0, 0)';
+}
+
