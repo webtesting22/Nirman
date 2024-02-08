@@ -11,9 +11,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
+    <script>
+        AOS.init();
+      </script>
+    <div id="loader">
+        <p class="method-2 red-text" >Architecting Vision</p>
+      </div>
     <a href="" class="btn-whatsapp-pulse btn-whatsapp-pulse-border">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -136,7 +144,7 @@
     </header>
 
     <main>
-        <section>
+        <section >
             <div class="section-padding"></div>
 
             <div id="Foundations-Section">
@@ -314,7 +322,19 @@
 
     </footer>
 
-
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function() {
+          // Delay showing content for 10 seconds
+          setTimeout(function() {
+            // Hide loader
+            document.getElementById("loader").style.display = "none";
+        
+            // Show content
+            document.getElementById("content").style.display = "block";
+          }, 5000); // 10 seconds delay
+        });
+      </script>
 
 
 
@@ -328,6 +348,7 @@
 
 
     <script src="./script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 

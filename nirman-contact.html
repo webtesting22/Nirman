@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    <div id="loader">
+        <p class="method-2" >Architecting Vision</p>
+      </div>
 
     <a href="" class="btn-whatsapp-pulse btn-whatsapp-pulse-border">
         <i class="fab fa-whatsapp"></i>
@@ -204,5 +207,18 @@
 
 
 </body>
+<script>
+        
+    document.addEventListener("DOMContentLoaded", function() {
+      // Delay showing content for 10 seconds
+      setTimeout(function() {
+        // Hide loader
+        document.getElementById("loader").style.display = "none";
+    
+        // Show content
+        document.getElementById("content").style.display = "block";
+      }, 5000); // 10 seconds delay
+    });
+  </script>
 
 </html>
