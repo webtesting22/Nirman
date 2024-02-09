@@ -455,6 +455,8 @@ figure.snip1163.hover figcaption p {
     background: #000;
     clip-path: circle(25px at calc(100% - 45px) 45px);
     transition: all 0.3s ease-in-out;
+   
+    
 }
 
 #active:checked~.wrapper {
@@ -1732,12 +1734,14 @@ input[type="checkbox"] {
     justify-content: center;
     z-index: 57667656757755;
     overflow: hidden;
+    font-size: 400px;
+    font-family: Inconsolata;
     
   }
 
   .method-2 {
     display: inline-block;
-    font-size: 100px;
+    /* font-size: 10vw; */
     background: url('./projects-images/backgroung.png') no-repeat;
     -webkit-background-clip: text;
     color: rgba(255, 255, 255, 0);
@@ -1752,5 +1756,20 @@ input[type="checkbox"] {
     50%   { background-size: 100% 100%; }
     100%  { background-size: 0 100%; }
   }
+  /* Media query for tablets (landscape) and larger */
+@media (min-width: 768px) {
+    .method-2 {
+      font-size: 10vw;
+    }
+  }
+  
+  /* Media query for small devices (portrait) */
+  @media (max-width: 600px) {
+    .method-2 {
+      font-size: 7vw;
+    }
+  }
 
+
+  
   
