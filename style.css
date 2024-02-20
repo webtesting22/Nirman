@@ -1769,7 +1769,7 @@ input[type="checkbox"] {
     
     text-shadow: 0 0 rgba(0, 0, 0, .1);
     background-size: 0 100%;
-    animation: fill-2 5s infinite; /* Increase animation duration to 10 seconds */
+    animation: fill-2 5.5s infinite; /* Increase animation duration to 10 seconds */
     overflow: hidden;
   }
 
