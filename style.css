@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair:opsz,wght@5..1200,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -1752,7 +1753,10 @@ input[type="checkbox"] {
     z-index: 57667656757755;
     overflow: hidden;
     font-size: 400px;
-    font-family: Inconsolata;
+    font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  
+  font-style: normal;
     
   }
 
@@ -1785,6 +1789,45 @@ input[type="checkbox"] {
     .method-2 {
       font-size: 7vw;
     }
+  }
+  .form-horizontal {
+    /*float: left;*/
+    max-width: 400px;
+    font-family: 'Lato';
+    font-weight: 400;
+  }
+  
+  .form-control, 
+  textarea {
+    max-width: 400px;
+    background-color: #000;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  
+  .send-button {
+    margin-top: 15px;
+    height: 34px;
+    width: 400px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+  }
+  
+  .alt-send-button {
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+  }
+  
+  .send-text {
+    display: block;
+    margin-top: 10px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+  }
+  
+  .alt-send-button:hover {
+    transform: translate3d(0px, -29px, 0px);
   }
 
 

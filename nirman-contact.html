@@ -16,7 +16,7 @@
 
 <body>
     <div id="loader">
-        <p class="method-2" >Architecting Vision</p>
+        <p class="method-2" >You Dream We Build</p>
       </div>
 
     <a href="" class="btn-whatsapp-pulse btn-whatsapp-pulse-border">
@@ -78,7 +78,34 @@
                             <br> <br>
                             <img src="./projects-images/our project back.jpg" width="100%" alt="">
                         </div>
+                        
                     </div>
+                    <!-- <div class="col-lg-6 col-md-12">
+                        <form id="contact-form" class="form-horizontal" role="form">
+       
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+                              </div>
+                            </div>
+                      
+                            <div class="form-group">
+                              <div class="col-sm-12">
+                                <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+                              </div>
+                            </div>
+                      
+                            <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+                            
+                            <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                              <div class="alt-send-button">
+                                <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+                              </div>
+                            
+                            </button>
+                            
+                          </form>
+                    </div> -->
                     <div class="col-lg-6 col-md-12" id="form-column">
                         <!-- <form class="row g-3 needs-validation" novalidate>
                             <div class="col-md-12">
@@ -219,6 +246,13 @@
         document.getElementById("content").style.display = "block";
       }, 5000); // 10 seconds delay
     });
+    document.querySelector('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.target.elements.name.value = '';
+    e.target.elements.email.value = '';
+    e.target.elements.message.value = '';
+  });
+
   </script>
 
 </html>
