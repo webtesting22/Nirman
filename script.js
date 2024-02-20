@@ -143,6 +143,6 @@ function changeColor(element) {
   });
 
   // Set background color to red for the clicked anchor link
-  element.style.backgroundColor = 'rgb(255, 0, 0)';
+  element.style.backgroundColor = 'rgb(0, 129, 199)';
 }
 

@@ -7,7 +7,7 @@
 
 #single-project-title h1 span {
     font-size: 6rem;
-    color: #db2112;
+    color: rgb(0,129,199);
     text-align: center;
 }
 
@@ -84,7 +84,7 @@
 }
 
 .ftco-services-2 .services.services-2 {
-    background: #db2112;
+    background: rgb(0,129,199);
     margin: 10px;
     border-radius: 5px;
 
@@ -114,7 +114,7 @@
     height: 80px;
     z-index: 1;
     margin-bottom: 20px;
-    background: #db2112;
+    background: rgb(0,129,199);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -191,7 +191,7 @@
 
 .Project-container .Project-title span {
     font-size: 23px;
-    background-color: #db2112;
+    background-color: rgb(0,129,199);
     color: white;
     padding: 2px 3px;
     font-weight: 400;
@@ -359,7 +359,7 @@
 }
 
 .project-box-title span {
-    color: #db2112;
+    color: rgb(0,129,199);
     font-weight: 600;
 }
 
@@ -369,7 +369,7 @@
 }
 
 .download-btn {
-    background-color: #db2112;
+    background-color: rgb(0,129,199);
     text-decoration: none;
     padding: 8px 20px;
     border-radius: 3px;
@@ -405,7 +405,7 @@
 }
 
 .project-contact-icon i:hover {
-    color: #db2112;
+    color: rgb(0,129,199);
     font-size: 3rem;
     background-color: rgb(255, 255, 255);
     padding: 20px 20px;
@@ -443,7 +443,7 @@
     margin: auto;
     /* width: 100%; */
     text-align: center;
-    background-color: #db1f12c5;
+    background-color: rgb(0,129,199);
     padding: 6px 40px;
     color: white;
     font-weight: 500;
