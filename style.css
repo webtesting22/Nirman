@@ -1332,7 +1332,7 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px 0px;
+    padding: 10px 0px;
   }
 
   #Footer .Footer-social-links li {
@@ -1371,7 +1371,7 @@ input[type="checkbox"] {
   color: transparent; /* Ensures the text itself is transparent */
   text-decoration: none;
   /* background-color: rgb(33, 33, 33); */
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
   border-radius: 5px;
   transition: 0.5s;
 }
