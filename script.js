@@ -112,6 +112,9 @@ const swiperQuiz = new Swiper(".animeslide", {
   loop: true,
   speed: 900,
   centeredSlides: true,
+  autoplay:{
+    delay:5000,
+  },
   pagination: {
     el: ".animeslide-pagination",
     type: "custom",
