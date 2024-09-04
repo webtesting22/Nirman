@@ -434,7 +434,7 @@ figure.snip1163.hover figcaption p {
 }
 
 .wrapper {
-  position: fixed;
+  position: absolute;
   /* top: -70px; */
   left: 0px;
   height: 10vh;
@@ -487,9 +487,9 @@ figure.snip1163.hover figcaption p {
   /* border: 2px solid rgb(255, 255, 255); */
   border-radius: 50%;
 
-  position: fixed;
-  top: 55px;
-  right: 30px;
+  position: absolute;
+  top: 20px;
+  right: 0px;
   height: 70px;
   width: 70px;
 }
@@ -1844,8 +1844,8 @@ textarea {
     right: 5px;
   }
   #active:checked ~ .menu-btn i:before {
-    top: 50px;
-    right: 5px;
+    top: 20px;
+    right: 0px;
   }
   #loader img {
     width: 300px;
