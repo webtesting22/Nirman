@@ -1357,7 +1357,7 @@ input[type="checkbox"] {
   font-size: 30px;
   /* color: white; */
   /* color: #0A489A; */
-  /* color: #70C8BE; */
+  /* color: #70C8BE; */ 
   /* color: #0F2D86; */
   /* color: #7ECBBE; */
   background: linear-gradient(
@@ -1928,37 +1928,50 @@ textarea {
 }
 .StructuraHeading {
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 3rem;
   color: white;
   margin: 0;
   border: none;
-  padding: 10px;
+  padding: 20px;
   /* background:none; */
   background-color: black;
+
 }
 .StructuraHeading a {
-  background: linear-gradient(
-    to right,
-    #7953cd 20%,
-    #00affa 30%,
-    #0190cd 70%,
-    #764ada 80%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 500% auto;
-  animation: textShine 5s ease-in-out infinite alternate;
-  border: 1px solid blue;
-  border-radius: 20px;
+  color:rgb(0, 129, 199);
   padding: 5px;
+  /* color: #18272F; */
+  position: relative;
+  text-decoration: none;
+}
+.StructuraHeading a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: blue;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
 }
 
+.StructuraHeading a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
 @keyframes textShine {
   0% {
     background-position: 0% 50%;
   }
   100% {
     background-position: 100% 50%;
+  }
+}
+@media(max-width:576px){
+  .StructuraHeading {
+    font-size: 2rem;
   }
 }
