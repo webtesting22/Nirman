@@ -93,8 +93,10 @@
                     <h1>Residential <span>Projects</span></h1>
                     <hr>
                 </div>
+              
                 <div class="section-padding"></div>
                 <div class="container">
+                    
                     <div id="exTab2">
                         <ul class="nav nav-tabs">
                             <li class="active">
@@ -111,7 +113,13 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="1a">
                                 <div class="swiper mySwiper">
+                                    <div class="control">
+                                        <div class="swiper-button-prev tabprev1" id="prev"><span></span></div>
+                                        <div class="swiper-button-next tabnext1" id="next"><span></span></div>
+                    
+                                    </div>
                                     <div class="swiper-wrapper">
+                                       
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%;">
                                                 <div style="overflow: hidden;">
@@ -296,15 +304,16 @@
                                     <!-- <div class="swiper-pagination"></div> -->
 
                                 </div>
-                                <div class="control">
-                                    <div class="swiper-button-prev" id="prev"><span>Prev</span></div>
-                                    <div class="swiper-button-next" id="next"><span> Next</span></div>
-
-                                </div>
+                               
 
                             </div>
                             <div class="tab-pane" id="2a">
                                 <div class="swiper mySwiper2">
+                                    <div class="control">
+                                        <div class="swiper-button-prev tabprev2" id="prev"><span></span></div>
+                                        <div class="swiper-button-next tabnext2" id="next"><span></span></div>
+    
+                                    </div>
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%;">
@@ -402,16 +411,17 @@
                                     </div>
                                     <div class="swiper-pagination"></div>
                                 </div>
-                                <div class="control">
-                                    <div class="swiper-button-prev tabprev2" id="prev"><span>Prev</span></div>
-                                    <div class="swiper-button-next tabnext2" id="next"><span> Next</span></div>
-
-                                </div>
+                               
 
 
                             </div>
                             <div class="tab-pane" id="3a">
                                 <div class="swiper mySwiper3">
+                                    <div class="control">
+                                        <div class="swiper-button-prev tabprev3" id="prev"><span></span></div>
+                                        <div class="swiper-button-next tabnext3" id="next"><span></span></div>
+    
+                                    </div>
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%;">
@@ -569,11 +579,7 @@
                                     </div>
                                     <div class="swiper-pagination"></div>
                                 </div>
-                                <div class="control">
-                                    <div class="swiper-button-prev tabprev3" id="prev"><span>Prev</span></div>
-                                    <div class="swiper-button-next tabnext3" id="next"><span> Next</span></div>
-
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -606,6 +612,11 @@
                         <div class="tab-pane active" id="1b">
 
                             <div class="swiper mySwiper4">
+                                <div class="control">
+                                    <div class="swiper-button-prev tabprev4" id="prev"><span></span></div>
+                                    <div class="swiper-button-next tabnext4" id="next"><span> </span></div>
+    
+                                </div>
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="card" style="width: 100%;">
@@ -702,14 +713,15 @@
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
-                            <div class="control">
-                                <div class="swiper-button-prev tabprev4" id="prev"><span>Prev</span></div>
-                                <div class="swiper-button-next tabnext4" id="next"><span> Next</span></div>
-
-                            </div>
+                           
                         </div>
                         <div class="tab-pane" id="2b">
                             <div class="swiper mySwiper5">
+                                <div class="control">
+                                    <div class="swiper-button-prev tabprev5" id="prev"><span></span></div>
+                                    <div class="swiper-button-next tabnext5" id="next"><span> </span></div>
+    
+                                </div>
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="card" style="width: 100%;">
@@ -867,16 +879,16 @@
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
-                            <div class="control">
-                                <div class="swiper-button-prev tabprev5" id="prev"><span>Prev</span></div>
-                                <div class="swiper-button-next tabnext5" id="next"><span> Next</span></div>
-
-                            </div>
+                           
 
                         </div>
                         <div class="tab-pane" id="3b">
 
                             <div class="swiper mySwiper6">
+                                <div class="control">
+                                    <div class="swiper-button-prev tabprev6" id="prev"><span></span></div>
+                                    <div class="swiper-button-next tabnext6" id="next"><span></span></div>
+                                </div>
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="card" style="width: 100%;">
@@ -1034,11 +1046,7 @@
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
-                            <div class="control">
-                                <div class="swiper-button-prev tabprev6" id="prev"><span>Prev</span></div>
-                                <div class="swiper-button-next tabnext6" id="next"><span> Next</span></div>
-
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -1126,6 +1134,7 @@
             //     el: ".swiper-pagination",
             //     clickable: true,
             // },
+            // navigation:true,
             navigation: {
                 nextEl: ".tabnext2",
                 prevEl: ".tabprev2",
@@ -1149,8 +1158,9 @@
             //     el: ".swiper-pagination",
             //     clickable: true,
             // },
+        //    navigation:true,
             navigation: {
-                nextEl: ".tabnext3",
+                  nextEl: ".tabnext3",
                 prevEl: ".tabprev3",
             },
             autoplay: {
@@ -1172,6 +1182,7 @@
             //     el: ".swiper-pagination",
             //     clickable: true,
             // },
+        //    navigation:true,
             navigation: {
                 nextEl: ".tabnext4",
                 prevEl: ".tabprev4",
@@ -1195,6 +1206,7 @@
             //     el: ".swiper-pagination",
             //     clickable: true,
             // },
+        //    navigation:true,
             navigation: {
                 nextEl: ".tabnext5",
                 prevEl: ".tabprev5",
@@ -1219,6 +1231,7 @@
             //     el: ".swiper-pagination",
             //     clickable: true,
             // },
+            // navigation:true,
             navigation: {
                 nextEl: ".tabnext6",
                 prevEl: ".tabprev6",
@@ -1244,9 +1257,12 @@
             //     clickable: true,
             // },
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+
+                // nextEl: ".swiper-button-next",
+                nextEl: ".tabnext1",
+                prevEl: ".tabprev1",
             },
+            // navigation:true,
             autoplay: {
                 delay: 3000, // Set autoplay delay to 3 seconds
             },

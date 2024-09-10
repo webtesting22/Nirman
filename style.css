@@ -1104,7 +1104,7 @@ input[type="checkbox"] {
   background-color: green;
   color: #fff;
 }
-
+/* 
 #next,
 #prev {
   position: static;
@@ -1113,9 +1113,9 @@ input[type="checkbox"] {
   color: rgb(0, 0, 0);
   padding: 20px 70px;
   transition: 0.5s;
-}
+} */
 
-#next:hover,
+/* #next:hover,
 #prev:hover {
   position: static;
   background-color: rgb(0, 0, 0);
@@ -1123,18 +1123,28 @@ input[type="checkbox"] {
   color: rgb(255, 255, 255);
   padding: 20px 70px;
   transition: 0.5s;
+} */
+#next,#prev{
+  position:relative;
 }
-
+#prev{
+  left: 0;
+  top: 205px;
+}
+#next{
+  right: 0;
+  top: 205px;
+}
 .control {
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 3rem;
+  justify-content: space-between;
+  margin-top: 3rem;  
 }
-
+/* 
 #next::after,
 #prev::after {
   content: "";
-}
+} */
 
 .swiper-slide {
   background-color: transparent;
@@ -1293,6 +1303,7 @@ input[type="checkbox"] {
 
 #Footer {
   background-color: black;
+  /* background-color: #878678; */
   /* background-color: #0F2D86; */
   /* background: rgb(15,45,134);
   background: linear-gradient(90deg, rgba(15,45,134,1) 0%, rgba(126,203,190,1) 100%); */
@@ -1357,7 +1368,7 @@ input[type="checkbox"] {
   font-size: 30px;
   /* color: white; */
   /* color: #0A489A; */
-  /* color: #70C8BE; */ 
+  /* color: #70C8BE; */
   /* color: #0F2D86; */
   /* color: #7ECBBE; */
   background: linear-gradient(
@@ -1819,9 +1830,9 @@ textarea {
 .alt-send-button:hover {
   transform: translate3d(0px, -29px, 0px);
 }
-@media(max-width:1090px){
-  .wrapper ul{
-    left:15%;
+@media (max-width: 1090px) {
+  .wrapper ul {
+    left: 15%;
   }
 }
 @media (max-width: 876px) {
@@ -1857,48 +1868,24 @@ textarea {
   #active:checked ~ .menu-btn {
     color: #fff;
   }
-
-  /* #active:checked ~ .menu-btn i:before {
-    
-    display: block;
-    font-size: 30px;
-    color: white;
-    
-    border-radius: 50%;
-    background: transparent;
-    position: absolute;
-    top: 20px;
-    right: 0px;
-    height: 70px;
-    width: 70px;
-  } */
   #active:checked ~ .wrapper {
-    transform: translateX(50%); /* Menu slides in */
+    transform: translateX(50%);
     width: 70%;
-    transition:transform 0.5s ease-in-out;
-    /* background-color: red; */
-    /* transform: translateX(0%); */
-    /* clip-path: none; */
-    /* left: 30%; */
-    /* width: 10%; */
+    transition: transform 0.5s ease-in-out;
   }
   .wrapper {
     position: fixed;
     top: 0;
     right: 0;
-    width: 0%; /* Set width for the menu */
+    width: 0%;
     height: 100vh;
     background-color: rgb(0, 0, 0, 0.9);
+
+    color: black;
     overflow: hidden;
-    transform: translateX(100%); /* Start off the screen */
-    transition: transform 0.5s ease-in-out ;
-    z-index: 2; /* Ensure menu is above other content but below the menu button */
-    /* left:100%; */
-    /* width: 50%; */
-    /* transform: translateX(100%); */
-    /* background-color: black; */
-    /* transition: all 0.5s ease-in-out; */
-    /* clip-path: none; */
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 2;
   }
   .wrapper ul {
     display: flex;
@@ -1907,16 +1894,9 @@ textarea {
     align-items: center;
     width: 70%;
     transition: all 0.5s ease-in-out;
-    /* transform: translateX(100%); */
-    /* background-color: black; */
-    /* background-color: black; */
     color: white;
-    /* left: 90px; */
-    /* right: 0px; */
     left: 0;
     top: 0;
-    /* top: 90px; */
-    /* width: 100%; */
     height: 100vh;
   }
   .wrapper ul li a {
@@ -1927,25 +1907,24 @@ textarea {
   color: black;
 }
 .StructuraHeading {
+  
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   color: white;
   margin: 0;
-  border: none;
   padding: 20px;
-  /* background:none; */
   background-color: black;
-
 }
 .StructuraHeading a {
-  color:rgb(0, 129, 199);
+  font-family: 'Roboto Condensed';
+  color: rgb(0, 129, 199);
   padding: 5px;
   /* color: #18272F; */
   position: relative;
   text-decoration: none;
 }
 .StructuraHeading a::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 4px;
@@ -1955,7 +1934,7 @@ textarea {
   left: 0;
   transform-origin: right;
   transform: scaleX(0);
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .StructuraHeading a:hover::before {
@@ -1970,8 +1949,13 @@ textarea {
     background-position: 100% 50%;
   }
 }
-@media(max-width:576px){
+@media (max-width:990px){
+  .StructuraHeading{
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 576px) {
   .StructuraHeading {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
