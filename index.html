@@ -6,30 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nirmaan</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./Nirmaan GROUP 2023 FINAL.png"/>
+    <link rel="icon" href="./Nirmaan GROUP 2023 FINAL.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/zekton" rel="stylesheet">
 
 </head>
 
+<script>
+    let isNavVisible = false;
+
+    function toggleNav() {
+        const navbar = document.querySelector('.navigationBar');
+        const navMenu = document.querySelector('.nav-menu');
+        const menuIcon = document.querySelector('.menu-icon');
+
+        isNavVisible = !isNavVisible;
+
+        if (isNavVisible) {
+            navbar.classList.add('nav-open');
+            navMenu.classList.add('open');
+            menuIcon.innerHTML = "<i class='bx bx-window-close' ></i>";
+        } else {
+            navbar.classList.remove('nav-open');
+            navMenu.classList.remove('open');
+            menuIcon.innerHTML = "<i class='bx bx-menu'></i>";
+        }
+    }
+</script>
 
 <body>
     <!-- <script>
         AOS.init();
     </script> -->
-    
+
     <div id="loader">
-        <img src="Nirmaan GROUP 2023 FINAL.png"/>
-      </div>
+        <img src="Nirmaan GROUP 2023 FINAL.png" />
+    </div>
     <!-- <a href="" class="btn-whatsapp-pulse btn-whatsapp-pulse-border">
         <i class="fab fa-whatsapp"></i>
     </a> -->
     <header>
-        <div id="logo">
+        <!-- <div id="logo">
             <a href="./index.html"><img src="./Nirmaan GROUP 2023 FINAL.png" alt=""></a>
 
         </div>
@@ -42,17 +64,37 @@
                 <li><a href="./nirman-projects.html">Projects</a></li>
                 <li><a href="./nirman-contact.html">Contact&nbsp;Us</a></li>
                 <!-- <li><a href="https://structura-web.vercel.app/"> Structura&nbsp;</a></li> -->
-                <!-- <li><a href="#">Gallery</a></li>
-                <li><a href="#">Feedback</a></li> -->
+        <!-- <li><a href="#">Gallery</a></li>
+                <li><a href="#">Feedback</a></li> 
             </ul>
-        </div>
+        </div> -->
+        <div class="navigationBar">
+            <div class="logo-container">
+                <a href="/">
+                    <img src="./Nirmaan GROUP 2023 FINAL.png" alt="Logo">
+                </a>
+            </div>
 
+            <div class="nav-menu">
+                <div class="overlay"></div>
+                <ul>
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./nirman-about.html">About Us</a></li>
+                    <li><a href="./nirman-projects.html">All Projects</a></li>
+                    <li><a href="./nirman-contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <button class="nav-toggler" onclick="toggleNav()" style="border-radius: 8px;">
+                <span class="menu-icon">Menu</span>
+            </button>
+        </div>
 
         <section>
             <div id="nav">
 
             </div>
-            <section >
+            <section>
                 <div class="swiper animeslide" style="height: 100vh;">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper" id="swiper-home">
@@ -62,7 +104,7 @@
                             <div class="container">
                                 <h2 data-animate="bottom" class="animeslide-heading">
                                     <!-- "Mastering the Craft: Expert Insights into Construction Excellence" -->
-                                     Project 1
+                                    Project 1
                                     <br />
 
                                 </h2>
@@ -70,7 +112,9 @@
                                 <p data-animate="bottom" class="animeslide-desc">
                                     <!-- Unveiling the Blueprint of Mastery – Where Knowledge Meets Concrete, and Excellence
                                     is the Foundation of Every Structure We Create -->
-                                    A residential building with luxury apartments, offering rooftop gardens, a gym, and modern amenities. Designed with eco-friendly features for a sustainable urban lifestyle.
+                                    A residential building with luxury apartments, offering rooftop gardens, a gym, and
+                                    modern amenities. Designed with eco-friendly features for a sustainable urban
+                                    lifestyle.
                                 </p>
                                 <!-- <span>Read More</span> -->
                             </div>
@@ -81,11 +125,13 @@
                                 <h2 data-animate="bottom" class="animeslide-heading">
                                     <!-- Elevate Your Vision with Expert Construction: Where Quality Meets Innovation -->
                                     Project 2
-                                </span>
+                                    </span>
                                 </h2>
 
                                 <p data-animate="bottom" class="animeslide-desc">
-                                    A commercial development with corporate offices, retail outlets, and co-working spaces. It includes smart building management and advanced security systems for modern businesses.
+                                    A commercial development with corporate offices, retail outlets, and co-working
+                                    spaces. It includes smart building management and advanced security systems for
+                                    modern businesses.
                                     <!-- Transforming Blueprints into Masterpieces, We Build with Integrity, Skill, and a
                                     Commitment to Your Tomorrow – Your Dream, Our Craft, Unleashing Possibilities Brick
                                     by Brick. -->
@@ -99,11 +145,12 @@
                                 <h2 data-animate="bottom" class="animeslide-heading">
                                     <!-- Redefining Construction Excellence: Your Journey to Inspired Living Starts Here -->
                                     Project 3
-                                </span>
+                                    </span>
                                 </h2>
 
                                 <p data-animate="bottom" class="animeslide-desc">
-                                    A commercial office tower featuring premium workspaces and advanced energy-efficient systems. Designed for corporate offices with smart building technology.
+                                    A commercial office tower featuring premium workspaces and advanced energy-efficient
+                                    systems. Designed for corporate offices with smart building technology.
                                     <!-- From Groundbreaking to Grandeur, Every Structure Tells a Story – Ours is Written in
                                     Steel, Cemented in Quality, and Built on Your Aspirations for a Timeless Legacy -->
                                 </p>
@@ -116,11 +163,12 @@
                                 <h2 data-animate="bottom" class="animeslide-heading">
                                     <!-- Crafting Tomorrow's Landscapes Today: Pioneering Construction Solutions for Your Vision -->
                                     Project 4
-                                </span>
+                                    </span>
                                 </h2>
 
                                 <p data-animate="bottom" class="animeslide-desc">
-                                    A residential project offering eco-friendly apartments with solar panels and energy-efficient systems. Built for modern, sustainable living.
+                                    A residential project offering eco-friendly apartments with solar panels and
+                                    energy-efficient systems. Built for modern, sustainable living.
                                     <!-- Innovate, Build, Thrive – Unleashing the Power of Precision in Construction, We
                                     Shape Spaces Where Dreams Flourish and Futures Bloom, One Project at a Time -->
                                 </p>
@@ -160,8 +208,8 @@
         <script>
             AOS.init();
         </script>
-        <h1 class="StructuraHeading">Find out more about us on  <a href="https://structura-web.vercel.app/" target="_blank">Structura!</a></h1>
-        <section >
+        <!-- <h1 class="StructuraHeading">Find out more about us on  <a href="https://structura-web.vercel.app/" target="_blank">Structura!</a></h1> -->
+        <section>
             <!-- <br/> -->
             <!-- <div class="section-padding"></div> -->
 
@@ -230,13 +278,13 @@
             </div-->
             <!-- <div class="section-padding"></div>
             <div class="section-padding"></div> -->
-            
+
         </section>
-        
+
         <section id="Project-back">
             <!-- <div class="section-padding"></div> -->
             <!-- <div class="section-padding"></div> -->
-           
+
             <div id="Section-title">
                 <h1>Our <span>Projects</span></h1>
                 <hr>
@@ -307,9 +355,9 @@
             <div class="section-padding"></div>
             <!-- <div class="section-padding"></div> -->
         </section>
-        
+
     </main>
-    
+
     <footer>
         <div id="Footer">
             <!-- <div class="section-padding"></div>
@@ -325,6 +373,7 @@
                             <li><a href="./nirman-about.html">About Us</a></li>
                             <li><a href="./nirman-projects.html">Projects</a></li>
                             <li><a href="./nirman-contact.html">Contact Us</a></li>
+                            <li><a href="https://www.structura-web.vercel.app">Structura</a></li>
                         </div>
                         <div class="social-links">
                             <li><a href=""><i class='bx bxl-instagram-alt'></i></a></li>
@@ -335,9 +384,10 @@
                     </div>
                 </div>
                 <!-- <div class="section-padding"></div> -->
-                 
+
                 <div class="copyright-text">
-                    <span>Copyright © All rights reserved by<a href="https://outleadsolutions.com/" target="_blank"> Outlead solution.</a></span>
+                    <span>Copyright © All rights reserved by<a href="https://outleadsolutions.com/" target="_blank">
+                            Outlead solution.</a></span>
                 </div>
             </div>
             <!-- <div class="section-padding"></div> -->
@@ -347,23 +397,23 @@
     </footer>
 
     <script>
-        
-        document.addEventListener("DOMContentLoaded", function() {
-          // Delay showing content for 10 seconds
-          setTimeout(function() {
-            // Hide loader
-            document.getElementById("loader").style.display = "none";
-        
-            // Show content
-            document.getElementById("content").style.display = "block";
-          }, 2000); // 10 seconds delay
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Delay showing content for 10 seconds
+            setTimeout(function () {
+                // Hide loader
+                document.getElementById("loader").style.display = "none";
+
+                // Show content
+                document.getElementById("content").style.display = "block";
+            }, 2000); // 10 seconds delay
         });
-      </script>
+    </script>
 
 
 
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
@@ -373,7 +423,7 @@
 
 
     <script src="./script.js"></script>
-    
+
     <!-- <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> -->
 
 

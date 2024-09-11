@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair:opsz,wght@5..1200,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/zekton");
 
 html {
   scroll-behavior: smooth;
@@ -12,7 +13,7 @@ body {
   margin: 0px;
   background-color: black;
   overflow: auto;
-
+  font-family: "Zekton Rg", sans-serif;
   /* height: 100vh; */
 }
 
@@ -59,7 +60,7 @@ section {
 }
 
 #Section-title h1 span {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   color: rgb(0, 129, 199);
   font-family: "Roboto Condensed", sans-serif;
@@ -501,10 +502,10 @@ figure.snip1163.hover figcaption p {
   position: absolute;
   top: 30px;
   left: 30%;
-
   list-style: none;
   text-align: center;
   display: flex;
+  border-bottom: 1px solid white;
 }
 
 .wrapper ul li {
@@ -523,13 +524,6 @@ figure.snip1163.hover figcaption p {
   position: relative;
   line-height: 50px;
   transition: all 0.3s ease;
-}
-
-.wrapper ul li a:hover {
-  /* border-bottom: 2px solid white; */
-  background-color: white;
-  color: black;
-  border-radius: 20px;
 }
 
 input[type="checkbox"] {
@@ -1124,21 +1118,22 @@ input[type="checkbox"] {
   padding: 20px 70px;
   transition: 0.5s;
 } */
-#next,#prev{
-  position:relative;
+#next,
+#prev {
+  position: relative;
 }
-#prev{
+#prev {
   left: 0;
   top: 205px;
 }
-#next{
+#next {
   right: 0;
   top: 205px;
 }
 .control {
   display: flex;
   justify-content: space-between;
-  margin-top: 3rem;  
+  margin-top: 3rem;
 }
 /* 
 #next::after,
@@ -1907,16 +1902,15 @@ textarea {
   color: black;
 }
 .StructuraHeading {
-  
   text-align: center;
-  font-size: 4rem;
+  /* font-size: 1rem; */
   color: white;
   margin: 0;
   padding: 20px;
   background-color: black;
 }
 .StructuraHeading a {
-  font-family: 'Roboto Condensed';
+  font-family: "Roboto Condensed";
   color: rgb(0, 129, 199);
   padding: 5px;
   /* color: #18272F; */
@@ -1949,13 +1943,167 @@ textarea {
     background-position: 100% 50%;
   }
 }
-@media (max-width:990px){
-  .StructuraHeading{
+@media (max-width: 990px) {
+  .StructuraHeading {
     font-size: 2.8rem;
   }
 }
 @media (max-width: 576px) {
   .StructuraHeading {
     font-size: 1.8rem;
+  }
+}
+
+/* Navbar styles */
+.navigationBar {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  height: 70px;
+  /* transition: background-color 0.5s ease; */
+}
+
+.navigationBar .nav-open {
+  /* background-color: #ffffffab;  */
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  
+  object-fit: contain;
+  width: 150px;
+  height: auto;
+}
+
+/* Nav-toggler styles */
+.nav-toggler {
+  background: transparent;
+  color: rgb(53, 62, 71);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 20;
+  margin-right: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggler .menu-icon {
+  font-size: 1.5rem;
+}
+
+/* Menu styling */
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  position: static;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateX(100%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.nav-menu.open {
+  opacity: 1;
+  transform: translateX(0);
+}
+.nav-menu.open{
+  transform: none;
+}
+.nav-menu ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+.navigationBar.nav-open{
+  background-color: white;
+  color: black;
+  transition: background 0.5s ease-in-out;
+}
+.nav-menu li {
+  margin-bottom: 20px;
+  
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: black  ;
+  font-size: 1.5rem;
+  /* padding: 10px 20px; */
+}
+.nav-menu.open li a{
+  
+  padding: 10px 20px;
+}
+
+/* Responsive styling */
+@media (max-width: 576px) {
+  .nav-toggler {
+    /* height: 50px; */
+    width: 50px;
+  }
+  .nav-menu{
+    /* transition: opacity 0.7s ease,transform 0.7s ease; */
+     /* Smooth transition */
+    transform: translateX(100%); 
+    height: 100vh;
+    position: absolute;
+    top:0;
+  }
+  .nav-menu.open{
+    /* top:0; */
+    right:0;
+    position:fixed;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 55%;
+    width: 70%;
+    background-image: url("./ResidentialBacl.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 0;
+    position: fixed;
+    opacity: 1; /* Fade in */
+    transform: translateX(0); 
+    
+  }
+  .overlay{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    opacity: 0.9;
+    position:absolute;
+    z-index: -1;
+  }
+
+  .nav-menu ul {
+    gap: 50px;
+    flex-direction: column;
+  }
+
+  .nav-menu ul li a {
+    font-size: 1.5rem;
   }
 }
