@@ -20,23 +20,23 @@
 <script>
     let isNavVisible = false;
 
-    function toggleNav() {
-        const navbar = document.querySelector('.navigationBar');
-        const navMenu = document.querySelector('.nav-menu');
-        const menuIcon = document.querySelector('.menu-icon');
+function toggleNav() {
+const navbar = document.querySelector('.navigationBar');
+const navMenu = document.querySelector('.nav-menu');
+const menuIcon = document.querySelector('.menu-icon');
 
-        isNavVisible = !isNavVisible;
+isNavVisible = !isNavVisible;
 
-        if (isNavVisible) {
-            navbar.classList.add('nav-open');
-            navMenu.classList.add('open');
-            menuIcon.innerHTML = "<i class='bx bx-window-close' ></i>";
-        } else {
-            navbar.classList.remove('nav-open');
-            navMenu.classList.remove('open');
-            menuIcon.innerHTML = "<i class='bx bx-menu'></i>";
-        }
-    }
+if (isNavVisible) {
+    navbar.classList.add('nav-open');
+    navMenu.classList.add('open');
+    menuIcon.innerHTML = "<i class='bx bx-window-close' ></i>";
+} else {
+    navbar.classList.remove('nav-open');
+    navMenu.classList.remove('open');
+    menuIcon.innerHTML = "<i class='bx bx-menu'></i>";
+}
+}
 </script>
 <body>
     <div id="loader">
@@ -48,49 +48,27 @@
     <!-- <a href="" class="btn-whatsapp-pulse btn-whatsapp-pulse-border">
         <i class="fab fa-whatsapp"></i>
     </a> -->
-    <header>
-        <div class="navigationBar">
-            <div class="logo-container">
-                <a href="/">
-                    <img src="./Nirmaan GROUP 2023 FINAL.png" alt="Logo">
-                </a>
-            </div>
-
-            <div class="nav-menu">
-                <div class="overlay"></div>
-                <ul>
-                    <li><a href="./">Home</a></li>
-                    <li><a href="./nirman-about.html">About Us</a></li>
-                    <li><a href="./nirman-projects.html">All Projects</a></li>
-                    <li><a href="./nirman-contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <button class="nav-toggler" onclick="toggleNav()" style="border-radius: 8px;">
-                <span class="menu-icon"><i class='bx bx-menu'></i></span>
-            </button>
+    <div class="navigationBar">
+        <div class="logo-container">
+            <a href="/">
+                <img src="./Nirmaan GROUP 2023 FINAL.png" alt="Logo">
+            </a>
         </div>
 
-        <section>
-            <div id="nav">
+        <div class="nav-menu">
+            <div class="overlay"></div>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./nirman-about.html">About Us</a></li>
+                <li><a href="./nirman-projects.html">All Projects</a></li>
+                <!-- <li><a href="./nirman-contact.html">Contact Us</a></li> -->
+            </ul>
+        </div>
 
-            </div>
-            <div id="home-back">
-
-            </div>
-            <div id="Home-text">
-                <p>
-
-                    <span>
-                        About Us
-                    </span>
-                    &mdash; &mdash;
-                </p>
-            </div>
-
-        </section>
-
-    </header>
+        <button class="nav-toggler" onclick="toggleNav()" style="border-radius: 8px;">
+            <i class='bx bx-menu' style="color: white;"></i>
+        </button>
+    </div>
 
     <main>
         <section style="  background-color: rgb(21, 21, 21);">
@@ -135,7 +113,7 @@
                                             style="visibility: visible;">
                                             <!-- <i class="fa fa-briefcase"></i> -->
                                             <p id="number1" class="number"
-                                                style="font-size: 40px;  font-family: 'Playfair', serif; font-weight: 200;">
+                                                style="font-size: 40px;  font-weight: 200;">
                                                 24</p>
                                             <span></span>
                                             <p>Prestigious Projects</p>
@@ -144,7 +122,7 @@
                                             style="visibility: visible;">
                                             <!-- <i class="fa fa-smile-o"></i> -->
                                             <p id="number2" class="number"
-                                                style="font-size: 40px; font-family: 'Playfair', serif; font-weight: 200;">
+                                                style="font-size: 40px; font-weight: 200;">
                                                 1500</p>
                                             <span></span>
                                             <p>Happy Families</p>
@@ -286,7 +264,7 @@
             <div class="section-padding"></div>
 
         </section>
-        <section>
+        <!-- <section>
             <div class="section-padding"></div>
             <div class="section-padding"></div>
             <div id="Section-title">
@@ -385,79 +363,7 @@
                                         </div>
                                     </div>
 
-                                     <!-- <div class="row timeline-left">
-                                        <div class="col-md-6 d-md-none d-block">
-                                            <p class="timeline-date">
-                                                01 Sep 2019
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="timeline-box">
-                                                <div class="timeline-icon d-md-none d-block">
-                                                    <i class="fa fa-cogs"></i>
-                                                </div>
-                                                <div class="timeline-text">
-                                                    <h3>Lorem ipsum dolor</h3>
-                                                    <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                                </div>
-                                                <div class="timeline-icon d-md-block d-none">
-                                                    <i class="fa fa-cogs"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 d-md-block d-none">
-                                            <p class="timeline-date">
-                                                01 Sep 2019
-                                            </p>
-                                        </div> 
-                                    </div-->
-
-                                    <!-- <div class="row timeline-right">
-                                        <div class="col-md-6">
-                                            <p class="timeline-date">
-                                                01 Jun 2019
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="timeline-box">
-                                                <div class="timeline-icon">
-                                                    <i class="fa fa-running"></i>
-                                                </div>
-                                                <div class="timeline-text">
-                                                    <h3>Lorem ipsum dolor</h3>
-                                                    <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row timeline-left">
-                                        <div class="col-md-6 d-md-none d-block">
-                                            <p class="timeline-date">
-                                                01 Mar 2019
-                                            </p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="timeline-box">
-                                                <div class="timeline-icon d-md-none d-block">
-                                                    <i class="fa fa-home"></i>
-                                                </div>
-                                                <div class="timeline-text">
-                                                    <h3>Lorem ipsum dolor</h3>
-                                                    <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                                </div>
-                                                <div class="timeline-icon d-md-block d-none">
-                                                    <i class="fa fa-home"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 d-md-block d-none">
-                                            <p class="timeline-date">
-                                                01 Mar 2019
-                                            </p>
-                                        </div>
-                                    </div> 
-                                </div> -->
+                                
                                 <div class="timeline-start">
                                     <p>2019</p>
                                 </div>
@@ -490,78 +396,7 @@
                                     </div>
                                 </div>
 
-                                <!-- <div class="row timeline-left">
-                                    <div class="col-md-6 d-md-none d-block">
-                                        <p class="timeline-date">
-                                            01 Sep 2019
-                                        </p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="timeline-box">
-                                            <div class="timeline-icon d-md-none d-block">
-                                                <i class="fa fa-cogs"></i>
-                                            </div>
-                                            <div class="timeline-text">
-                                                <h3>Lorem ipsum dolor</h3>
-                                                <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                            </div>
-                                            <div class="timeline-icon d-md-block d-none">
-                                                <i class="fa fa-cogs"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 d-md-block d-none">
-                                        <p class="timeline-date">
-                                            01 Sep 2019
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="row timeline-right">
-                                    <div class="col-md-6">
-                                        <p class="timeline-date">
-                                            01 Jun 2019
-                                        </p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="timeline-box">
-                                            <div class="timeline-icon">
-                                                <i class="fa fa-running"></i>
-                                            </div>
-                                            <div class="timeline-text">
-                                                <h3>Lorem ipsum dolor</h3>
-                                                <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row timeline-left">
-                                    <div class="col-md-6 d-md-none d-block">
-                                        <p class="timeline-date">
-                                            01 Mar 2019
-                                        </p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="timeline-box">
-                                            <div class="timeline-icon d-md-none d-block">
-                                                <i class="fa fa-home"></i>
-                                            </div>
-                                            <div class="timeline-text">
-                                                <h3>Lorem ipsum dolor</h3>
-                                                <p>Lorem ipsum dolor sit amet elit ornare velit non</p>
-                                            </div>
-                                            <div class="timeline-icon d-md-block d-none">
-                                                <i class="fa fa-home"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 d-md-block d-none">
-                                        <p class="timeline-date">
-                                            01 Mar 2019
-                                        </p>
-                                    </div>
-                                </div> -->
+                            
                                 <div class="timeline-start">
                                     <p>2017</p>
                                 </div>
@@ -849,105 +684,10 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="marquee">
-                <div class="track">
-                    <div class="hello">.Nirman .Nirman .Nirman .Nirman .Nirman .Nirman .Nirman</div>
-                </div>
-            </div> -->
-            <!-- <div class="timeline">
-                <div class="road"></div>
 
-                <div class="circle">
-                    
-                    <div class="list-item">
-                        <p>2019</p>
-                        <div class="dot"></div>
-                        <h1>Ivory Springs</h1>
-                        <p>Residential+Commercial</p>
-                    </div>
-                    <div class="list-item">
-                        <p>2019</p>
-                        <div class="dot"></div>
-                        <h1>Ivory Springs</h1>
-                        <p>Residential+Commercial</p>
-                    </div>
-                    <div class="list-item">
-                        <p>2019</p>
-                        <div class="dot"></div>
-                        <h1>Ivory Springs</h1>
-                        <p>Residential+Commercial</p>
-                    </div>
-                    <div class="list-item">
-                        <p>2019</p>
-                        <div class="dot"></div>
-                        <h1>Ivory Springs</h1>
-                        <p>Residential+Commercial</p>
-                    </div>
-                    <div class="list-item">
-                        <p>2019</p>
-                        <div class="dot"></div>
-                        <h1>Ivory Springs</h1>
-                        <p>Residential+Commercial</p>
-                    </div>
-                    <div class="list-item">
-                        <p>2019</p>
-                        <div class="dot"></div>
-                        <h1>Ivory Springs</h1>
-                        <p>Residential+Commercial</p>
-                    </div>
-                    <div class="list-item">
-                        <p>2019</p>
-                        <div class="dot"></div>
-                        <h1>Ivory Springs</h1>
-                        <p>Residential+Commercial</p>
-                    </div>
-                    <div class="list-item">
-                        <p>2019</p>
-                        <div class="dot"></div>
-                        <h1>Ivory Springs</h1>
-                        <p>Residential+Commercial</p>
-                    </div>
-                    <div class="list-item">
-                        <p>2019</p>
-                        <div class="dot"></div>
-                        <h1>Ivory Springs</h1>
-                        <p>Residential+Commercial</p>
-                    </div>
-                    <div class="list-item">
-                        <p>2019</p>
-                        <div class="dot"></div>
-                        <h1>Ivory Springs</h1>
-                        <p>Residential+Commercial</p>
-                    </div>
-                    <div class="list-item">
-                        <p>2019</p>
-                        <div class="dot"></div>
-                        <h1>Ivory Springs</h1>
-                        <p>Residential+Commercial</p>
-                    </div>
-                    <div class="list-item">
-                        <p>2019</p>
-                        <div class="dot"></div>
-                        <h1>Ivory Springs</h1>
-                        <p>Residential+Commercial</p>
-                    </div>
-                    <div class="list-item">
-                        <p>2019</p>
-                        <div class="dot"></div>
-                        <h1>Ivory Springs</h1>
-                        <p>Residential+Commercial</p>
-                    </div>
-                    <div class="list-item">
-                        <p>2019</p>
-                        <div class="dot"></div>
-                        <h1>Ivory Springs</h1>
-                        <p>Residential+Commercial</p>
-                    </div>
-                   
-                </div> -->
             </div>
 
-        </section>
+        </section> -->
 
 
 
@@ -967,26 +707,29 @@
                             <li><a href="./index.html">Home</a></li>
                             <li><a href="./nirman-about.html">About Us</a></li>
                             <li><a href="./nirman-projects.html">Projects</a></li>
-                            <li><a href="./nirman-contact.html">Contact Us</a></li>
-                            <li><a href="https://www.structura-web.vercel.app">Structura</a></li>
+                            <!-- <li><a href="./nirman-contact.html">Contact Us</a></li>
+                            <li><a href="https://www.structura-web.vercel.app">Structura</a></li> -->
                         </div>
+
                         <div class="social-links">
                             <li><a href=""><i class='bx bxl-instagram-alt'></i></a></li>
                             <li><a href=""><i class='bx bxl-meta'></i></a></li>
                             <li><a href=""><i class='bx bxl-linkedin-square'></i></a></li>
 
                         </div>
-                        <!-- <div class="section-padding"></div> -->
-                        <div class="copyright-text">
-                            <span>Copyright © All rights reserved by<a href="https://outleadsolutions.com/"
-                                    target="_blank"> Outlead solution.</a></span>
-                        </div>
                     </div>
+                </div>
+                <hr>
+                <!-- <div class="section-padding"></div> -->
+                <br>
+                <div class="copyright-text">
+                    <span>Copyright © All rights reserved by<a href="https://outleadsolutions.com/" target="_blank">
+                            Outlead solution.</a></span>
                 </div>
             </div>
             <!-- <div class="section-padding"></div> -->
 
-
+        </div>
 
     </footer>
 
