@@ -2157,3 +2157,18 @@ span{
 button{
   font-family: "Roboto Condensed", sans-serif;
 }
+.TopBackContainer{
+  height: 60vh;
+  background-image: url("https://images.unsplash.com/photo-1638519922476-50688bb1f318?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  position: relative;
+}
+.OverlayBack{
+  height: 60vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.532);
+  position: absolute;
+  top: 0px;
+}
