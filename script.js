@@ -76,7 +76,11 @@ $.fn.jQuerySimpleCounter = function (options) {
       var mathCount = Math.ceil(this.count);
       thisElement.text(mathCount);
     },
-    complete: settings.complete
+    complete: function () {
+      thisElement.text(settings.end + '+'); // Append the '+' after the counting ends
+      if (settings.complete) { // Call the complete callback if it's provided
+        settings.complete();
+      }}
   });
 };
 

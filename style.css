@@ -221,7 +221,7 @@ figure.snip1163 figcaption {
   height: 100%;
 }
 
-figure.snip1163 figcaption>div {
+figure.snip1163 figcaption > div {
   height: 20%;
   overflow: hidden;
   width: 100%;
@@ -428,7 +428,7 @@ figure.snip1163.hover figcaption p {
   border-radius: 20px;
 }
 
-@media (max-width:769px) {
+@media (max-width: 769px) {
   #project-section .c-swiper__image-container img {
     width: 100%;
     height: 100%;
@@ -470,7 +470,7 @@ figure.snip1163.hover figcaption p {
   transition: all 0.3s ease-in-out;
 }
 
-#active:checked~.wrapper {
+#active:checked ~ .wrapper {
   clip-path: circle(75%);
 }
 
@@ -498,11 +498,11 @@ figure.snip1163.hover figcaption p {
   transition: all 0.3s ease-in-out;
 }
 
-#active:checked~.menu-btn {
+#active:checked ~ .menu-btn {
   color: #fff;
 }
 
-#active:checked~.menu-btn i:before {
+#active:checked ~ .menu-btn i:before {
   /* content: "\f057"; */
   display: block;
   font-size: 30px;
@@ -1369,7 +1369,6 @@ input[type="checkbox"] {
   margin: 0px;
   border: 1px solid white;
   background-color: white;
-
 }
 
 @media (max-width: 500px) {
@@ -1549,7 +1548,6 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 600px) {
-
   .timeline .timeline-box,
   .timeline .timeline-launch {
     position: relative;
@@ -1723,7 +1721,6 @@ input[type="checkbox"] {
 
 .copyright-text span {
   color: #ffffffab;
-
 }
 
 .copyright-text span a {
@@ -1859,7 +1856,7 @@ textarea {
     background: transparent;
   }
 
-  #active:checked~.menu-btn i:before {
+  #active:checked ~ .menu-btn i:before {
     top: 20px;
     right: 0px;
     background: transparent;
@@ -1870,11 +1867,11 @@ textarea {
     height: auto;
   }
 
-  #active:checked~.menu-btn {
+  #active:checked ~ .menu-btn {
     color: #fff;
   }
 
-  #active:checked~.wrapper {
+  #active:checked ~ .wrapper {
     transform: translateX(50%);
     width: 70%;
     transition: transform 0.5s ease-in-out;
@@ -2057,7 +2054,6 @@ textarea {
   list-style: none;
   margin: 0;
   padding: 0;
-
 }
 
 .navigationBar.nav-open {
@@ -2065,7 +2061,6 @@ textarea {
   color: black;
   transition: 0.7s ease;
 }
-
 
 .nav-menu li a {
   text-decoration: none;
@@ -2075,7 +2070,6 @@ textarea {
 }
 
 .nav-menu.open li a {
-
   padding: 10px 20px;
 }
 
@@ -2085,14 +2079,14 @@ textarea {
     /* height: 50px; */
     width: 50px;
   }
-  .nav-menu{
+  .nav-menu {
     visibility: hidden;
-    transition: opacity 0.7s ease,transform 0.7s ease;
-    transform: translateX(100%); 
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    transform: translateX(100%);
     height: 100vh;
     position: absolute;
     background-color: white;
-    top:0;
+    top: 0;
   }
 
   .nav-menu.open {
@@ -2105,11 +2099,12 @@ textarea {
     right: 0;
     position: fixed;
     display: flex;
-    background-color: white;
+    /* background-color: white; */
+    background-color: black;
+
     opacity: 1;
     /* Fade in */
     transform: translateX(0);
-
   }
 
   .overlay {
@@ -2118,18 +2113,20 @@ textarea {
     width: 100%;
     background-color: white;
     opacity: 0.9;
-    
+
     position: absolute;
     z-index: -1;
   }
- 
+
   .nav-menu ul {
     gap: 50px;
+
     flex-direction: column;
   }
 
   .nav-menu ul li a {
     font-size: 1.5rem;
+    color: white;
   }
 }
 
@@ -2145,30 +2142,45 @@ textarea {
   width: 300px;
 }
 
-a{
+a {
   font-family: "Roboto Condensed", sans-serif;
 }
-p{
+p {
   font-family: "Roboto Condensed", sans-serif;
 }
-span{
+span {
   font-family: "Roboto Condensed", sans-serif;
 }
-button{
+button {
   font-family: "Roboto Condensed", sans-serif;
 }
-.TopBackContainer{
+.TopBackContainer {
   height: 60vh;
-  background-image: url("https://images.unsplash.com/photo-1638519922476-50688bb1f318?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url(./projects-images/bg3.jpg);
+  /* background-image: url("https://images.unsplash.com/photo-1638519922476-50688bb1f318?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
   background-size: cover;
   background-position: center;
   width: 100%;
   position: relative;
 }
-.OverlayBack{
+.OverlayBack {
   height: 60vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.532);
   position: absolute;
   top: 0px;
+}
+.TopBackContainerProject {
+  height: 60vh;
+
+  background-image: url(./projects-images//projectbg.avif);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  position: relative;
+}
+.NirmanProjectBtn {
+  background-color: #4f84c4;
+  color: black;
+  border: none;
 }
