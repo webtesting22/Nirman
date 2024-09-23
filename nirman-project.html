@@ -26,6 +26,16 @@
     </style>
     <script>
         
+    document.addEventListener("DOMContentLoaded", function () {
+        // Delay showing content for 10 seconds
+        setTimeout(function () {
+            // Hide loader
+            document.getElementById("loader").style.display = "none";
+
+            // Show content
+            document.getElementById("content").style.display = "block";
+        }, 2000); // 10 seconds delay
+    });
         function getQueryParam(name) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(name);
@@ -37,6 +47,10 @@
 
             if (contentParam === 'link1') {
                 contentDiv.innerHTML = `
+                 <div id="loader">
+        <img src="Nirmaan GROUP 2023 FINAL.png" />
+        <!-- <p class="method-2 " >You Dream We Build</p> -->
+    </div>
                 <section class="ftco-section" id="back-overlay">
                     <section style="background-color: transparent;">
             <div class="section-padding"></div>
@@ -91,7 +105,7 @@
                 </div>
             </div>
             <div class="container">
-                <div id="Section-title"><h1>Project <span>Details</span></h1><hr/></div>
+                <!--div id="Section-title"><h1>Project <span>Details</span></h1><hr/></div-->
                 <!--h2 id="Section-title">Project<span>Details</span></h2-->
                 <div class="ftco-section ftco-no-pt ftco-no-pb ftco-services-2" id="project-details">
                     <!-- <div class="container"> -->
@@ -317,9 +331,9 @@
             </div>
             
             <br><br>
- <div style="display:flex;justify-content:center">
-            <a href="./nirman-projects.html" class="download-btn">View More Projects</a>
-                </div>
+            <div style="display:flex;justify-content:center">
+                 <a href="./nirman-projects.html" class="download-btn">View More Projects</a>
+            </div>
 
         </div>
         <div class="section-padding"></div>
@@ -340,6 +354,7 @@
 <script>
     let isNavVisible = false;
 
+   
     function toggleNav() {
         const navbar = document.querySelector('.navigationBar');
         const navMenu = document.querySelector('.nav-menu');
@@ -378,12 +393,13 @@
                     <li><a href="./">Home</a></li>
                     <li><a href="./nirman-about.html">About Us</a></li>
                     <li><a href="./nirman-projects.html">All Projects</a></li>
-                    <li><a href="./nirman-contact.html">Contact Us</a></li>
+                    <!-- <li><a href="./nirman-contact.html">Contact Us</a></li> -->
                 </ul>
             </div>
 
+            
             <button class="nav-toggler" onclick="toggleNav()" style="border-radius: 8px;">
-                <span class="menu-icon"><i class='bx bx-menu'></i></span>
+                <i class='bx bx-menu' style="color: white;"></i>
             </button>
         </div>
 
@@ -391,19 +407,23 @@
             <div id="nav">
 
             </div>
-            <div id="home-back">
-
+            <!-- <div id="home-back">
+                
             </div>
             <div id="Home-text">
                 <p>
 
                     <span>
-                        Projects Details
+                        Project Details
                     </span>
                     &mdash; &mdash;
                 </p>
+            </div> -->
+            <div class="TopBackContainerProjectPage">
+                <div class="OverlayBackProjectPage">
+                    <h1 style="z-index: 10000;position: relative;top:50%;text-align: center;color: white;font-size: 50px;font-family:Roboto Condensed;">PROJECT DETAILS</h1> 
+                </div>
             </div>
-
         </section>
 
 

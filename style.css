@@ -55,12 +55,14 @@ section {
   font-size: 3rem;
   text-align: center;
   color: white;
-  /* font-family: "Roboto Condensed", sans-serif; */
+  font-family: "Roboto Condensed", sans-serif;
   letter-spacing: 5px;
+  color: rgb(0, 129, 199);
 }
 
 #Section-title h1 span {
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
+  font-size: 3rem;
   text-align: center;
   color: rgb(0, 129, 199);
   /* font-family: "Roboto Condensed", sans-serif; */
@@ -2183,4 +2185,20 @@ button {
   background-color: #4f84c4;
   color: black;
   border: none;
+}
+.TopBackContainerProjectPage{
+  height: 80vh;
+  background-image: url(./projects-images//menu\ back.jpg);
+
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  position: relative;
+}
+.OverlayBackProjectPage{
+  height: 80vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.532);
+  position: absolute;
+  top: 0px;
 }
