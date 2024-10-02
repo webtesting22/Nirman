@@ -44,6 +44,7 @@ var swiper = new Swiper("#js-swiper-hotels", {
   autoplay: {
     delay: 2000, // Autoplay every 5 seconds
   },
+  speed: 1000,
   breakpoints: {
     // When window width is <= 767px (for mobile)
     767: {
@@ -80,7 +81,8 @@ $.fn.jQuerySimpleCounter = function (options) {
       thisElement.text(settings.end + '+'); // Append the '+' after the counting ends
       if (settings.complete) { // Call the complete callback if it's provided
         settings.complete();
-      }}
+      }
+    }
   });
 };
 
@@ -114,10 +116,11 @@ const swiperQuiz = new Swiper(".animeslide", {
   // Optional parameters
   effect: "slide",
   loop: true,
-  speed: 900,
+  speed: 800, // Moderate speed for smooth transitions
   centeredSlides: true,
   autoplay: {
-    delay: 1500,
+    delay: 4000, // Increased delay for smooth viewing
+    disableOnInteraction: false, // Continue autoplay after interaction
   },
   pagination: {
     el: ".animeslide-pagination",
@@ -140,8 +143,12 @@ const swiperQuiz = new Swiper(".animeslide", {
     enabled: true,
     onlyInViewport: false
   },
-  runCallbacksOnInit: true
+  runCallbacksOnInit: true,
+  grabCursor: true, // Provides a better user experience with smooth interaction
+  slidesPerView: 'auto', // Ensures smooth sliding by dynamically adjusting the view
+  spaceBetween: 30, // Adds space between slides for smoothness
 });
+
 function changeColor(element) {
   // Remove background color from all anchor links
   var anchorLinks = document.querySelectorAll('.nav-pills a');
@@ -155,4 +162,3 @@ function changeColor(element) {
 
 
 
- 
