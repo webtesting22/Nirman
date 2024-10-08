@@ -601,6 +601,7 @@ input[type="checkbox"] {
   /* justify-content: space-between; */
   padding: 10px 45px;
   color: white;
+  min-height: 350px;
   border-radius: 10px;
 }
 
@@ -630,7 +631,9 @@ input[type="checkbox"] {
 
 .Team-member-name {
   font-size: 2rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "Raleway",sans-serif;
+  /* font-family: "Oswald", sans-serif; */
+
   font-family: 100;
   letter-spacing: 2px;
 }
@@ -652,7 +655,7 @@ input[type="checkbox"] {
 
 .Team-member-sub h4 {
   font-size: 1.5rem;
-  font-family: "Oswald", sans-serif;
+  /* font-family: "Oswald", sans-serif; */
   font-family: 100;
   letter-spacing: 2px;
 }
@@ -1437,7 +1440,7 @@ input[type="checkbox"] {
   text-decoration: none;
   color: white;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 200;
   transition: 0.3s;
   /* border-bottom: 1px solid rgb(0, 0, 0); */
 }
@@ -2209,6 +2212,9 @@ button {
   background-color: rgba(0, 0, 0, 0.532);
   position: absolute;
   top: 0px;
+}
+.OverlayBack h1{
+  font-family: "Raleway",sans-serif;
 }
 .TopBackContainerProject {
   height: 80vh;
