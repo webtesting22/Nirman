@@ -1114,11 +1114,11 @@ input[type="checkbox"] {
 #exTab1 .nav-tabs li a {
   text-decoration: none;
   color: rgb(255, 255, 255);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   background-color: #000000;
   padding: 5px 20px;
   border-radius: 3px;
-  font-family: "Titillium Web", sans-serif;
+  /* font-family: "Titillium Web", sans-serif; */
   font-weight: 500;
 
   transition: background-color 0.3s, color 0.3s;
@@ -1126,7 +1126,7 @@ input[type="checkbox"] {
 
 #exTab2 .tab-content,
 #exTab1 .tab-content {
-  margin: 2rem 0rem;
+  /* margin: 2rem 0rem; */
   /* background-color: red; */
   color: white;
 }
@@ -2204,14 +2204,14 @@ button {
   position: relative;
 }
 .OverlayBack {
-  height: 60vh;
+  height: 80vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.532);
   position: absolute;
   top: 0px;
 }
 .TopBackContainerProject {
-  height: 60vh;
+  height: 80vh;
 
   background-image: url(./projects-images//projectbg.avif);
   background-size: cover;

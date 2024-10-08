@@ -2,45 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nirmaan</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./Nirmaan GROUP 2023 FINAL.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/zekton" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/zekton" rel="stylesheet" />
 </head>
 
 <script>
     let isNavVisible = false;
 
     function toggleNav() {
-        const navbar = document.querySelector('.navigationBar');
-        const navMenu = document.querySelector('.nav-menu');
-        const menuIcon = document.querySelector('.menu-icon');
+        const navbar = document.querySelector(".navigationBar");
+        const navMenu = document.querySelector(".nav-menu");
+        const menuIcon = document.querySelector(".menu-icon");
 
         isNavVisible = !isNavVisible;
 
         if (isNavVisible) {
-            navbar.classList.add('nav-open');
-            navMenu.classList.add('open');
+            navbar.classList.add("nav-open");
+            navMenu.classList.add("open");
             menuIcon.innerHTML = "<i class='bx bx-window-close' ></i>";
         } else {
-            navbar.classList.remove('nav-open');
-            navMenu.classList.remove('open');
+            navbar.classList.remove("nav-open");
+            navMenu.classList.remove("open");
             menuIcon.innerHTML = "<i class='bx bx-menu'></i>";
         }
     }
 </script>
 
 <body>
-
     <div id="loader">
         <img src="Nirmaan GROUP 2023 FINAL.png" />
     </div>
@@ -50,11 +48,10 @@
         <p>#8C8A7D Grey</p>
     </div> -->
     <header>
-
         <div class="navigationBar">
             <div class="logo-container">
                 <a href="/">
-                    <img src="./Nirmaan GROUP 2023 FINAL.png" alt="Logo">
+                    <img src="./Nirmaan GROUP 2023 FINAL.png" alt="Logo" />
                 </a>
             </div>
 
@@ -68,35 +65,26 @@
                 </ul>
             </div>
 
-            <button class="nav-toggler" onclick="toggleNav()" style="border-radius: 8px;">
-                <i class='bx bx-menu' style="color: white;"></i>
+            <button class="nav-toggler" onclick="toggleNav()" style="border-radius: 8px">
+                <i class="bx bx-menu" style="color: white"></i>
             </button>
         </div>
 
         <section>
-            <div id="nav">
-
-            </div>
+            <div id="nav"></div>
             <section>
-                <div class="swiper animeslide" style="height: 100vh;">
+                <div class="swiper animeslide" style="height: 100vh">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper" id="swiper-home">
                         <!-- Slides -->
                         <div class="swiper-slide animeslide-slide"
-                            style="background-image: url(./projects-images/1.jpg);">
-                        </div>
+                            style="background-image: url(./projects-images/1.jpg)" ></div>
                         <div class="swiper-slide animeslide-slide"
-                            style="background-image: url(./projects-images/3.jpg);">
-
-                        </div>
+                            style="background-image: url(./projects-images/3.jpg)"></div>
                         <div class="swiper-slide animeslide-slide"
-                            style="background-image: url(./projects-images/4.jpg);">
-
-                        </div>
+                            style="background-image: url(./projects-images/4.jpg)"></div>
                         <div class="swiper-slide animeslide-slide"
-                            style="background-image: url(./projects-images/5.jpg);">
-
-                        </div>
+                            style="background-image: url(./projects-images/5.jpg)"></div>
                     </div>
                     <div class="flex animeslide-bottom">
                         <!-- <div class="cell small">
@@ -121,9 +109,7 @@
                     &mdash; &mdash;
                 </p>
             </div> -->
-
         </section>
-
     </header>
 
     <main>
@@ -131,18 +117,16 @@
             AOS.init();
         </script>
 
-
         <section id="Project-back" class="section-padding">
             <!-- <div class="section-padding"></div> -->
             <!-- <div class="section-padding"></div> -->
 
-            <div id="project-section-title">
+            <div id="project-section-title" data-aos="fade-up" data-aos-duration="1000">
                 <h1>Our <span>Projects</span></h1>
-                <hr>
+                <hr />
             </div>
             <div class="section-padding"></div>
-            <div id="project-section">
-
+            <div id="project-section" data-aos-duration="1000" data-aos="fade-up">
                 <div class="swiper" id="js-swiper-hotels">
                     <div class="swiper-wrapper">
                         <!-- ITEM 1 -->
@@ -150,13 +134,13 @@
                             <div class="c-swiper__text">
                                 <div class="c-swiper__title">Nirmaan Rejoice</div>
 
-                                <a href="./nirman-project.html?content=link1"> <button class="NirmanBtn">View
-                                        Details</button>
+                                <a href="./nirman-project.html?content=link1">
+                                    <button class="NirmanBtn">View Details</button>
                                 </a>
                             </div>
 
                             <div class="c-swiper__image-container">
-                                <img src="./projects-images/nirman-habitat.jpeg" alt="nirman-habitat-img">
+                                <img src="./projects-images/nirman-habitat.jpeg" alt="nirman-habitat-img" />
                             </div>
                         </div>
 
@@ -169,21 +153,21 @@
                             </div>
 
                             <div class="c-swiper__image-container">
-                                <img src="./projects-images/nirman-greens.jpeg" alt="nirman-greens-img">
+                                <img src="./projects-images/nirman-greens.jpeg" alt="nirman-greens-img" />
                             </div>
                         </div>
 
                         <!-- ITEM 3 -->
                         <div class="swiper-slide">
                             <div class="c-swiper__text">
-                                <div class="c-swiper__title">Ivory <br>Springs</div>
+                                <div class="c-swiper__title">Ivory <br />Springs</div>
 
                                 <a href="#"><button class="NirmanBtn">View Details</button></a>
                             </div>
 
                             <div class="c-swiper__image-container">
                                 <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    alt="nirman-ivory-springs-img">
+                                    alt="nirman-ivory-springs-img" />
                             </div>
                         </div>
 
@@ -197,7 +181,7 @@
 
                             <div class="c-swiper__image-container">
                                 <img src="https://images.pexels.com/photos/1591361/pexels-photo-1591361.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                                    alt="nirman-ivory-springs-img">
+                                    alt="nirman-ivory-springs-img" />
                             </div>
                         </div>
                     </div>
@@ -207,7 +191,6 @@
             <div class="section-padding"></div>
             <!-- <div class="section-padding"></div> -->
         </section>
-
     </main>
 
     <footer>
@@ -218,7 +201,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="footer-logo">
-                            <a href="./index.html"><img src="./Nirmaan GROUP 2023 FINAL.png" alt=""></a>
+                            <a href="./index.html"><img src="./Nirmaan GROUP 2023 FINAL.png" alt="" /></a>
                         </div>
                         <div class="Footer-social-links">
                             <li><a href="./index.html">Home</a></li>
@@ -229,29 +212,31 @@
                         </div>
 
                         <div class="social-links">
-                            <li><a href=""><i class='bx bxl-instagram-alt'></i></a></li>
-                            <li><a href=""><i class='bx bxl-meta'></i></a></li>
-                            <li><a href=""><i class='bx bxl-linkedin-square'></i></a></li>
-
+                            <li>
+                                <a href=""><i class="bx bxl-instagram-alt"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="bx bxl-meta"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="bx bxl-linkedin-square"></i></a>
+                            </li>
                         </div>
                     </div>
                 </div>
-                <hr>
+                <hr />
                 <!-- <div class="section-padding"></div> -->
-                <br>
+                <br />
                 <div class="copyright-text">
                     <span>Copyright © All rights reserved by<a href="https://outleadsolutions.com/" target="_blank">
                             Outlead solution.</a></span>
                 </div>
             </div>
             <!-- <div class="section-padding"></div> -->
-
         </div>
-
     </footer>
 
     <script>
-
         document.addEventListener("DOMContentLoaded", function () {
             // Delay showing content for 10 seconds
             setTimeout(function () {
@@ -264,9 +249,6 @@
         });
     </script>
 
-
-
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -274,15 +256,14 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="./script.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> -->
-
-
-
-
 </body>
 
 </html>

@@ -10,9 +10,14 @@
     <!-- <link rel="stylesheet" href="./about-us.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
         .swiper {
             width: 100%;
@@ -96,15 +101,17 @@
     <main>
         <div class="TopBackContainerProject">
             <div class="OverlayBack">
-                <h1 style="z-index: 5;position: relative;top: 50%;text-align: center;color: white;font-size: 50px;font-family:Roboto Condensed;">ALL PROJECTS</h1> 
+                <h1
+                    style="z-index: 5;position: relative;top: 50%;text-align: center;color: white;font-size: 50px;font-family:Roboto Condensed;">
+                    PROJECTS</h1>
             </div>
         </div>
         <section style="  background-color: rgb(21, 21, 21);" class="section-padding">
             <div class="section-padding"></div>
             <div class="section-padding"></div>
             <div class="container">
-                <div id="Section-title">
-                    <h1>Residential <span>Projects</span></h1>
+                <div id="Section-title" data-aos-duration="1000" data-aos="fade-up">
+                    <h1> <span>PROJECTS</span></h1>
                     <hr>
                 </div>
 
@@ -113,22 +120,23 @@
 
                     <div id="exTab2">
                         <ul class="nav nav-tabs">
-                            <li class="active">
-                                <a href="#1a" data-toggle="tab" onclick="changeTabColor(this)">All projects</a>
+                            <li class="active" data-aos-duration="1000" data-aos="fade-right">
+                                <a href="#1a" data-toggle="tab" onclick="changeTabColor(this)">PROJECTS</a>
                             </li>
-                            <li>
-                                <a href="#2a" data-toggle="tab" onclick="changeTabColor(this)">Ongoing</a>
+                            <li data-aos-duration="1000" data-aos="zoom-in">
+                                <a href="#2a" data-toggle="tab" onclick="changeTabColor(this)">ONGOING</a>
                             </li>
-                            <li>
-                                <a href="#3a" data-toggle="tab" onclick="changeTabColor(this)">Completed</a>
+                            <li data-aos-duration="1000" data-aos="fade-left">
+                                <a href="#3a" data-toggle="tab" onclick="changeTabColor(this)">COMPLETED</a>
                             </li>
                         </ul>
 
-                        <div class="tab-content">
+                        <div class="tab-content" data-aos="fade-up" data-aos-duration="2000">
                             <div class="tab-pane active" id="1a">
                                 <div class="swiper mySwiper">
                                     <div class="control">
-                                        <div class="swiper-button-prev tabprev1" id="prev"><span></span></div>
+                                        <div class="swiper-button-prev tabprev1" onclick="console.log('button clicked')"
+                                            id="prev"><span></span></div>
                                         <div class="swiper-button-next tabnext1" id="next"><span></span></div>
 
                                     </div>
@@ -257,9 +265,10 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%;">
                                                 <div style="overflow: hidden;">
-                                                   <!-- <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                    <!-- <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                     class="card-img-top" alt="..."> -->
-                                                    <img src="./projects-images/nirman-habitat1.jpeg" class="card-img-top" alt="..."/>
+                                                    <img src="./projects-images/nirman-habitat1.jpeg"
+                                                        class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Nirmaan <span>Rejoice</span></h5>
@@ -295,7 +304,8 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%;">
                                                 <div style="overflow: hidden;">
-                                                    <img src="https://images.pexels.com/photos/1591361/pexels-photo-1591361.jpeg?auto=compress&cs=tinysrgb&w=1600" class="card-img-top" alt="...">
+                                                    <img src="https://images.pexels.com/photos/1591361/pexels-photo-1591361.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                                                        class="card-img-top" alt="...">
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Ivory <span>Orchards</span></h5>
@@ -307,7 +317,8 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%;">
                                                 <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+                                                    <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                        class="card-img-top" alt="...">
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Ivory <span>Springs</span></h5>
@@ -387,9 +398,10 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%;">
                                                 <div style="overflow: hidden;">
-                                                   <!-- <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                    <!-- <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                     class="card-img-top" alt="..."> -->
-                                                    <img src="./projects-images/nirman-habitat1.jpeg" class="card-img-top" alt="..."/>
+                                                    <img src="./projects-images/nirman-habitat1.jpeg"
+                                                        class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">Nirmaan <span>Rejoice</span></h5>
@@ -468,36 +480,36 @@
                                                 </div>
                                             </div>
                                         </div>
-                                
-                                            <div class="swiper-slide">
-                                                <div class="card" style="width: 100%;">
-                                                    <div style="overflow: hidden;">
-                                                        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                            class="card-img-top" alt="...">
-                                                    </div>
-    
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Nirmaan <span>Heights</span></h5>
-                                                        <p class="card-text">Residential, Commercial</p>
-                                                        <!--a href="#" class="btn project-card-btn">Read More</a-->
-                                                    </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="card" style="width: 100%;">
+                                                <div style="overflow: hidden;">
+                                                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                        class="card-img-top" alt="...">
+                                                </div>
+
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Nirmaan <span>Heights</span></h5>
+                                                    <p class="card-text">Residential, Commercial</p>
+                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
                                                 </div>
                                             </div>
-                                            <div class="swiper-slide">
-                                                <div class="card" style="width: 100%;">
-                                                    <div style="overflow: hidden;">
-                                                        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                            class="card-img-top" alt="...">
-                                                    </div>
-    
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Nirmaan <span>Row House</span></h5>
-                                                        <p class="card-text">Residential, Commercial</p>
-                                                        <!--a href="#" class="btn project-card-btn">Read More</a-->
-                                                    </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card" style="width: 100%;">
+                                                <div style="overflow: hidden;">
+                                                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                        class="card-img-top" alt="...">
+                                                </div>
+
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Nirmaan <span>Row House</span></h5>
+                                                    <p class="card-text">Residential, Commercial</p>
+                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
                                                 </div>
                                             </div>
-                                        
+                                        </div>
+
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%;">
                                                 <div style="overflow: hidden;">
@@ -694,24 +706,24 @@
                 <!-- <div class="section-padding"></div> -->
             </div>
             <div class="container">
-                <div id="Section-title">
-                    <h1>Commercial <span>Projects</span></h1>
+                <div id="Section-title" data-aos="fade-up" data-aos-duration="1000">
+                    <h1> <span>PROJECTS</span></h1>
                     <hr>
                 </div>
                 <div class="section-padding"></div>
                 <div id="exTab1">
                     <ul class="nav nav-tabs">
-                        <li class="active">
-                            <a href="#1b" data-toggle="tab" onclick="changeTabColor(this)">All projects</a>
+                        <li class="active" data-aos="fade-right" data-aos-duration="1000">
+                            <a href="#1b" data-toggle="tab" onclick="changeTabColor(this)">PROJECTS</a>
                         </li>
-                        <li>
-                            <a href="#2b" data-toggle="tab" onclick="changeTabColor(this)">Ongoing</a>
+                        <li data-aos="zoom-in" data-aos-duration="1000">
+                            <a href="#2b" data-toggle="tab" onclick="changeTabColor(this)">ONGOING</a>
                         </li>
-                        <li>
-                            <a href="#3b" data-toggle="tab" onclick="changeTabColor(this)">Completed</a>
+                        <li data-aos="fade-left" data-aos-duration="1000">
+                            <a href="#3b" data-toggle="tab" onclick="changeTabColor(this)">COMPLETED</a>
                         </li>
                     </ul>
-                    <div class="tab-content">
+                    <div class="tab-content" data-aos="fade-up" data-aos-duration="1000">
                         <div class="tab-pane active" id="1b">
 
                             <div class="swiper mySwiper4">
@@ -779,7 +791,8 @@
                                             <div style="overflow: hidden;">
                                                 <!-- <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                     class="card-img-top" alt="..."> -->
-                                                    <img src="./projects-images/nirman-habitat1.jpeg" class="card-img-top" alt="..." />
+                                                <img src="./projects-images/nirman-habitat1.jpeg" class="card-img-top"
+                                                    alt="..." />
                                             </div>
                                             <div class="card-body">
                                                 <h5 class="card-title">Nirmaan <span>Rejoice</span></h5>
@@ -1064,7 +1077,7 @@
                                     <div class="swiper-button-next tabnext6" id="next"><span></span></div>
                                 </div>
                                 <div class="swiper-wrapper">
-                                     <div class="swiper-slide">
+                                    <div class="swiper-slide">
                                         <div class="card" style="width: 100%;">
                                             <div style="overflow: hidden;">
                                                 <img src="https://images.unsplash.com/photo-1506749547535-fe88ffa57a7a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -1078,7 +1091,7 @@
                                                 <!-- <a href="#" class="btn project-card-btn">Read More</a> -->
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div>
                                     <div class="swiper-slide">
                                         <div class="card" style="width: 100%;">
                                             <div style="overflow: hidden;">
@@ -1133,7 +1146,7 @@
                                             </div>
                                             <div class="card-body">
                                                 <h5 class="card-title">Akshay <span>Apartment</span></h5>
-                                                <p class="card-text">Commercial 
+                                                <p class="card-text">Commercial
                                                 </p>
                                                 <!-- <a href="#" class="btn project-card-btn">Read More</a> -->
                                             </div>
@@ -1353,29 +1366,37 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="./script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
     <script>
         var swiper2 = new Swiper(".mySwiper2", {
             slidesPerView: 1,
             loop: true,
             spaceBetween: 30,
-            freeMode: true,
+            // freeMode: true,
             // pagination: {
             //     el: ".swiper-pagination",
             //     clickable: true,
             // },
-            // navigation:true,
+            observer: true,  // Add this
+            observeParents: true,  // Add this
+
             navigation: {
                 nextEl: ".tabnext2",
                 prevEl: ".tabprev2",
             },
             autoplay: {
-                delay: 4000,
+                delay: 3000,
+                disableOnInteraction: false,
             },
             breakpoints: {
                 768: {
@@ -1388,18 +1409,21 @@
             slidesPerView: 1,
             loop: true,
             spaceBetween: 30,
-            freeMode: true,
+            // freeMode: true,
             // pagination: {
             //     el: ".swiper-pagination",
             //     clickable: true,
             // },
-            //    navigation:true,
+            observer: true,  // Add this
+            observeParents: true,  // Add this
+            navigation: true,
             navigation: {
                 nextEl: ".tabnext3",
                 prevEl: ".tabprev3",
             },
             autoplay: {
-                delay: 4000,
+                delay: 3000,
+                disableOnInteraction: false,
             },
             breakpoints: {
                 768: {
@@ -1417,13 +1441,14 @@
             //     el: ".swiper-pagination",
             //     clickable: true,
             // },
-            //    navigation:true,
+            navigation: true,
             navigation: {
                 nextEl: ".tabnext4",
                 prevEl: ".tabprev4",
             },
             autoplay: {
-                delay: 4000,
+                delay: 3000,
+                disableOnInteraction: false,
             },
             breakpoints: {
                 768: {
@@ -1441,13 +1466,14 @@
             //     el: ".swiper-pagination",
             //     clickable: true,
             // },
-            //    navigation:true,
+            navigation: true,
             navigation: {
                 nextEl: ".tabnext5",
                 prevEl: ".tabprev5",
             },
             autoplay: {
-                delay: 4000,
+                delay: 3000,
+                disableOnInteraction: false,
             },
             breakpoints: {
                 768: {
@@ -1466,13 +1492,14 @@
             //     el: ".swiper-pagination",
             //     clickable: true,
             // },
-            // navigation:true,
+
             navigation: {
                 nextEl: ".tabnext6",
                 prevEl: ".tabprev6",
             },
             autoplay: {
-                delay: 4000,
+                delay: 3000,
+                disableOnInteraction: false,
             },
             breakpoints: {
                 768: {
@@ -1482,24 +1509,28 @@
             },
         });
 
-        var swiper = new Swiper(".mySwiper", {
+        var swiper1 = new Swiper(".mySwiper", {
             slidesPerView: 1,
             loop: true,
             spaceBetween: 30,
-            freeMode: true,
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // },
+            // freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            observer: true,  // Add this
+            observeParents: true,  // Add this
+
             navigation: {
 
-                // nextEl: ".swiper-button-next",
+
                 nextEl: ".tabnext1",
                 prevEl: ".tabprev1",
             },
-            // navigation:true,
+
             autoplay: {
                 delay: 3000, // Set autoplay delay to 3 seconds
+                disableOnInteraction: false,
             },
             breakpoints: {
                 // Add breakpoints for different screen sizes
@@ -1510,6 +1541,7 @@
                 // Add more breakpoints if needed
             },
         });
+        swiper1.update();
         function changeTabColor(clickedTab) {
             // Reset styles for all tabs
             var tabs = document.querySelectorAll('.nav-tabs li a');
@@ -1522,6 +1554,17 @@
             clickedTab.style.backgroundColor = '#your-desired-color';
             clickedTab.style.backgroundColor = 'Bondi Blue';
         }
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            var target = $(e.target).attr("href");
+
+            if (target === "#1a") {
+                swiper1.update();  // Reinitialize or update Swiper instance for tab #1a
+            } else if (target === "#2a") {
+                swiper2.update();  // For tab #2a
+            } else if (target === "#3a") {
+                swiper3.update();  // For tab #3a
+            }
+        });
     </script>
     <script>
 
@@ -1535,6 +1578,9 @@
                 document.getElementById("content").style.display = "block";
             }, 2000); // 10 seconds delay
         });
+
+
+
     </script>
 
 

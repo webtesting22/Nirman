@@ -114,7 +114,9 @@ $('#number2').jQuerySimpleCounter({ end: 1500, duration: 6000 });
 // })()
 const swiperQuiz = new Swiper(".animeslide", {
   // Optional parameters
-  effect: "slide",
+  // effect: "slide",
+  effect:"slide",
+  // crossfade:"false",
   loop: true,
   speed: 800, // Moderate speed for smooth transitions
   centeredSlides: true,
