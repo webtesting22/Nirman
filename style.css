@@ -382,6 +382,7 @@ figure.snip1163.hover figcaption p {
   flex-direction: column;
   justify-content: space-around;
   transition: opacity 350ms ease;
+  font-family: 'Raleway',sans-serif;
 }
 
 #project-section .c-swiper__text .c-swiper__title {
@@ -617,6 +618,7 @@ input[type="checkbox"] {
     margin: 10px 0px;
     color: white;
     border-radius: 10px;
+    min-height: 0px;
   }
 }
 
@@ -631,10 +633,10 @@ input[type="checkbox"] {
 
 .Team-member-name {
   font-size: 2rem;
-  font-family: "Raleway",sans-serif;
+  font-family: "Raleway", sans-serif;
   /* font-family: "Oswald", sans-serif; */
 
-  font-family: 100;
+  /* font-family: 100; */
   letter-spacing: 2px;
 }
 
@@ -1343,6 +1345,8 @@ input[type="checkbox"] {
 /* ------------------scroll bar css  */
 
 #Footer {
+  display: flex;
+  flex-direction: column;
   background-color: black;
   /* background-color: #282828; */
   padding: 30px 0px;
@@ -1763,7 +1767,7 @@ input[type="checkbox"] {
   z-index: 57667656757755;
   overflow: hidden;
   font-size: 400px;
-  font-family: "Dancing Script", cursive;
+  /* font-family: "Dancing Script", cursive; */
   font-optical-sizing: auto;
 
   font-style: normal;
@@ -1810,7 +1814,7 @@ input[type="checkbox"] {
 .form-horizontal {
   /*float: left;*/
   max-width: 400px;
-  font-family: "Lato";
+  /* font-family: "Lato"; */
   font-weight: 400;
 }
 
@@ -1935,43 +1939,6 @@ textarea {
   color: black;
 }
 
-.StructuraHeading {
-  text-align: center;
-  /* font-size: 1rem; */
-  color: white;
-  margin: 0;
-  padding: 20px;
-  background-color: black;
-}
-
-.StructuraHeading a {
-  font-family: "Roboto Condensed";
-  color: rgb(0, 129, 199);
-  padding: 5px;
-  /* color: #18272F; */
-  position: relative;
-  text-decoration: none;
-}
-
-.StructuraHeading a::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
-  background-color: blue;
-  bottom: 0;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-.StructuraHeading a:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
-}
-
 @keyframes textShine {
   0% {
     background-position: 0% 50%;
@@ -1979,18 +1946,6 @@ textarea {
 
   100% {
     background-position: 100% 50%;
-  }
-}
-
-@media (max-width: 990px) {
-  .StructuraHeading {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .StructuraHeading {
-    font-size: 1.8rem;
   }
 }
 
@@ -2213,8 +2168,8 @@ button {
   position: absolute;
   top: 0px;
 }
-.OverlayBack h1{
-  font-family: "Raleway",sans-serif;
+.OverlayBack h1 {
+  font-family: "Raleway", sans-serif;
 }
 .TopBackContainerProject {
   height: 80vh;
@@ -2246,24 +2201,141 @@ button {
   position: absolute;
   top: 0px;
 }
-#project-section-title h1{
-  
+#project-section-title h1 {
   opacity: 1;
   margin: auto;
   border-radius: 10px;
   font-size: 3rem;
   text-align: center;
-  color: white ; 
+  color: white;
   font-family: "Raleway", sans-serif;
   letter-spacing: 7px;
   font-size: 3rem;
   text-align: center;
 }
-#project-section-title hr{
-  background-color:white;
+#project-section-title hr {
+  background-color: white;
   opacity: 1;
   border: 1px solid white;
   width: 15%;
   margin: auto;
   border-radius: 10px;
+}
+.qualitiesCards{
+  padding: 30px 150px;
+}
+.qualityCard{
+  background-color: #343434;
+  color: white;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  border-top:2px solid #0081C7;
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  min-height: 350px;
+  /* width: 500px; */
+}
+.qualityCard h4{
+  /* padding:5px; */
+  font-size: 1.8rem; /* Adjust heading size */
+  margin: 15px 0; /* Spacing between title and image */
+  font-weight: 600;
+  font-family: 'Raleway',sans-serif;
+}
+.qualityCard p{
+  font-size: 1.1rem;
+  margin-top: 10px;
+  line-height: 1.6; /* Improve readability with proper line height */
+  padding: 0 15px; /* Padding to ensure text doesn’t touch card edges */
+}
+.qualityCard img{
+  width: 50px;
+  padding: 15px 0;
+}
+.ContactUsContainer {
+  position: relative;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ContactUsContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("./projects-images/01.jpg") no-repeat center center;
+  background-size: cover;
+  opacity: 0.5; /* Slightly increase opacity for more visibility */
+  z-index: 1;
+}
+
+.ContentContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Align text in the center */
+  color: white;
+  font-family: 'Raleway',sans-serif;
+}
+
+.ContactUsBtn {
+  background: transparent;
+  border: 2px solid #0081C7;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease-in-out; /* Ensure smooth transitions */
+}
+.ContactUsBtn a{
+  text-decoration: none;
+  
+}
+.ContactUsBtn:hover{
+  transform: scale(1.1);
+  background-color: #0081C7;
+}
+.ContactUsBtn:hover a {
+  /* background-color: #bc7742; */
+  
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .ContentContainer {
+    font-size: 1.4rem;
+    padding: 0 20px; /* Add padding to prevent content from shrinking too much */
+  }
+}
+
+@media (max-width: 768px) {
+  .qualitiesCards{
+    padding: 30px 0;
+  }
+  .qualityCard {
+    margin: 15px 0;
+    padding: 20px;
+    min-height: 300px;
+  }
+
+  .qualityCard h4 {
+    font-size: 1.5rem;
+  }
+
+  .qualityCard img {
+    width: 50px;
+  }
 }
