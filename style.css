@@ -14,6 +14,7 @@ body {
   margin: 0px;
   background-color: black;
   overflow: auto;
+  font-family: 'Raleway',sans-serif;
   /* font-family: "Zekton Rg", sans-serif !important; */
   /* height: 100vh; */
 }
@@ -2350,4 +2351,23 @@ button {
   .qualityCard img {
     width: 50px;
   }
+}
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.4) !important; /* Lightens the backdrop */
+}
+.modal-title {
+  font-family: 'Raleway',sans-serif;
+}
+.modal-content{
+  background-color: #383838 !important;
+  color: white !important;
+}
+.modal-header .close{
+  color: white !important;
+}
+a:not([href]):not([tabindex]){
+  color: white !important;
+}
+a:not([href]):not([tabindex]):hover{
+  color: black !important;
 }

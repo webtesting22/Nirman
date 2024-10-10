@@ -1,6 +1,7 @@
 #single-project-title h1 {
     font-size: 6rem;
     color: rgb(131, 131, 131);
+    font-family: 'Raleway',sans-serif;
     /* font-family: 'Roboto Condensed', sans-serif; */
     text-align: center;
 }
@@ -27,6 +28,7 @@
 }
 
 .project-title-container h1 {
+    font-family: 'Raleway',sans-serif;
     font-size: 2rem;
     color: rgb(255, 255, 255);
     /* border: 3px solid rgb(51, 51, 51);; */
@@ -144,7 +146,7 @@
 .ftco-services-2 .services .media-body h3 {
     font-size: 24px;
     font-weight: 500;
-    /* font-family: "Roboto", Arial, sans-serif; */
+    font-family: "Raleway", Arial, sans-serif;
     color: #fff;
 }
 
@@ -352,6 +354,7 @@
 }
 
 .project-box-title {
+    font-family: 'Raleway',sans-serif;
     color: rgb(131, 131, 131);
     font-weight: 500;
     font-size: 40px;

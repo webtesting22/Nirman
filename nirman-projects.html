@@ -2,21 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nirmaan</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./Nirmaan GROUP 2023 FINAL.png" />
     <!-- <link rel="stylesheet" href="./about-us.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
         .swiper {
@@ -41,29 +45,54 @@
             object-fit: cover;
         }
     </style>
-
 </head>
 
 <script>
     let isNavVisible = false;
 
     function toggleNav() {
-        const navbar = document.querySelector('.navigationBar');
-        const navMenu = document.querySelector('.nav-menu');
-        const menuIcon = document.querySelector('.menu-icon');
+        const navbar = document.querySelector(".navigationBar");
+        const navMenu = document.querySelector(".nav-menu");
+        const menuIcon = document.querySelector(".menu-icon");
 
         isNavVisible = !isNavVisible;
 
         if (isNavVisible) {
-            navbar.classList.add('nav-open');
-            navMenu.classList.add('open');
+            navbar.classList.add("nav-open");
+            navMenu.classList.add("open");
             menuIcon.innerHTML = "<i class='bx bx-window-close' ></i>";
         } else {
-            navbar.classList.remove('nav-open');
-            navMenu.classList.remove('open');
+            navbar.classList.remove("nav-open");
+            navMenu.classList.remove("open");
             menuIcon.innerHTML = "<i class='bx bx-menu'></i>";
         }
     }
+</script>
+<script>
+    $(document).ready(function () {
+        $(".project-card-btn").on("click", function (event) {
+            // Log that the button was clicked
+            console.log("Button clicked:", this);
+
+            // Prevent the default action of the link
+            event.preventDefault();
+
+            // Check if modal data attributes exist
+            var projectName = $(this).data("project-name");
+            var projectLocation = $(this).data("project-location");
+            var projectType = $(this).data("project-type");
+            var projectYear = $(this).data("project-year");
+            var projectSize = $(this).data("project-size");
+            var projectValue = $(this).data("project-value");
+            // Ensure that the modal updates with the right data
+            $("#modalProjectName").text(projectName);
+            $("#modalProjectType").text(projectType);
+            $("#modalProjectLocation").text(projectLocation);
+            $("#modalProjectYear").text(projectYear);
+            $("#modalProjectSize").text(projectSize);
+            $("#modalProjectValue").text(projectValue);
+        });
+    });
 </script>
 
 <body>
@@ -72,14 +101,13 @@
         <!-- <p class="method-2 " >You Dream We Build</p> -->
     </div>
 
-
     <!-- <a href="" class="btn-whatsapp-pulse btn-whatsapp-pulse-border">
         <i class="fab fa-whatsapp"></i>
     </a> -->
     <div class="navigationBar">
         <div class="logo-container">
             <a href="/">
-                <img src="./Nirmaan GROUP 2023 FINAL.png" alt="Logo">
+                <img src="./Nirmaan GROUP 2023 FINAL.png" alt="Logo" />
             </a>
         </div>
 
@@ -93,31 +121,37 @@
             </ul>
         </div>
 
-        <button class="nav-toggler" onclick="toggleNav()" style="border-radius: 8px;">
-            <i class='bx bx-menu' style="color: white;"></i>
+        <button class="nav-toggler" onclick="toggleNav()" style="border-radius: 8px">
+            <i class="bx bx-menu" style="color: white"></i>
         </button>
     </div>
 
     <main>
         <div class="TopBackContainerProject">
             <div class="OverlayBack">
-                <h1
-                    style="z-index: 5;position: relative;top: 50%;text-align: center;color: white;font-size: 50px;">
-                    PROJECTS</h1>
+                <h1 style="
+              z-index: 5;
+              position: relative;
+              top: 50%;
+              text-align: center;
+              color: white;
+              font-size: 50px;
+            ">
+                    PROJECTS
+                </h1>
             </div>
         </div>
-        <section style="  background-color: rgb(21, 21, 21);" class="section-padding">
+        <section style="background-color: rgb(21, 21, 21)" class="section-padding">
             <div class="section-padding"></div>
             <div class="section-padding"></div>
             <div class="container">
                 <div id="Section-title" data-aos-duration="1000" data-aos="fade-up">
-                    <h1> <span>PROJECTS</span></h1>
-                    <hr>
+                    <h1><span>PROJECTS</span></h1>
+                    <hr />
                 </div>
 
                 <div class="section-padding"></div>
                 <div class="container">
-
                     <div id="exTab2">
                         <ul class="nav nav-tabs">
                             <li class="active" data-aos-duration="1000" data-aos="fade-up">
@@ -136,749 +170,658 @@
                                 <div class="swiper mySwiper">
                                     <div class="control">
                                         <div class="swiper-button-prev tabprev1" onclick="console.log('button clicked')"
-                                            id="prev"><span></span></div>
-                                        <div class="swiper-button-next tabnext1" id="next"><span></span></div>
-
+                                            id="prev">
+                                            <span></span>
+                                        </div>
+                                        <div class="swiper-button-next tabnext1" id="next">
+                                            <span></span>
+                                        </div>
                                     </div>
                                     <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">
+                                                        Nirmaan<span> Satva</span>
+                                                    </h5>
+                                                    <!-- <p class="card-text">Residential</p> -->
+                                                    <p class="card-text">Adalaj</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Satva"
+                                                        data-project-location="Adalaj" data-project-size="Not available"
+                                                        data-project-type="Residential, Commercial"
+                                                        
+                                                        data-project-year="2019" data-project-value="120 Crores">Read
+                                                        More</a>
+                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Corporate Office</span>
+                                                    </h5>
+                                                    <!-- <p class="card-text">Residential, Commercial</p> -->
+                                                    <p class="card-text">S.G. Highway</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal"
+                                                        data-project-name="Nirmaan Corporate Office"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-size="Not available"
+                                                        data-project-year="2019" data-project-location="S.G. Highway"
+                                                        data-project-value="20 Crores">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Greens</span>
+                                                    </h5>
+                                                    <!-- <p class="card-text">Residential, Commercial</p> -->
+                                                    <p class="card-text">Prantij Highway</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Greens"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-size="Not available"
+                                                        data-project-year="2019" data-project-location="Prantij Highway"
+                                                        data-project-value="25 Crores">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Rejoice</span>
+                                                    </h5>
+                                                    <p class="card-text">Jagatpur</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Rejoice"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-year="2018" data-project-location="Jagatpur"
+                                                        data-project-size="210 flats and 20 shops">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
 
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="...">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top"
+                                                        alt="Project Image" />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan<span> Flats</span></h5>
-                                                    <p class="card-text">Residential</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Lifestyle</span>
+                                                    </h5>
+                                                    <p class="card-text">Chenpur</p>
+                                                    <!-- Button for modal trigger -->
+                                                    <!-- Uncomment if needed -->
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-project-location="Chenpur" data-target="#projectModal"
+                                                        data-project-name="Nirmaan Lifestyle"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-year="2013"
+                                                        data-project-size="120 flats and 30 shops"
+                                                        data-project-value="50 Crores">Read More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Modal Structure -->
+
+                                        <div class="swiper-slide">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Homes</span>
+                                                    </h5>
+                                                    <p class="card-text">Sattadhar</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Homes"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="Sattadhar" data-project-year="2002"
+                                                        data-project-size="100 flats"
+                                                        data-project-value="35 Crores">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="...">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Complex</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Complex</span>
+                                                    </h5>
+                                                    <p class="card-text">Chanakyapuri</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Complex"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-year="2003" data-project-location="Chanakyapuri"
+                                                        data-project-size="400 flats and 40 shops"
+                                                        data-project-value="25 Crores">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="...">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./projects-images/nirman-habitat1.jpeg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Tower</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Habitat</span>
+                                                    </h5>
+                                                    <p class="card-text">Ghatlodia</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal"
+                                                        data-project-name="Nirmaan Habitat"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="Ghatlodia" data-project-value="25 Crores"
+                                                        data-project-size="48 flats" data-project-year="2010">Read
+                                                        More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="...">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Tenaments</span></h5>
-                                                    <p class="card-text">Residential</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Tower</span>
+                                                    </h5>
+                                                    <p class="card-text">Sattadhar</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Tower"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="Sattadhar"
+                                                        data-project-size="78 flats and 12 shops"
+                                                        data-project-value="15 Crores" data-project-year="1995">Read
+                                                        More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="...">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Heights</span></h5>
-                                                    <p class="card-text">Residential</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Bungalows</span>
+                                                    </h5>
+                                                    <p class="card-text">S.G. Highway</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal"
+                                                        data-project-name="Nirmaan Bungalows"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="S.G. Highway"
+                                                        data-project-size="Not available" data-project-value="5 Crores"
+                                                        data-project-year="2005">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="...">
-                                                </div>
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Row House</span></h5>
-                                                    <p class="card-text">Residential</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="...">
-                                                </div>
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>House</span></h5>
-                                                    <p class="card-text">Residential</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="...">
-                                                </div>
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Satva</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="...">
-                                                </div>
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Akshay <span>Apartment</span></h5>
-                                                    <p class="card-text">Residential</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="...">
-                                                </div>
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Niti <span>Apartment</span></h5>
-                                                    <p class="card-text">Residential</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <!-- <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                    class="card-img-top" alt="..."> -->
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
                                                     <img src="./projects-images/nirman-habitat1.jpeg"
                                                         class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Rejoice</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Twins</span>
+                                                    </h5>
+                                                    <p class="card-text">S.G. Highway</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Twins"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="S.G. Highway"
+                                                        data-project-size="Not available" data-project-value="20 Crores"
+                                                        data-project-year="2003">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="...">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Lifestyle</span></h5>
-                                                    <p class="card-text">Residential</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Sandipani <span>Hostel</span>
+                                                    </h5>
+                                                    <p class="card-text">Gota</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Sandipani Hostel"
+                                                        data-project-type="Residential"
+                                                        data-project-location="Gota" data-project-value="12 Crores"
+                                                        data-project-size="Not available" data-project-year="2005">Read
+                                                        More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="...">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Twins Bunglows</span></h5>
-                                                    <p class="card-text">Residential</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>House</span>
+                                                    </h5>
+                                                    <p class="card-text">Ashram Road</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan House"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="Ashram Road"
+                                                        data-project-size="Not available" data-project-value="3 Crores"
+                                                        data-project-year="2000">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
                                                     <img src="https://images.pexels.com/photos/1591361/pexels-photo-1591361.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                                                        class="card-img-top" alt="...">
+                                                        class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Ivory <span>Orchards</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Ivory <span>Orchards</span>
+                                                    </h5>
+                                                    <p class="card-text">Shilaj</p>
+
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Ivory Orchards"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="Shilaj" data-project-size="Not available"
+                                                        data-project-value="Not available" data-project-year="2019">Read
+                                                        More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
                                                     <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
+                                                        class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Ivory <span>Springs</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Ivory <span>Springs</span>
+                                                    </h5>
+                                                    <p class="card-text">Location Not Available</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Ivory Springs"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="Not available"
+                                                        data-project-size="Not available"
+                                                        data-project-value="Not available" data-project-year="2013">Read
+                                                        More</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="swiper-pagination"></div> -->
-
                                 </div>
-
-
                             </div>
                             <div class="tab-pane" id="2a">
                                 <div class="swiper mySwiper2">
                                     <div class="control">
-                                        <div class="swiper-button-prev tabprev2" id="prev"><span></span></div>
-                                        <div class="swiper-button-next tabnext2" id="next"><span></span></div>
-
+                                        <div class="swiper-button-prev tabprev2" id="prev">
+                                            <span></span>
+                                        </div>
+                                        <div class="swiper-button-next tabnext2" id="next">
+                                            <span></span>
+                                        </div>
                                     </div>
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
-
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Complex</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
+                                                    <h5 class="card-title">
+                                                        Nirmaan<span> Satva</span>
+                                                    </h5>
+                                                    <!-- <p class="card-text">Residential</p> -->
+                                                    <p class="card-text">Adalaj</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Satva"
+                                                        data-project-location="Adalaj" data-project-size="Not available"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-year="2019" data-project-value="120 Crores">Read
+                                                        More</a>
                                                     <!--a href="#" class="btn project-card-btn">Read More</a-->
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Tower</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Corporate Office</span>
+                                                    </h5>
+                                                    <!-- <p class="card-text">Residential, Commercial</p> -->
+                                                    <p class="card-text">S.G. Highway</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal"
+                                                        data-project-name="Nirmaan Corporate Office"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-year="2019" data-project-location="S.G. Highway"
+                                                        data-project-value="20 Crores">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Homes</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Greens</span>
+                                                    </h5>
+                                                    <!-- <p class="card-text">Residential, Commercial</p> -->
+                                                    <p class="card-text">Prantij Highway</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Greens"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-year="2019" data-project-location="Prantij Highway"
+                                                        data-project-value="25 Crores">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
-                                                </div>
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Satva</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <!-- <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                    class="card-img-top" alt="..."> -->
-                                                    <img src="./projects-images/nirman-habitat1.jpeg"
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="https://images.pexels.com/photos/1591361/pexels-photo-1591361.jpeg?auto=compress&cs=tinysrgb&w=1600"
                                                         class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Rejoice</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Ivory <span>Orchards</span>
+                                                    </h5>
+                                                    <p class="card-text">Shilaj</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Ivory Orchards"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="Shilaj" data-project-size="Not available"
+                                                        data-project-value="Not available" data-project-year="2019">Read
+                                                        More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.pexels.com/photos/1591361/pexels-photo-1591361.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                                                        class="card-img-top" alt="...">
-                                                </div>
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Ivory <span>Orchards</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
                                                     <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
+                                                        class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Ivory <span>Springs</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Ivory <span>Springs</span>
+                                                    </h5>
+                                                    <p class="card-text">Location Not Available</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Ivory Springs"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="Not available"
+                                                        data-project-size="Not available"
+                                                        data-project-value="Not available" data-project-year="2013">Read
+                                                        More</a>
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
-                                    <div class="swiper-pagination"></div>
                                 </div>
-
-
-
                             </div>
                             <div class="tab-pane" id="3a">
                                 <div class="swiper mySwiper3">
                                     <div class="control">
-                                        <div class="swiper-button-prev tabprev3" id="prev"><span></span></div>
-                                        <div class="swiper-button-next tabnext3" id="next"><span></span></div>
-
+                                        <div class="swiper-button-prev tabprev3" id="prev">
+                                            <span></span>
+                                        </div>
+                                        <div class="swiper-button-next tabnext3" id="next">
+                                            <span></span>
+                                        </div>
                                     </div>
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
-
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Flats</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
-                                                </div>
-
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Tenaments</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Rejoice</span>
+                                                    </h5>
+                                                    <p class="card-text">Jagatpur</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Rejoice"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-year="2018" data-project-location="Jagatpur"
+                                                        data-project-size="210 flats and 20 shops">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top"
+                                                        alt="Project Image" />
                                                 </div>
-
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Heights</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Lifestyle</span>
+                                                    </h5>
+                                                    <p class="card-text">Chenpur</p>
+                                                    <!-- Button for modal trigger -->
+                                                    <!-- Uncomment if needed -->
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-project-location="Chenpur" data-target="#projectModal"
+                                                        data-project-name="Nirmaan Lifestyle"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-year="2013"
+                                                        data-project-size="120 flats and 30 shops"
+                                                        data-project-value="50 Crores">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
-
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Row House</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
-                                                </div>
-
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Nirmaan <span>Lifestyle</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Homes</span>
+                                                    </h5>
+                                                    <p class="card-text">Sattadhar</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Homes"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="Sattadhar" data-project-year="2002"
+                                                        data-project-size="100 flats"
+                                                        data-project-value="35 Crores">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
-
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Akshay <span>Apartment</span></h5>
-                                                    <p class="card-text">Residential, Commercial</p>
-                                                    <!--a href="#" class="btn project-card-btn">Read More</a-->
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Complex</span>
+                                                    </h5>
+                                                    <p class="card-text">Chanakyapuri</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Complex"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-year="2003" data-project-location="Chanakyapuri"
+                                                        data-project-size="400 flats and 40 shops"
+                                                        data-project-value="25 Crores">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
-
+                                        <div class="swiper-slide">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Card <span>title</span></h5>
-                                                    <p class="card-text">Some quick example text to build on the
-                                                        card title and make
-                                                        up the bulk of the card's
-                                                        content.</p>
-                                                    a href="#" class="btn project-card-btn">Read More</a
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Habitat</span>
+                                                    </h5>
+                                                    <p class="card-text">Ghatlodia</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal"
+                                                        data-project-name="Nirmaan Habitat"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="Ghatlodia" data-project-value="25 Crores"
+                                                        data-project-size="48 flats" data-project-year="2010">Read
+                                                        More</a>
                                                 </div>
                                             </div>
-                                        </div> -->
-                                        <!-- <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
-
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Card <span>title</span></h5>
-                                                    <p class="card-text">Some quick example text to build on the
-                                                        card title and make
-                                                        up the bulk of the card's
-                                                        content.</p>
-                                                    a href="#" class="btn project-card-btn">Read More</a
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Tower</span>
+                                                    </h5>
+                                                    <p class="card-text">Sattadhar</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Tower"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="Sattadhar"
+                                                        data-project-size="78 flats and 12 shops"
+                                                        data-project-value="15 Crores" data-project-year="1995">Read
+                                                        More</a>
                                                 </div>
                                             </div>
-                                        </div> -->
-                                        <!-- <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
-
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Card <span>title</span></h5>
-                                                    <p class="card-text">Some quick example text to build on the
-                                                        card title and make
-                                                        up the bulk of the card's
-                                                        content.</p>
-                                                    a href="#" class="btn project-card-btn">Read More</a
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Bungalows</span>
+                                                    </h5>
+                                                    <p class="card-text">S.G. Highway</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal"
+                                                        data-project-name="Nirmaan Bungalows"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="S.G. Highway"
+                                                        data-project-size="Not available" data-project-value="5 Crores"
+                                                        data-project-year="2005">Read More</a>
                                                 </div>
                                             </div>
-                                        </div> -->
-                                        <!-- <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
-
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg"
+                                                        class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Card <span>title</span></h5>
-                                                    <p class="card-text">Some quick example text to build on the
-                                                        card title and make
-                                                        up the bulk of the card's
-                                                        content.</p>
-                                                    a href="#" class="btn project-card-btn">Read More</a
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>Twins</span>
+                                                    </h5>
+                                                    <p class="card-text">S.G. Highway</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Twins"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="S.G. Highway"
+                                                        data-project-size="Not available" data-project-value="20 Crores"
+                                                        data-project-year="2003">Read More</a>
                                                 </div>
                                             </div>
-                                        </div> -->
-                                        <!-- <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
-
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Card <span>title</span></h5>
-                                                    <p class="card-text">Some quick example text to build on the
-                                                        card title and make
-                                                        up the bulk of the card's
-                                                        content.</p>
-                                                    a href="#" class="btn project-card-btn">Read More</a
+                                                    <h5 class="card-title">
+                                                        Sandipani <span>Hostel</span>
+                                                    </h5>
+                                                    <p class="card-text">Gota</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Sandipani Hostel"
+                                                        data-project-type="Residential"
+                                                        data-project-location="Gota" data-project-value="12 Crores"
+                                                        data-project-size="Not available" data-project-year="2005">Read
+                                                        More</a>
                                                 </div>
                                             </div>
-                                        </div> -->
-                                        <!-- <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
-
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card" style="width: 100%">
+                                                <div style="overflow: hidden">
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Card <span>title</span></h5>
-                                                    <p class="card-text">Some quick example text to build on the
-                                                        card title and make
-                                                        up the bulk of the card's
-                                                        content.</p>
-                                                    a href="#" class="btn project-card-btn">Read More</a
+                                                    <h5 class="card-title">
+                                                        Nirmaan <span>House</span>
+                                                    </h5>
+                                                    <p class="card-text">Ashram Road</p>
+                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                        data-target="#projectModal" data-project-name="Nirmaan House"
+                                                        data-project-type="Residential, Commercial"
+                                                        data-project-location="Ashram Road"
+                                                        data-project-size="Not available" data-project-value="3 Crores"
+                                                        data-project-year="2000">Read More</a>
                                                 </div>
                                             </div>
-                                        </div> -->
-                                        <!-- <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
+                                        </div>
 
-                                                </div>
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Card <span>title</span></h5>
-                                                    <p class="card-text">Some quick example text to build on the
-                                                        card title and make
-                                                        up the bulk of the card's
-                                                        content.</p>
-                                                    a href="#" class="btn project-card-btn">Read More</a
-                                                </div>
-                                            </div>
-                                        </div> -->
-                                        <!-- <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
-
-                                                </div>
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Card <span>title</span></h5>
-                                                    <p class="card-text">Some quick example text to build on the
-                                                        card title and make
-                                                        up the bulk of the card's
-                                                        content.</p>
-                                                    a href="#" class="btn project-card-btn">Read More</a
-                                                </div>
-                                            </div>
-                                        </div> -->
-                                        <!-- <div class="swiper-slide">
-                                            <div class="card" style="width: 100%;">
-                                                <div style="overflow: hidden;">
-                                                    <img src="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                        class="card-img-top" alt="...">
-
-                                                </div>
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Card <span>title</span></h5>
-                                                    <p class="card-text">Some quick example text to build on the
-                                                        card title and make
-                                                        up the bulk of the card's
-                                                        content.</p>
-                                                    a href="#" class="btn project-card-btn">Read More</a
-                                                </div>
-                                            </div>
-                                        </div> -->
                                     </div>
-                                    <div class="swiper-pagination"></div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
+
+                    <div class="section-padding"></div>
                 </div>
-                <!-- <div class="section-padding"></div> -->
-
-
-                <div class="section-padding"></div>
-                <!-- <div class="section-padding"></div> -->
             </div>
-           
-                                    <!-- <div class="swiper-slide">
-                                        <div class="card" style="width: 100%;">
-                                            <div style="overflow: hidden;">
-                                                <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                    class="card-img-top" alt="...">
-
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card <span>title</span></h5>
-                                                <p class="card-text">Some quick example text to build on the
-                                                    card title and make
-                                                    up the bulk of the card's
-                                                    content.</p>
-                                                a href="#" class="btn project-card-btn">Read More</a
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="swiper-slide">
-                                        <div class="card" style="width: 100%;">
-                                            <div style="overflow: hidden;">
-                                                <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                    class="card-img-top" alt="...">
-
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card <span>title</span></h5>
-                                                <p class="card-text">Some quick example text to build on the
-                                                    card title and make
-                                                    up the bulk of the card's
-                                                    content.</p>
-                                                a href="#" class="btn project-card-btn">Read More</a
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="swiper-slide">
-                                        <div class="card" style="width: 100%;">
-                                            <div style="overflow: hidden;">
-                                                <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                    class="card-img-top" alt="...">
-
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card <span>title</span></h5>
-                                                <p class="card-text">Some quick example text to build on the
-                                                    card title and make
-                                                    up the bulk of the card's
-                                                    content.</p>
-                                                a href="#" class="btn project-card-btn">Read More</a
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="swiper-slide">
-                                        <div class="card" style="width: 100%;">
-                                            <div style="overflow: hidden;">
-                                                <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                    class="card-img-top" alt="...">
-
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card <span>title</span></h5>
-                                                <p class="card-text">Some quick example text to build on the
-                                                    card title and make
-                                                    up the bulk of the card's
-                                                    content.</p>
-                                                a href="#" class="btn project-card-btn">Read More</a
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="swiper-slide">
-                                        <div class="card" style="width: 100%;">
-                                            <div style="overflow: hidden;">
-                                                <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                    class="card-img-top" alt="...">
-
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card <span>title</span></h5>
-                                                <p class="card-text">Some quick example text to build on the
-                                                    card title and make
-                                                    up the bulk of the card's
-                                                    content.</p>
-                                                a href="#" class="btn project-card-btn">Read More</a
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="swiper-slide">
-                                        <div class="card" style="width: 100%;">
-                                            <div style="overflow: hidden;">
-                                                <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                    class="card-img-top" alt="...">
-
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card <span>title</span></h5>
-                                                <p class="card-text">Some quick example text to build on the
-                                                    card title and make
-                                                    up the bulk of the card's
-                                                    content.</p>
-                                                a href="#" class="btn project-card-btn">Read More</a
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="swiper-slide">
-                                        <div class="card" style="width: 100%;">
-                                            <div style="overflow: hidden;">
-                                                <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                    class="card-img-top" alt="...">
-
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card <span>title</span></h5>
-                                                <p class="card-text">Some quick example text to build on the
-                                                    card title and make
-                                                    up the bulk of the card's
-                                                    content.</p>
-                                                a href="#" class="btn project-card-btn">Read More</a
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="swiper-slide">
-                                        <div class="card" style="width: 100%;">
-                                            <div style="overflow: hidden;">
-                                                <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                    class="card-img-top" alt="...">
-
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card <span>title</span></h5>
-                                                <p class="card-text">Some quick example text to build on the
-                                                    card title and make
-                                                    up the bulk of the card's
-                                                    content.</p>
-                                                a href="#" class="btn project-card-btn">Read More</a
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="swiper-slide">
-                                        <div class="card" style="width: 100%;">
-                                            <div style="overflow: hidden;">
-                                                <img src="https://images.unsplash.com/photo-1461695008884-244cb4543d74?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                                    class="card-img-top" alt="...">
-
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card <span>title</span></h5>
-                                                <p class="card-text">Some quick example text to build on the
-                                                    card title and make
-                                                    up the bulk of the card's
-                                                    content.</p>
-                                                a href="#" class="btn project-card-btn">Read More</a
-                                            </div>
-                                        </div>
-                                    </div> -->
-                               
-
-
-                <div class="section-padding"></div>
-            </div>
-
-
-
-            <!-- <div class="section-padding"></div> -->
-            <!-- <div class="section-padding"></div> -->
-            <!-- <div class="marquee">
-                <div class="track">
-                    <div class="hello">.Nirman .Nirman .Nirman .Nirman .Nirman .Nirman .Nirman</div>
-                </div>
-            </div> -->
         </section>
-
-
-
-
     </main>
     <footer>
         <div id="Footer">
@@ -888,42 +831,85 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="footer-logo">
-                            <a href="./index.html"><img src="./Nirmaan GROUP 2023 FINAL.png" alt=""></a>
+                            <a href="./index.html"><img src="./Nirmaan GROUP 2023 FINAL.png" alt="" /></a>
                         </div>
                         <div class="Footer-social-links">
                             <li><a href="./index.html">Home</a></li>
                             <li><a href="./nirman-about.html">About Us</a></li>
                             <li><a href="./nirman-projects.html">Projects</a></li>
                             <!-- <li><a href="./nirman-contact.html">Contact Us</a></li> -->
-                            
                         </div>
 
                         <div class="social-links">
-                            <li><a href=""><i class='bx bxl-instagram-alt'></i></a></li>
-                            <li><a href=""><i class='bx bxl-meta'></i></a></li>
-                            <li><a href=""><i class='bx bxl-linkedin-square'></i></a></li>
-
+                            <li>
+                                <a href=""><i class="bx bxl-instagram-alt"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="bx bxl-meta"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="bx bxl-linkedin-square"></i></a>
+                            </li>
                         </div>
                     </div>
                 </div>
-                <hr>
+                <hr />
                 <!-- <div class="section-padding"></div> -->
-                <br>
+                <br />
                 <div class="copyright-text">
                     <span>Copyright © All rights reserved by<a href="https://outleadsolutions.com/" target="_blank">
                             Outlead solution.</a></span>
                 </div>
             </div>
             <!-- <div class="section-padding"></div> -->
-
         </div>
-
     </footer>
 
+    <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="projectModalLabel">Project Details</h5> -->
+                    <h5><span id="modalProjectName"></span></h5>
 
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- <p><b>Project:</b> <span id="modalProjectName"></span></p> -->
+                    <p><b>Location:</b><span id="modalProjectLocation"></span></p>
+                    <p><b>Type:</b> <span id="modalProjectType"></span></p>
+                    <p><b>Year:</b> <span id="modalProjectYear"></span></p>
+                    
+                    <p><b>Project Size:</b> <span id="modalProjectSize"></span></p>
+                    <p><b>Project Value:</b> <span id="modalProjectValue"></span></p>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -952,8 +938,8 @@
             //     el: ".swiper-pagination",
             //     clickable: true,
             // },
-            observer: true,  // Add this
-            observeParents: true,  // Add this
+            observer: true, // Add this
+            observeParents: true, // Add this
 
             navigation: {
                 nextEl: ".tabnext2",
@@ -979,8 +965,8 @@
             //     el: ".swiper-pagination",
             //     clickable: true,
             // },
-            observer: true,  // Add this
-            observeParents: true,  // Add this
+            observer: true, // Add this
+            observeParents: true, // Add this
             navigation: true,
             navigation: {
                 nextEl: ".tabnext3",
@@ -1083,12 +1069,10 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
-            observer: true,  // Add this
-            observeParents: true,  // Add this
+            observer: true, // Add this
+            observeParents: true, // Add this
 
             navigation: {
-
-
                 nextEl: ".tabnext1",
                 prevEl: ".tabprev1",
             },
@@ -1109,30 +1093,29 @@
         swiper1.update();
         function changeTabColor(clickedTab) {
             // Reset styles for all tabs
-            var tabs = document.querySelectorAll('.nav-tabs li a');
-            tabs.forEach(tab => {
-                tab.style.backgroundColor = '';
-                tab.style.color = 'white';
+            var tabs = document.querySelectorAll(".nav-tabs li a");
+            tabs.forEach((tab) => {
+                tab.style.backgroundColor = "";
+                tab.style.color = "white";
             });
 
             // Apply styles to the clicked tab
-            clickedTab.style.backgroundColor = '#your-desired-color';
-            clickedTab.style.backgroundColor = 'Bondi Blue';
+            clickedTab.style.backgroundColor = "#your-desired-color";
+            clickedTab.style.backgroundColor = "Bondi Blue";
         }
-        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
             var target = $(e.target).attr("href");
 
             if (target === "#1a") {
-                swiper1.update();  // Reinitialize or update Swiper instance for tab #1a
+                swiper1.update(); // Reinitialize or update Swiper instance for tab #1a
             } else if (target === "#2a") {
-                swiper2.update();  // For tab #2a
+                swiper2.update(); // For tab #2a
             } else if (target === "#3a") {
-                swiper3.update();  // For tab #3a
+                swiper3.update(); // For tab #3a
             }
         });
     </script>
     <script>
-
         document.addEventListener("DOMContentLoaded", function () {
             // Delay showing content for 10 seconds
             setTimeout(function () {
@@ -1143,13 +1126,7 @@
                 document.getElementById("content").style.display = "block";
             }, 2000); // 10 seconds delay
         });
-
-
-
     </script>
-
-
-
 </body>
 
 </html>
