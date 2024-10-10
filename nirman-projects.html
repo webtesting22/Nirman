@@ -69,30 +69,70 @@
     }
 </script>
 <script>
-    $(document).ready(function () {
-        $(".project-card-btn").on("click", function (event) {
-            // Log that the button was clicked
-            console.log("Button clicked:", this);
+   $(document).ready(function () {
+    $('.project-card-btn').on('click', function (event) {
+        // Log that the button was clicked
+        console.log('Button clicked:', this);
 
-            // Prevent the default action of the link
-            event.preventDefault();
+        // Prevent the default action of the link
+        event.preventDefault();
 
-            // Check if modal data attributes exist
-            var projectName = $(this).data("project-name");
-            var projectLocation = $(this).data("project-location");
-            var projectType = $(this).data("project-type");
-            var projectYear = $(this).data("project-year");
-            var projectSize = $(this).data("project-size");
-            var projectValue = $(this).data("project-value");
-            // Ensure that the modal updates with the right data
-            $("#modalProjectName").text(projectName);
-            $("#modalProjectType").text(projectType);
-            $("#modalProjectLocation").text(projectLocation);
-            $("#modalProjectYear").text(projectYear);
-            $("#modalProjectSize").text(projectSize);
-            $("#modalProjectValue").text(projectValue);
-        });
+        // Check if modal data attributes exist
+        var projectName = $(this).data('project-name');
+        var projectLocation = $(this).data('project-location');
+        var projectType = $(this).data('project-type');
+        var projectYear = $(this).data('project-year');
+        var projectSize = $(this).data('project-size');
+        var projectValue = $(this).data('project-value');
+        var projectImages = $(this).data('project-images'); // Get image URLs (if any)
+
+        // Ensure that the modal updates with the right data
+        $('#modalProjectName').text(projectName);
+        $('#modalProjectLocation').text(projectLocation);
+        $('#modalProjectType').text(projectType);
+        $('#modalProjectYear').text(projectYear);
+        $('#modalProjectSize').text(projectSize);
+        $('#modalProjectValue').text(projectValue);
+
+        // Check if there are images
+        if (projectImages && projectImages.length > 0) {
+            // Clear existing carousel images
+            $('#carouselImages').empty();
+
+            // Split the images if they are passed as a comma-separated string
+            var imagesArray = projectImages.split(',');
+
+            // Add images to the carousel dynamically
+            imagesArray.forEach(function (image, index) {
+                var isActive = index === 0 ? 'active' : ''; // Make the first image active
+                var carouselItem = `
+                    <div class="carousel-item ${isActive}">
+                        <img src="${image}" class="d-block w-100" alt="Project Image">
+                    </div>
+                `;
+                $('#carouselImages').append(carouselItem);
+            });
+
+            // Show the carousel only if there are images
+            $('#projectImageCarousel').show();
+
+            // Disable carousel buttons if there is only one image
+            if (imagesArray.length === 1) {
+                $('.carousel-control-prev').hide();  // Hide the "prev" button
+                $('.carousel-control-next').hide();  // Hide the "next" button
+            } else {
+                $('.carousel-control-prev').show();  // Show the "prev" button
+                $('.carousel-control-next').show();  // Show the "next" button
+            }
+
+        } else {
+            // Hide the carousel if no images are provided
+            $('#projectImageCarousel').hide();
+        }
     });
+});
+
+
 </script>
 
 <body>
@@ -181,7 +221,7 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
+                                                    <img src="./projects-images/Nirmansatva/01.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -193,8 +233,9 @@
                                                         data-target="#projectModal" data-project-name="Nirmaan Satva"
                                                         data-project-location="Adalaj" data-project-size="Not available"
                                                         data-project-type="Residential, Commercial"
-                                                        
-                                                        data-project-year="2019" data-project-value="120 Crores">Read
+                                                        data-project-year="2019" data-project-value="120 Crores"
+                                                        data-project-images="./projects-images/Nirmansatva/01.jpg,
+                                                                             ./projects-images/Nirmansatva/02.jpg,">Read
                                                         More</a>
                                                     <!--a href="#" class="btn project-card-btn">Read More</a-->
                                                 </div>
@@ -215,8 +256,8 @@
                                                         data-target="#projectModal"
                                                         data-project-name="Nirmaan Corporate Office"
                                                         data-project-type="Residential, Commercial"
-                                                        data-project-size="Not available"
-                                                        data-project-year="2019" data-project-location="S.G. Highway"
+                                                        data-project-size="Not available" data-project-year="2019"
+                                                        data-project-location="S.G. Highway"
                                                         data-project-value="20 Crores">Read More</a>
                                                 </div>
                                             </div>
@@ -235,8 +276,10 @@
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal" data-project-name="Nirmaan Greens"
                                                         data-project-type="Residential, Commercial"
-                                                        data-project-size="Not available"
-                                                        data-project-year="2019" data-project-location="Prantij Highway"
+                                                        data-project-size="Not available" data-project-year="2019"
+                                                        data-project-location="Prantij Highway" 
+                                                        data-project-images="./projects-images/nirman-greens.jpeg,
+                                                                             ./projects-images/nirmaan-greens1.png"
                                                         data-project-value="25 Crores">Read More</a>
                                                 </div>
                                             </div>
@@ -255,7 +298,14 @@
                                                         data-target="#projectModal" data-project-name="Nirmaan Rejoice"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-year="2018" data-project-location="Jagatpur"
-                                                        data-project-size="210 flats and 20 shops">Read More</a>
+                                                        data-project-size="210 flats and 20 shops" 
+                                                        data-project-value="Not available"
+                                                        data-project-images="./projects-images/Final_Render_aerial_view-2-1.jpg,
+                                                        ./projects-images/Final_Render_commercial_Front-1.jpg,
+                                                        ./projects-images/Final_Render_Dusk_View.jpg,
+                                                        ./projects-images/Final_Render_Entry_View_Revised.jpg.jpg,
+                                                        ./projects-images/Final_Render_Garden_View_revised-1.jpg,
+                                                        ./projects-images/Final_Render_street_revised-1.jpg">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -327,7 +377,8 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./projects-images/nirman-habitat1.jpeg" class="card-img-top" alt="..." />
+                                                    <img src="./projects-images/nirman-habitat1.jpeg"
+                                                        class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -335,11 +386,11 @@
                                                     </h5>
                                                     <p class="card-text">Ghatlodia</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
-                                                        data-target="#projectModal"
-                                                        data-project-name="Nirmaan Habitat"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Habitat"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-location="Ghatlodia" data-project-value="25 Crores"
-                                                        data-project-size="48 flats" data-project-year="2010">Read
+                                                        data-project-size="48 flats" data-project-year="2010"
+                                                        data-project-images="./projects-images/nirman-habitat1.jpeg">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -387,8 +438,7 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./projects-images/nirman-habitat1.jpeg"
-                                                        class="card-img-top" alt="..." />
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -416,9 +466,9 @@
                                                     <p class="card-text">Gota</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal" data-project-name="Sandipani Hostel"
-                                                        data-project-type="Residential"
-                                                        data-project-location="Gota" data-project-value="12 Crores"
-                                                        data-project-size="Not available" data-project-year="2005">Read
+                                                        data-project-type="Residential" data-project-location="Gota"
+                                                        data-project-value="12 Crores" data-project-size="Not available"
+                                                        data-project-year="2005">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -445,7 +495,7 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="https://images.pexels.com/photos/1591361/pexels-photo-1591361.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                                                    <img src="./projects-images/IVORY ORCHARDS/14.jpeg"
                                                         class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
@@ -458,7 +508,24 @@
                                                         data-target="#projectModal" data-project-name="Ivory Orchards"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-location="Shilaj" data-project-size="Not available"
-                                                        data-project-value="Not available" data-project-year="2019">Read
+                                                        data-project-value="Not available" data-project-year="2019"
+                                                        data-project-images="./projects-images/IVORY ORCHARDS/01.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/02.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/03.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/04.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/05.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/06.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/07.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/08.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/09.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/10.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/11.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/12.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/13.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/14.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/15.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/16.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/17.jpeg">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -479,6 +546,7 @@
                                                         data-project-type="Residential, Commercial"
                                                         data-project-location="Not available"
                                                         data-project-size="Not available"
+                                                        data-project-images="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                         data-project-value="Not available" data-project-year="2013">Read
                                                         More</a>
                                                 </div>
@@ -554,15 +622,19 @@
                                                         data-target="#projectModal" data-project-name="Nirmaan Greens"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-year="2019" data-project-location="Prantij Highway"
-                                                        data-project-value="25 Crores">Read More</a>
+                                                        data-project-value="25 Crores" 
+                                                        data-project-images="./projects-images/nirmaan-greens.jpeg,
+                                                        ./projects-images/nirmaan-greens1.png"
+                                                        >Read
+                                                        More</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="https://images.pexels.com/photos/1591361/pexels-photo-1591361.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                                                        class="card-img-top" alt="..." />
+                                                    <img src="./projects-images/IVORY ORCHARDS/14.jpeg"
+                                                    class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -573,7 +645,24 @@
                                                         data-target="#projectModal" data-project-name="Ivory Orchards"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-location="Shilaj" data-project-size="Not available"
-                                                        data-project-value="Not available" data-project-year="2019">Read
+                                                        data-project-value="Not available" data-project-year="2019"
+                                                        data-project-images="./projects-images/IVORY ORCHARDS/01.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/02.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/03.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/04.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/05.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/06.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/07.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/08.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/09.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/10.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/11.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/12.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/13.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/14.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/15.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/16.jpeg,
+                                                        ./projects-images/IVORY ORCHARDS/17.jpeg">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -627,7 +716,14 @@
                                                         data-target="#projectModal" data-project-name="Nirmaan Rejoice"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-year="2018" data-project-location="Jagatpur"
-                                                        data-project-size="210 flats and 20 shops">Read More</a>
+                                                        data-project-size="210 flats and 20 shops"
+                                                        data-project-images="./projects-images/Final_Render_aerial_view-2-1.jpg,
+                                                        ./projects-images/Final_Render_commercial_Front-1.jpg,
+                                                        ./projects-images/Final_Render_Dusk_View.jpg,
+                                                        ./projects-images/Final_Render_Entry_View_Revised.jpg.jpg,
+                                                        ./projects-images/Final_Render_Garden_View_revised-1.jpg,
+                                                        ./projects-images/Final_Render_street_revised-1.jpg"
+                                                        >Read More</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -704,11 +800,11 @@
                                                     </h5>
                                                     <p class="card-text">Ghatlodia</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
-                                                        data-target="#projectModal"
-                                                        data-project-name="Nirmaan Habitat"
+                                                        data-target="#projectModal" data-project-name="Nirmaan Habitat"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-location="Ghatlodia" data-project-value="25 Crores"
-                                                        data-project-size="48 flats" data-project-year="2010">Read
+                                                        data-project-size="48 flats" data-project-year="2010"
+                                                        data-project-images="./projects-images/nirman-habitat1.jpeg">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -756,8 +852,7 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./demoimage.jpg"
-                                                        class="card-img-top" alt="..." />
+                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -785,9 +880,9 @@
                                                     <p class="card-text">Gota</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal" data-project-name="Sandipani Hostel"
-                                                        data-project-type="Residential"
-                                                        data-project-location="Gota" data-project-value="12 Crores"
-                                                        data-project-size="Not available" data-project-year="2005">Read
+                                                        data-project-type="Residential" data-project-location="Gota"
+                                                        data-project-value="12 Crores" data-project-size="Not available"
+                                                        data-project-year="2005">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -865,8 +960,7 @@
         </div>
     </footer>
 
-    <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -878,11 +972,24 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <!-- <p><b>Project:</b> <span id="modalProjectName"></span></p> -->
+                    <!-- Bootstrap Carousel for multiple images (initially hidden) -->
+                    <div id="projectImageCarousel" class="carousel slide" data-ride="carousel" style="display: none;">
+                        <div class="carousel-inner" id="carouselImages">
+                            <!-- Images will be dynamically inserted here -->
+                        </div>
+                        <a class="carousel-control-prev" href="#projectImageCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#projectImageCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                     <p><b>Location:</b><span id="modalProjectLocation"></span></p>
                     <p><b>Type:</b> <span id="modalProjectType"></span></p>
                     <p><b>Year:</b> <span id="modalProjectYear"></span></p>
-                    
+
                     <p><b>Project Size:</b> <span id="modalProjectSize"></span></p>
                     <p><b>Project Value:</b> <span id="modalProjectValue"></span></p>
                 </div>

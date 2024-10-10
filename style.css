@@ -2371,3 +2371,18 @@ a:not([href]):not([tabindex]){
 a:not([href]):not([tabindex]):hover{
   color: black !important;
 }
+#projectImageCarousel{
+  margin: 10px;
+
+}
+#carouselImages img{ 
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio:3/2;
+}
+#modalProjectName{
+  margin: 10px 10px;
+}
+.modal-body p{
+  margin: 10px;
+}
