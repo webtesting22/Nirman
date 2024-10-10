@@ -263,7 +263,7 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
+                                                    <img src="./projects-images/nirman-greens.jpeg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -275,8 +275,7 @@
                                                         data-target="#projectModal" data-project-name="Nirmaan Greens"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-size="Not available" data-project-year="2019"
-                                                        data-project-location="Prantij Highway" data-project-images="./projects-images/nirman-greens.jpeg,
-                                                                             ./projects-images/nirmaan-greens1.png"
+                                                        data-project-location="Prantij Highway" data-project-images="./projects-images/nirman-greens.jpeg,./projects-images/nirmaan-greens1.png"
                                                         data-project-value="25 Crores">Read More</a>
                                                 </div>
                                             </div>
@@ -284,7 +283,8 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
+                                                    <img src="./projects-images/Final_Render_Entry_View_Revised.jpg.jpg"
+                                                        class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -564,7 +564,8 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
+                                                    <img src="./projects-images/Nirmansatva/01.jpg" class="card-img-top"
+                                                        alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -578,7 +579,7 @@
                                                         data-project-type="Residential, Commercial"
                                                         data-project-year="2019" data-project-value="120 Crores"
                                                         data-project-images="./projects-images/Nirmansatva/01.jpg,
-                                                                             ./projects-images/Nirmansatva/02.jpg,">Read
+                                                                             ./projects-images/Nirmansatva/02.jpg">Read
                                                         More</a>
                                                     <!--a href="#" class="btn project-card-btn">Read More</a-->
                                                 </div>
@@ -599,7 +600,8 @@
                                                         data-target="#projectModal"
                                                         data-project-name="Nirmaan Corporate Office"
                                                         data-project-type="Residential, Commercial"
-                                                        data-project-year="2019" data-project-location="S.G. Highway"
+                                                        data-project-size="Not available" data-project-year="2019"
+                                                        data-project-location="S.G. Highway"
                                                         data-project-value="20 Crores">Read More</a>
                                                 </div>
                                             </div>
@@ -607,7 +609,7 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
+                                                    <img src="./projects-images/nirman-greens.jpeg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -618,8 +620,9 @@
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal" data-project-name="Nirmaan Greens"
                                                         data-project-type="Residential, Commercial"
+                                                        data-project-size="Not available"
                                                         data-project-year="2019" data-project-location="Prantij Highway"
-                                                        data-project-value="25 Crores" data-project-images="./projects-images/nirmaan-greens.jpeg,
+                                                        data-project-value="25 Crores" data-project-images="./projects-images/nirman-greens.jpeg,
                                                         ./projects-images/nirmaan-greens1.png">Read More</a>
                                                 </div>
                                             </div>
@@ -698,7 +701,8 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
+                                                    <img src="./projects-images/Final_Render_commercial_Front-1.jpg"
+                                                        class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -784,7 +788,7 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./demoimage.jpg" class="card-img-top" alt="..." />
+                                                    <img src="./projects-images/nirman-habitat1.jpeg" class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -1022,6 +1026,37 @@
     </script>
 
     <script>
+
+        var swiper1 = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            loop: true,
+            spaceBetween: 30,
+            // freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            observer: true, // Add this
+            observeParents: true, // Add this
+
+            navigation: {
+                nextEl: ".tabnext1",
+                prevEl: ".tabprev1",
+            },
+
+            autoplay: {
+                delay: 3000, // Set autoplay delay to 3 seconds
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                // Add breakpoints for different screen sizes
+                768: {
+                    slidesPerView: 3, // Show only one slide on mobile
+                    spaceBetween: 10, // Adjust space between slides on mobile
+                },
+                // Add more breakpoints if needed
+            },
+        });
         var swiper2 = new Swiper(".mySwiper2", {
             slidesPerView: 1,
             loop: true,
@@ -1073,114 +1108,8 @@
                 },
             },
         });
-        var swiper4 = new Swiper(".mySwiper4", {
-            slidesPerView: 1,
-            loop: true,
-            spaceBetween: 30,
-            freeMode: true,
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // },
-            navigation: true,
-            navigation: {
-                nextEl: ".tabnext4",
-                prevEl: ".tabprev4",
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                },
-            },
-        });
-        var swiper5 = new Swiper(".mySwiper5", {
-            slidesPerView: 1,
-            loop: true,
-            spaceBetween: 30,
-            freeMode: true,
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // },
-            navigation: true,
-            navigation: {
-                nextEl: ".tabnext5",
-                prevEl: ".tabprev5",
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                },
-            },
-        });
 
-        var swiper6 = new Swiper(".mySwiper6", {
-            slidesPerView: 1,
-            loop: true,
-            spaceBetween: 30,
-            freeMode: true,
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // },
 
-            navigation: {
-                nextEl: ".tabnext6",
-                prevEl: ".tabprev6",
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                },
-            },
-        });
-
-        var swiper1 = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            loop: true,
-            spaceBetween: 30,
-            // freeMode: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            observer: true, // Add this
-            observeParents: true, // Add this
-
-            navigation: {
-                nextEl: ".tabnext1",
-                prevEl: ".tabprev1",
-            },
-
-            autoplay: {
-                delay: 3000, // Set autoplay delay to 3 seconds
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                // Add breakpoints for different screen sizes
-                768: {
-                    slidesPerView: 3, // Show only one slide on mobile
-                    spaceBetween: 10, // Adjust space between slides on mobile
-                },
-                // Add more breakpoints if needed
-            },
-        });
-        swiper1.update();
         function changeTabColor(clickedTab) {
             // Reset styles for all tabs
             var tabs = document.querySelectorAll(".nav-tabs li a");
@@ -1193,13 +1122,7 @@
             clickedTab.style.backgroundColor = "#your-desired-color";
             clickedTab.style.backgroundColor = "Bondi Blue";
         }
-        $('a[data-toggle="tab"]').on("shown.bs.tab", function (e) {
-            var target = $(e.target).attr("href");
 
-            if (target === "#1a") {
-                swiper1.update(); // Reinitialize or update Swiper instance for tab #1a
-            }
-        });
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
