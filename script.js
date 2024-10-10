@@ -51,9 +51,8 @@ var swiper = new Swiper("#js-swiper-hotels", {
       slidesPerView: 2,
     },
   },
+  
 });
-
-
 
 
 
@@ -149,7 +148,11 @@ const swiperQuiz = new Swiper(".animeslide", {
   grabCursor: true, // Provides a better user experience with smooth interaction
   slidesPerView: 'auto', // Ensures smooth sliding by dynamically adjusting the view
   spaceBetween: 30, // Adds space between slides for smoothness
+
 });
+setTimeout(() => {
+  swiperQuiz.update(); // Refresh Swiper to recalculate sizes
+}, 100);
 
 function changeColor(element) {
   // Remove background color from all anchor links
