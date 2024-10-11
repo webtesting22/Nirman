@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nirmaan</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./Nirmaan GROUP 2023 FINAL.png" />
+    <!-- <link rel="stylesheet" href="./about-us.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .swiper {
+            width: 100%;
+            /* height: 40vh; */
+            max-height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<script>
+    let isNavVisible = false;
+
+    function toggleNav() {
+        const navbar = document.querySelector(".navigationBar");
+        const navMenu = document.querySelector(".nav-menu");
+        const menuIcon = document.querySelector(".menu-icon");
+
+        isNavVisible = !isNavVisible;
+
+        if (isNavVisible) {
+            navbar.classList.add("nav-open");
+            navMenu.classList.add("open");
+            menuIcon.innerHTML = "<i class='bx bx-window-close' ></i>";
+        } else {
+            navbar.classList.remove("nav-open");
+            navMenu.classList.remove("open");
+            menuIcon.innerHTML = "<i class='bx bx-menu'></i>";
+        }
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        $(".project-card-btn").on("click", function (event) {
+            // Log that the button was clicked
+
+            // Prevent the default action of the link
+            // event.preventDefault();
+
+            // Check if modal data attributes exist
+            var projectName = $(this).data("project-name");
+            var projectLocation = $(this).data("project-location");
+            var projectType = $(this).data("project-type");
+            var projectYear = $(this).data("project-year");
+            var projectSize = $(this).data("project-size");
+            var projectValue = $(this).data("project-value");
+            var projectImages = $(this).data("project-images"); // Get image URLs (if any)
+
+            // Ensure that the modal updates with the right data
+            $("#modalProjectName").text(projectName);
+            $("#modalProjectLocation").text(projectLocation);
+            $("#modalProjectType").text(projectType);
+            $("#modalProjectYear").text(projectYear);
+            $("#modalProjectSize").text(projectSize);
+            $("#modalProjectValue").text(projectValue);
+
+            // Check if there are images
+            if (projectImages && projectImages.length > 0) {
+                // Clear existing carousel images
+                $("#carouselImages").empty();
+
+                // Split the images if they are passed as a comma-separated string
+                var imagesArray = projectImages.split(",");
+
+                // Add images to the carousel dynamically
+                imagesArray.forEach(function (image, index) {
+                    var isActive = index === 0 ? "active" : ""; // Make the first image active
+                    var carouselItem = `
+                    <div class="carousel-item ${isActive}">
+                        <img src="${image}" class="d-block w-100" alt="Project Image">
+                    </div>
+                `;
+                    $("#carouselImages").append(carouselItem);
+                });
+
+                // Show the carousel only if there are images
+                $("#projectImageCarousel").show();
+
+                // Disable carousel buttons if there is only one image
+                if (imagesArray.length === 1) {
+                    $(".carousel-control-prev").hide(); // Hide the "prev" button
+                    $(".carousel-control-next").hide(); // Hide the "next" button
+                } else {
+                    $(".carousel-control-prev").show(); // Show the "prev" button
+                    $(".carousel-control-next").show(); // Show the "next" button
+                }
+            } else {
+                // Hide the carousel if no images are provided
+                $("#projectImageCarousel").hide();
+            }
+        });
+    });
+</script>
+
+<body>
+    <div id="loader">
+        <img src="Nirmaan GROUP 2023 FINAL.png" />
+        <!-- <p class="method-2 " >You Dream We Build</p> -->
+    </div>
+
+    <!-- <a href="" class="btn-whatsapp-pulse btn-whatsapp-pulse-border">
+        <i class="fab fa-whatsapp"></i>
+    </a> -->
+    <div class="navigationBar">
+        <div class="logo-container">
+            <a href="/">
+                <img src="./Nirmaan GROUP 2023 FINAL.png" alt="Logo" />
+            </a>
+        </div>
+
+        <div class="nav-menu">
+            <div class="overlay"></div>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./nirmaan-about.html">About Us</a></li>
+                <li><a href="./nirmaan-projects.html">Projects</a></li>
+                <li><a href="./nirmaan-contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <button class="nav-toggler" onclick="toggleNav()" style="border-radius: 8px">
+            <i class="bx bx-menu" style="color: white"></i>
+        </button>
+    </div>
+
+    <main>
+        <div class="TopBackContainerContact">
+            <div class="OverlayBackContact">
+                <h1 style="
+              z-index: 5;
+              position: relative;
+              top: 50%;
+              text-align: center;
+              color: white;
+              font-size: 50px;
+              font-family: 'Raleway',sans-serif;
+            ">
+                    CONTACT US
+                </h1>
+            </div>
+        </div>
+        
+    <footer>
+        <div id="Footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-logo">
+                            <a href="./index.html"><img src="./Nirmaan GROUP 2023 FINAL.png" alt="" /></a>
+                        </div>
+                        <div class="Footer-social-links">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./nirmaan-about.html">About Us</a></li>
+                            <li><a href="./nirmaan-projects.html">Projects</a></li>
+                            <li><a href="./nirmaan-contact.html">Contact Us</a></li>
+                        </div>
+
+                        <div class="social-links">
+                            <li>
+                                <a href=""><i class="bx bxl-instagram-alt"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="bx bxl-meta"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="bx bxl-linkedin-square"></i></a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <br />
+                <div class="copyright-text">
+                    <span>Copyright © All rights reserved by<a href="https://outleadsolutions.com/" target="_blank">
+                            Outlead solution.</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5><span id="modalProjectName"></span></h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="projectImageCarousel" class="carousel slide" data-ride="carousel" style="display: none">
+                        <div class="carousel-inner" id="carouselImages"></div>
+                        <a class="carousel-control-prev" href="#projectImageCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#projectImageCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <p><b>Location:</b> <span id="modalProjectLocation"></span></p>
+                    <p><b>Type:</b> <span id="modalProjectType"></span></p>
+                    <p><b>Year:</b> <span id="modalProjectYear"></span></p>
+
+                    <p><b>Project Size:</b> <span id="modalProjectSize"></span></p>
+                    <p><b>Project Value:</b> <span id="modalProjectValue"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="./script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Delay showing content for 10 seconds
+            setTimeout(function () {
+                // Hide loader
+                document.getElementById("loader").style.display = "none";
+
+                // Show content
+                document.getElementById("content").style.display = "block";
+            }, 2000); // 10 seconds delay
+        });
+    </script>
+</body>
+
+</html>

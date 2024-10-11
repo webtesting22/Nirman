@@ -157,7 +157,7 @@
 }
 
 #back-overlay {
-    background-image: url("./back.jpg");
+    /* background-image: url("./back.jpg"); */
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -346,11 +346,12 @@
 }
 
 #back-overlay {
-    background-image: url("./project-back.jpg");
+    /* background-image: url("./project-back.jpg"); */
     width: 100%;
-    background-size: cover;
+    background-color: #181818;
+    /* background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }
 
 .project-box-title {

@@ -12,7 +12,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
@@ -72,10 +72,9 @@
     $(document).ready(function () {
         $(".project-card-btn").on("click", function (event) {
             // Log that the button was clicked
-            console.log("Button clicked:", this);
 
             // Prevent the default action of the link
-            event.preventDefault();
+            // event.preventDefault();
 
             // Check if modal data attributes exist
             var projectName = $(this).data("project-name");
@@ -152,9 +151,9 @@
             <div class="overlay"></div>
             <ul>
                 <li><a href="./">Home</a></li>
-                <li><a href="./nirman-about.html">About Us</a></li>
-                <li><a href="./nirman-projects.html">Projects</a></li>
-                <!-- <li><a href="./nirman-contact.html">Contact Us</a></li> -->
+                <li><a href="./nirmaan-about.html">About Us</a></li>
+                <li><a href="./nirmaan-projects.html">Projects</a></li>
+                <li><a href="./nirmaan-contact.html">Contact Us</a></li>
             </ul>
         </div>
 
@@ -205,15 +204,6 @@
                         <div class="tab-content" data-aos="fade-up" data-aos-duration="2000">
                             <div class="tab-pane active" id="1a">
                                 <div class="swiper mySwiper">
-                                    <div class="control">
-                                        <div class="swiper-button-prev tabprev1" onclick="console.log('button clicked')"
-                                            id="prev">
-                                            <span></span>
-                                        </div>
-                                        <div class="swiper-button-next tabnext1" id="next">
-                                            <span></span>
-                                        </div>
-                                    </div>
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
@@ -225,16 +215,17 @@
                                                     <h5 class="card-title">
                                                         Nirmaan<span> Satva</span>
                                                     </h5>
-                                                    <!-- <p class="card-text">Residential</p> -->
                                                     <p class="card-text">Adalaj</p>
-                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                    <a href="./nirmaan-satva.html" class="btn project-card-btn">Read
+                                                        More</a>
+                                                    <!-- <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal" data-project-name="Nirmaan Satva"
                                                         data-project-location="Adalaj" data-project-size="Not available"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-year="2019" data-project-value="120 Crores"
                                                         data-project-images="./projects-images/Nirmansatva/01.jpg,
                                                                              ./projects-images/Nirmansatva/02.jpg">Read
-                                                        More</a>
+                                                        More</a> -->
                                                     <!--a href="#" class="btn project-card-btn">Read More</a-->
                                                 </div>
                                             </div>
@@ -248,7 +239,6 @@
                                                     <h5 class="card-title">
                                                         Nirmaan <span>Corporate Office</span>
                                                     </h5>
-                                                    <!-- <p class="card-text">Residential, Commercial</p> -->
                                                     <p class="card-text">S.G. Highway</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal"
@@ -263,19 +253,20 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./projects-images/nirman-greens.jpeg" class="card-img-top" alt="..." />
+                                                    <img src="./projects-images/nirman-greens.jpeg" class="card-img-top"
+                                                        alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
                                                         Nirmaan <span>Greens</span>
                                                     </h5>
-                                                    <!-- <p class="card-text">Residential, Commercial</p> -->
                                                     <p class="card-text">Prantij Highway</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal" data-project-name="Nirmaan Greens"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-size="Not available" data-project-year="2019"
-                                                        data-project-location="Prantij Highway" data-project-images="./projects-images/nirman-greens.jpeg,./projects-images/nirmaan-greens1.png"
+                                                        data-project-location="Prantij Highway"
+                                                        data-project-images="./projects-images/nirman-greens.jpeg,./projects-images/nirmaan-greens1.png"
                                                         data-project-value="25 Crores">Read More</a>
                                                 </div>
                                             </div>
@@ -291,7 +282,9 @@
                                                         Nirmaan <span>Rejoice</span>
                                                     </h5>
                                                     <p class="card-text">Jagatpur</p>
-                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                    <a class="btn project-card-btn" href="./nirmaan-rejoice.html">Read
+                                                        More</a>
+                                                    <!-- <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal" data-project-name="Nirmaan Rejoice"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-year="2018" data-project-location="Jagatpur"
@@ -302,7 +295,7 @@
                                                         ./projects-images/Final_Render_Entry_View_Revised.jpg.jpg,
                                                         ./projects-images/Final_Render_Garden_View_revised-1.jpg,
                                                         ./projects-images/Final_Render_street_revised-1.jpg">Read
-                                                        More</a>
+                                                        More</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -318,8 +311,7 @@
                                                         Nirmaan <span>Lifestyle</span>
                                                     </h5>
                                                     <p class="card-text">Chenpur</p>
-                                                    <!-- Button for modal trigger -->
-                                                    <!-- Uncomment if needed -->
+
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-project-location="Chenpur" data-target="#projectModal"
                                                         data-project-name="Nirmaan Lifestyle"
@@ -330,9 +322,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <!-- Modal Structure -->
-
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
@@ -549,17 +538,19 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="control">
+                                    <div class="swiper-button-prev tabprev1" onclick="console.log('button clicked')"
+                                        id="prev">
+                                        Previous
+                                    </div>
+                                    <div class="swiper-button-next tabnext1" id="next">
+                                        Next
+                                    </div>
+                                </div>
                             </div>
+
                             <div class="tab-pane" id="2a">
                                 <div class="swiper mySwiper2">
-                                    <div class="control">
-                                        <div class="swiper-button-prev tabprev2" id="prev">
-                                            <span></span>
-                                        </div>
-                                        <div class="swiper-button-next tabnext2" id="next">
-                                            <span></span>
-                                        </div>
-                                    </div>
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
@@ -571,16 +562,17 @@
                                                     <h5 class="card-title">
                                                         Nirmaan<span> Satva</span>
                                                     </h5>
-                                                    <!-- <p class="card-text">Residential</p> -->
                                                     <p class="card-text">Adalaj</p>
-                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                    <a href="./nirmaan-satva.html" class="btn project-card-btn">Read
+                                                        More</a>
+                                                    <!-- <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal" data-project-name="Nirmaan Satva"
                                                         data-project-location="Adalaj" data-project-size="Not available"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-year="2019" data-project-value="120 Crores"
                                                         data-project-images="./projects-images/Nirmansatva/01.jpg,
                                                                              ./projects-images/Nirmansatva/02.jpg">Read
-                                                        More</a>
+                                                        More</a> -->
                                                     <!--a href="#" class="btn project-card-btn">Read More</a-->
                                                 </div>
                                             </div>
@@ -609,7 +601,8 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./projects-images/nirman-greens.jpeg" class="card-img-top" alt="..." />
+                                                    <img src="./projects-images/nirman-greens.jpeg" class="card-img-top"
+                                                        alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -620,8 +613,8 @@
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal" data-project-name="Nirmaan Greens"
                                                         data-project-type="Residential, Commercial"
-                                                        data-project-size="Not available"
-                                                        data-project-year="2019" data-project-location="Prantij Highway"
+                                                        data-project-size="Not available" data-project-year="2019"
+                                                        data-project-location="Prantij Highway"
                                                         data-project-value="25 Crores" data-project-images="./projects-images/nirman-greens.jpeg,
                                                         ./projects-images/nirmaan-greens1.png">Read More</a>
                                                 </div>
@@ -686,17 +679,18 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="control">
+                                    <div class="swiper-button-prev tabprev2" id="prev">
+                                        Previous
+                                    </div>
+                                    <div class="swiper-button-next tabnext2" id="next">
+                                        Next
+                                    </div>
+                                </div>
                             </div>
+
                             <div class="tab-pane" id="3a">
                                 <div class="swiper mySwiper3">
-                                    <div class="control">
-                                        <div class="swiper-button-prev tabprev3" id="prev">
-                                            <span></span>
-                                        </div>
-                                        <div class="swiper-button-next tabnext3" id="next">
-                                            <span></span>
-                                        </div>
-                                    </div>
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
@@ -709,7 +703,9 @@
                                                         Nirmaan <span>Rejoice</span>
                                                     </h5>
                                                     <p class="card-text">Jagatpur</p>
-                                                    <a class="btn project-card-btn" data-toggle="modal"
+                                                    <a class="btn project-card-btn" href="./nirmaan-rejoice.html">Read
+                                                        More</a>
+                                                    <!-- <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal" data-project-name="Nirmaan Rejoice"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-year="2018" data-project-location="Jagatpur"
@@ -719,7 +715,7 @@
                                                         ./projects-images/Final_Render_Entry_View_Revised.jpg.jpg,
                                                         ./projects-images/Final_Render_Garden_View_revised-1.jpg,
                                                         ./projects-images/Final_Render_street_revised-1.jpg">Read
-                                                        More</a>
+                                                        More</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -788,7 +784,8 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./projects-images/nirman-habitat1.jpeg" class="card-img-top" alt="..." />
+                                                    <img src="./projects-images/nirman-habitat1.jpeg"
+                                                        class="card-img-top" alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
@@ -903,6 +900,10 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="control">
+                                    <div class="swiper-button-prev tabprev3" id="prev">Previous</div>
+                                    <div class="swiper-button-next tabnext3" id="next">Next</div>
+                                </div>
                             </div>
                         </div>
                         <!-- <div class="section-padding"></div> -->
@@ -912,10 +913,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
         </section>
     </main>
     <footer>
@@ -928,9 +925,9 @@
                         </div>
                         <div class="Footer-social-links">
                             <li><a href="./index.html">Home</a></li>
-                            <li><a href="./nirman-about.html">About Us</a></li>
-                            <li><a href="./nirman-projects.html">Projects</a></li>
-                            <!-- <li><a href="./nirman-contact.html">Contact Us</a></li> -->
+                            <li><a href="./nirmaan-about.html">About Us</a></li>
+                            <li><a href="./nirmaan-projects.html">Projects</a></li>
+                            <li><a href="./nirmaan-contact.html">Contact Us</a></li>
                         </div>
 
                         <div class="social-links">
@@ -1026,24 +1023,16 @@
     </script>
 
     <script>
-
         var swiper1 = new Swiper(".mySwiper", {
             slidesPerView: 1,
             loop: true,
             spaceBetween: 30,
-            // freeMode: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            observer: true, // Add this
-            observeParents: true, // Add this
-
+            freeMode: true,
+            
             navigation: {
                 nextEl: ".tabnext1",
                 prevEl: ".tabprev1",
             },
-
             autoplay: {
                 delay: 3000, // Set autoplay delay to 3 seconds
                 disableOnInteraction: false,
@@ -1061,11 +1050,7 @@
             slidesPerView: 1,
             loop: true,
             spaceBetween: 30,
-            // freeMode: true,
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // }
+            freeMode: true,
             navigation: {
                 nextEl: ".tabnext2",
                 prevEl: ".tabprev2",
@@ -1085,14 +1070,7 @@
             slidesPerView: 1,
             loop: true,
             spaceBetween: 30,
-            // freeMode: true,
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // },
-            observer: true, // Add this
-            observeParents: true, // Add this
-            navigation: true,
+            freeMode: true,
             navigation: {
                 nextEl: ".tabnext3",
                 prevEl: ".tabprev3",
@@ -1109,9 +1087,7 @@
             },
         });
 
-
         function changeTabColor(clickedTab) {
-            // Reset styles for all tabs
             var tabs = document.querySelectorAll(".nav-tabs li a");
             tabs.forEach((tab) => {
                 tab.style.backgroundColor = "";
@@ -1122,16 +1098,46 @@
             clickedTab.style.backgroundColor = "#your-desired-color";
             clickedTab.style.backgroundColor = "Bondi Blue";
         }
+        $(document).ready(function () {
+            function reinitSwipers() {
+                swiper1.update();
+                swiper2.update();
+                swiper3.update();
+            }
+
+            $('.nav-tabs a').on('shown.bs.tab', function () {
+                reinitSwipers();
+            });
+
+            $('.nav-tabs a').on('shown.bs.tab', function () {
+                swiper1.autoplay.start();
+                swiper2.autoplay.start();
+                swiper3.autoplay.start();
+            });
+
+            // Reinitialize autoplay and update swipers when clicking the tabs
+            $('.nav-tabs a').on('click', function () {
+                swiper1.autoplay.start();
+                swiper2.autoplay.start();
+                swiper3.autoplay.start();
+            });
+            $('.nav-tabs a').on('shown.bs.tab', function () {
+                setTimeout(function () {
+                    reinitSwipers();  // Update swiper dimensions after a small delay
+                    swiper1.autoplay.start();
+                    swiper2.autoplay.start();
+                    swiper3.autoplay.start();
+                }, 300);  // 300ms delay
+            });
+
+        });
+
 
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Delay showing content for 10 seconds
             setTimeout(function () {
-                // Hide loader
                 document.getElementById("loader").style.display = "none";
-
-                // Show content
                 document.getElementById("content").style.display = "block";
             }, 2000); // 10 seconds delay
         });
