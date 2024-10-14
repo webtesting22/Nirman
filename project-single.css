@@ -374,12 +374,6 @@
   border-right: 1px solid gray;
 }
 
-
- {
-  display: flex;
-  justify-content: center;
-}
-
 .project-contact-icon i {
   color: white;
   font-size: 1.6rem;
@@ -388,7 +382,6 @@
   border-radius: 50%;
   transition: 0.5s;
 }
-
 
 #project-detail-box:hover .project-box-title {
   color: white;
@@ -650,57 +643,80 @@
 } */
 /* Mobile Styles for Swipers */
 @media (max-width: 576px) {
-    .amenities-row {
-      display: flex;
-      flex-direction:column-reverse; /* Stack sliders vertically */
-      align-items: center; /* Center align sliders */
-    }
-  
-    /* Info slider adjustments */
-    .info-swiper {
-      width: 100% !important; /* Full width for mobile */
-      padding: 10px; /* Add some padding for better layout */
-    }
-  
-    .info-slide {
-      width: 100% !important; /* Ensure the slides take full width */
-      font-size: 14px; /* Adjust font size for readability on small screens */
-      text-align: center; /* Center text */
-    }
-  
-    /* Image slider adjustments */
-    .amenities-slide {
-      width: 100% !important; /* Full width for the image slider */
-      margin-top: 20px; /* Add spacing between the sliders */
-    }
-  .projectImageSlider{
+  .amenities-row {
+    display: flex;
+    flex-direction: column-reverse; /* Stack sliders vertically */
+    align-items: center; /* Center align sliders */
+  }
+
+  /* Info slider adjustments */
+  .info-swiper {
+    width: 100% !important; /* Full width for mobile */
+    padding: 10px; /* Add some padding for better layout */
+  }
+
+  .info-slide {
+    width: 100% !important; /* Ensure the slides take full width */
+    font-size: 14px; /* Adjust font size for readability on small screens */
+    text-align: center; /* Center text */
+  }
+
+  /* Image slider adjustments */
+  .amenities-slide {
+    width: 100% !important; /* Full width for the image slider */
+    margin-top: 20px; /* Add spacing between the sliders */
+  }
+  .projectImageSlider {
     height: 50vh;
   }
-    
-    /* Navigation buttons for Swipers */
-    .amenities-buttons {
-      display: flex;
-      justify-content: space-between;
-      width: 80%;
-      margin: 0 auto; /* Center the buttons on mobile */
-    }
-  
-    .swiper-button-prev, .swiper-button-next {
-      color: #000; /* Adjust the button colors */
-      font-size: 18px; /* Increase button size for better interaction */
-    }
+
+  /* Navigation buttons for Swipers */
+  .amenities-buttons {
+    display: flex;
+    /* justify-content: space-between; */
+    width: 80%;
   }
 
-  .amenities-buttons #amenPrev, #amenNext{
-    font-family: Swiper-icons;
-    padding: 15px 15px;
-    background-color: white;
-    border-radius: 3px;
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #000; /* Adjust the button colors */
+    font-size: 18px; /* Increase button size for better interaction */
   }
-  
-  #amenPrev::after , #amenNext::after{
-    font-size: 16px;
-    color: black;
-  }
+}
+.projectImageSlider-bottom {
+  /* position: absolute; */
+  bottom: 2%;
+  width: 100%;
+  border-radius: 8px;
+  background-color: transparent;
+  /* max-width: 600px; */
+  z-index: 1;
+  padding: 0px 35px;
+  right: 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
 
-  
+.projectImageSlider-button-next::after,
+.projectImageSlider-button-prev::after {
+  color: #fff;
+  content: "prev";
+  background: #414141;
+  padding: 18px;
+  border-radius: 5px;
+  margin-bottom:50px;
+}
+.amenities-buttons #amenPrev,
+#amenNext {
+  font-family: Swiper-icons;
+  padding: 15px 15px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+#amenPrev::after,
+#amenNext::after {
+  font-size: 16px;
+  color: black;
+}
