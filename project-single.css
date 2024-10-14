@@ -374,36 +374,21 @@
   border-right: 1px solid gray;
 }
 
-@media (max-width: 1000px) {
-  .border-related {
-    border: none;
-    margin-bottom: 30px;
-  }
-}
 
-.project-contact-icon {
+ {
   display: flex;
   justify-content: center;
 }
 
 .project-contact-icon i {
   color: white;
-  font-size: 3rem;
+  font-size: 1.6rem;
   background-color: black;
   padding: 20px 20px;
   border-radius: 50%;
   transition: 0.5s;
 }
 
-.project-contact-icon i:hover {
-  color: rgb(0, 129, 199);
-  font-size: 3rem;
-  background-color: rgb(255, 255, 255);
-  padding: 20px 20px;
-  border-radius: 50%;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  transition: 0.5s;
-}
 
 #project-detail-box:hover .project-box-title {
   color: white;
