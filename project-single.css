@@ -1,13 +1,13 @@
 #single-project-title h1 {
-  font-size: 6rem;
-  color: rgb(131, 131, 131);
+  font-size: 48px;
+  color: rgb(250, 250, 250);
   font-family: "Raleway", sans-serif;
   /* font-family: 'Roboto Condensed', sans-serif; */
   text-align: center;
 }
 
 #single-project-title h1 span {
-  font-size: 6rem;
+  font-size: 48;
   color: rgb(0, 129, 199);
   text-align: center;
 }
@@ -705,4 +705,15 @@
       font-size: 18px; /* Increase button size for better interaction */
     }
   }
+
+  .amenities-buttons #amenPrev, #amenNext{
+    font-family: Swiper-icons;
+    padding: 15px 15px;
+    background-color: white;
+    border-radius: 3px;
+  }
   
+  #amenPrev::after , #amenNext::after{
+    font-size: 16px;
+    color: black;
+  }
