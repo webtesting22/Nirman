@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/zekton" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 </head>
 
@@ -57,20 +58,23 @@
         </div>
 
         <div class="nav-menu">
+
             <div class="overlay"></div>
             <ul>
                 <li><a href="./">Home</a></li>
-                <li><a href="./nirman-about.html">About Us</a></li>
-                <li><a href="./nirman-projects.html">Projects</a></li>
+                <li><a href="./nirmaan-about.html">About Us</a></li>
+                <li><a href="./nirmaan-projects.html">Projects</a></li>
                 <li><a href="./nirmaan-contact.html">Contact Us</a></li>
             </ul>
-        </div>
 
+        </div>
         <button class="nav-toggler" onclick="toggleNav()" style="border-radius: 8px">
             <i class="bx bx-menu" style="color: white"></i>
         </button>
+
+
     </div>
-    <div class="TopBackContainerProjectPage" style="height: 80vh">
+    <!-- <div class="TopBackContainerProjectPage" style="height: 80vh">
         <div class="OverlayBack" style="height: 80vh">
             <h1 style="
           z-index: 5;
@@ -83,7 +87,45 @@
         ">
                 PROJECT DETAILS </h1>
         </div>
+    </div> -->
+    <div class="swiper projectImageSlider">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide projectImageSlider-slide">
+                <img src="projects-images/Final_Render_aerial_view-2-1.jpg" alt="VIBGYOR-img">
+            </div>
+            <div class="swiper-slide projectImageSlider-slide">
+                <img src="projects-images/Final_Render_commercial_Front-1.jpg" alt="VIBGYOR-img">
+            </div>
+            <div class="swiper-slide projectImageSlider-slide">
+                <img src="projects-images/Final_Render_Dusk_View.jpg" alt="VIBGYOR-img">
+            </div>
+            <div class="swiper-slide projectImageSlider-slide">
+                <img src="projects-images/Final_Render_Garden_View_revised-1.jpg" alt="VIBGYOR-img">
+            </div>
+            <div class="swiper-slide projectImageSlider-slide">
+                <img src="projects-images/Final_Render_street_revised-1.jpg" alt="VIBGYOR-img">
+            </div>
+            <div class="swiper-slide projectImageSlider-slide">
+                <img src="projects-images/Final_Render_Entry_View_Revised.jpg.jpg" alt="VIBGYOR-img">
+            </div>
+        </div>
     </div>
+    <div class="flex animeslide-bottom">
+        <!-- <div class="cell small">
+                    <div class="animeslide-pagination swiper-pagination"></div>
+                </div>
+                <div class="cell medium">
+                    <div class="animeslide-scrollbar swiper-scrollbar"></div>
+                </div> -->
+        <div class="cell small">
+            <div class="animeslide-button-prev swiper-button-prev" id="swiper-button-prev"></div>
+            <div class="animeslide-button-next swiper-button-next" id="swiper-button-next"></div>
+        </div>
+    </div>
+    </div>
+
     <section class="ftco-section" id="back-overlay">
         <section style="background-color: transparent;">
             <div class="section-padding"></div>
@@ -136,7 +178,7 @@
                     <div class="row m-0" id="project-detail-box">
                         <div class="col-lg-4" style="background-color: #000000a3; display: flex; align-items: center;">
                             <div class="container">
-                                <h4 class="project-box-title"><span>N</span>irman Rejoice</h4>
+                                <h4 class="project-box-title"><span>N</span>irmaan Satva</h4>
                                 <hr
                                     style="background-color: rgb(0,129,199); border: 2px solid rgb(0,129,199); opacity: 1; width: 40px;">
                                 <span class="text-white">Residential + Commercial
@@ -294,6 +336,11 @@
                     <hr />
                 </div>
                 <br>
+            </div>
+            <!-- <div class="row m-0">
+                    <div class="col-lg-6">t</div>
+                    <div class="col-lg-6">t</div>
+                </div>
                 <div class="row m-0" style="background-color: #000000a3;padding: 7px;">
                     <div class="col-lg-4 col-md-6"
                         style="display: flex; justify-content: center; align-items: center; padding: 0px;">
@@ -337,12 +384,119 @@
                             <img src="projects-images/seating area.jpg" width="100%" alt="">
                         </div>
                     </div>
-                </div>
+                </div> -->
+            <div class="row-w-100 amenities-row">
+                <div class="col-lg-4">
+                    <div class="swiper info-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide info-slide">
+                                <p>Amenities Info 1: Swimming Pool</p>
+                            </div>
+                            <div class="swiper-slide info-slide">
+                                <p>Amenities Info 2: Gym</p>
+                            </div>
+                            <div class="swiper-slide info-slide">
+                                <p>Amenities Info 3: Banquet Hall</p>
+                            </div>
+                            <div class="swiper-slide info-slide">
+                                <p>Amenities Info 4: Badminton Court</p>
+                            </div>
+                            <div class="swiper-slide info-slide">
+                                <p>Amenities Info 5: Parking Area</p>
+                            </div>
+                            <div class="swiper-slide info-slide">
+                                <p>Amenities Info 6: Seating Area</p>
+                            </div>
 
+                        </div>
+                        <div class="amenities-buttons">
+                        <div class="swiper-button-prev amenities-slide-prev"></div>
+                        <div class="swiper-button-next amenities-slide-next"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="swiper image-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide amenities-slide">
+                                <img src="projects-images/swimming.jpg" alt="Image 1">
+                            </div>
+                            <div class="swiper-slide amenities-slide">
+                                <img src="projects-images/gym.jpg" alt="Image 2">
+                            </div>
+                            <div class="swiper-slide amenities-slide">
+                                <img src="projects-images/banquet hall.jpg" alt="Image 3">
+                            </div>
+                            <div class="swiper-slide amenities-slide">
+                                <img src="projects-images/badminton.jpg" alt="Image 4">
+                            </div>
+                            <div class="swiper-slide amenities-slide">
+                                <img src="projects-images/parking.jpg" alt="Image 5">
+                            </div>
+                            <div class="swiper-slide amenities-slide">
+                                <img src="projects-images/seating area.jpg" alt="Image 6">
+                            </div>
+                        </div>
+                        <!-- Navigation Buttons -->
+
+                    </div>
+                </div>
             </div>
+
+            <!-- Include Swiper JS -->
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+            <script>
+                // Initialize the info (text) Swiper
+                const infoSwiper = new Swiper('.info-swiper', {
+                    loop: true,
+                    allowTouchMove: false, // Disable swiping for text slider, only control with buttons
+
+                });
+
+                // Initialize the image Swiper
+                const imageSwiper = new Swiper('.image-swiper', {
+                    loop: true,
+                    navigation: {
+                        nextEl: '.amenities-slide-next',
+                        prevEl: '.amenities-slide-prev',
+                    },
+                });
+
+                // Sync the two Swipers
+                imageSwiper.on('slideChange', function () {
+                    infoSwiper.slideTo(imageSwiper.realIndex);
+                });
+
+                infoSwiper.on('slideChange', function () {
+                    imageSwiper.slideTo(infoSwiper.realIndex);
+                });
+            </script>
+
+
+
             <br><br><br>
 
+            <div class="container">
+                <!--h2 class="Project-title">Project <span>Ameneties</span></h2-->
+                <div id="Section-title">
+                    <h1>Location<span></span></h1>
+                    <hr />
+                </div>
+                <br>
+            </div>
+            <div style="width: 100%;">
+                <div class="col-lg-12">
+                    <div class="MapContainer">
 
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.660819542486!2d72.5496785!3d23.109509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e831d7e01f8c5%3A0x45944444afd839ea!2sNirman%20Rejoice!5e0!3m2!1sen!2sin!4v1728888883489!5m2!1sen!2sin"
+                            style="border:0;width: 100%;height:100%;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                </div>
+            </div>
 
             <br><br><br>
             <div class="container">
@@ -370,7 +524,7 @@
 
             <br><br>
             <div style="display:flex;justify-content:center">
-                <a href="./nirman-projects.html" class="download-btn">View More Projects</a>
+                <a href="./nirmaan-projects.html" class="download-btn">View More Projects</a>
             </div>
 
         </div>
@@ -391,7 +545,7 @@
                             <li><a href="./index.html">Home</a></li>
                             <li><a href="./nirmaan-about.html">About Us</a></li>
                             <li><a href="./nirmaan-projects.html">Projects</a></li>
-                            <li><a href="./nirmaan-contact.html">Contact Us</a></li>    
+                            <li><a href="./nirmaan-contact.html">Contact Us</a></li>
 
                         </div>
 
@@ -463,6 +617,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
 
@@ -472,6 +627,54 @@
     AOS.init();
 </script>
 <script src="./script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const swiperQuiz = new Swiper(".projectImageSlider", {
+            // Optional parameters
+            // effect: "slide",
+            effect: "slide",
+            // crossfade:"false",
+            loop: true,
+            speed: 800, // Moderate speed for smooth transitions
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000, // Increased delay for smooth viewing
+                disableOnInteraction: false, // Continue autoplay after interaction
+            },
+            pagination: {
+                el: ".animeslide-pagination",
+                type: "custom",
+                renderCustom: function (swiper, current, total) {
+                    let indT = total >= 5 ? total : `${total}`;
+                    let indC = current >= 5 ? current : `${current}`;
+                    return `<b>${indC}</b><span>/</span>${indT}`;
+                }
+            },
+            navigation: {
+                nextEl: ".animeslide-button-next",
+                prevEl: ".animeslide-button-prev"
+            },
+            scrollbar: {
+                el: ".animeslide-scrollbar",
+                draggable: true
+            },
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false
+            },
+            runCallbacksOnInit: true,
+            grabCursor: true, // Provides a better user experience with smooth interaction
+            slidesPerView: 'auto', // Ensures smooth sliding by dynamically adjusting the view
+            // spaceBetween: 30, // Adds space between slides for smoothness
+
+        });
+    })
+
+    // setTimeout(() => {
+    //     swiperQuiz.update(); // Refresh Swiper to recalculate sizes
+    // }, 100);
+
+</script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const galleryItems = document.querySelectorAll(".gallery-item");
