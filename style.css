@@ -2343,6 +2343,7 @@ button {
 .ContactUsBtn {
   background: transparent;
   border: 2px solid #0081c7;
+  font-weight: 600;
   color: white;
   padding: 10px 25px;
   border-radius: 50px;
