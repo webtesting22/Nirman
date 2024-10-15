@@ -418,24 +418,33 @@
   transition: 0.5s;
 }
 .swiper {
-  width: 100%;
-  height: 100vh;
+  /* width: 100%; */
+  /* height: 100vh; */
 }
-
+.projectImageSlider {
+  height: 100vh;
+  
+  
+}
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
+  /* text-align: center; */
+  /* font-size: 18px; */
   /* background: #fff; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* width: 100% !important; */
+  
 }
 
 .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
+  /* display: block; */
+  width: 100% !important;
+  /* height: 100%; */
   object-fit: cover;
+  
+  /* object-fit: contain ; */
+  aspect-ratio: 3/2 !important;
 }
 
 #fullScreenImg {
@@ -651,8 +660,8 @@
 
   /* Info slider adjustments */
   .info-swiper {
-    width: 100% !important; /* Full width for mobile */
-    padding: 10px; /* Add some padding for better layout */
+    width: 100%; /* Full width for mobile */
+    
   }
 
   .info-slide {
@@ -667,7 +676,7 @@
     margin-top: 20px; /* Add spacing between the sliders */
   }
   .projectImageSlider {
-    height: 50vh;
+    height: 30vh;
   }
 
   /* Navigation buttons for Swipers */
@@ -682,10 +691,26 @@
     color: #000; /* Adjust the button colors */
     font-size: 18px; /* Increase button size for better interaction */
   }
+
+  .projectImageSlider-button-next::after,
+  .projectImageSlider-button-prev::after {
+    color: #fff;
+    content: "prev";
+    background: #414141;
+    padding: 18px;
+    border-radius: 5px;
+    margin-bottom: 300px;
+  }
+
+  .projectImageSlider-button-next,
+  .projectImageSlider-button-prev {
+    position: absolute;
+    margin-bottom: 300px !important ;
+  }
 }
 .projectImageSlider-bottom {
   /* position: absolute; */
-  bottom: 2%;
+  /* bottom: 2%; */
   width: 100%;
   border-radius: 8px;
   background-color: transparent;
@@ -695,6 +720,7 @@
   right: 0;
   font-size: 14px;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -705,8 +731,9 @@
   background: #414141;
   padding: 18px;
   border-radius: 5px;
-  margin-bottom:50px;
+  /* margin-bottom: 300px; */
 }
+
 .amenities-buttons #amenPrev,
 #amenNext {
   font-family: Swiper-icons;

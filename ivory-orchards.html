@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nirmaan</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./project-single.css" />
+    <link rel="icon" href="./Nirmaan GROUP 2023 FINAL.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/zekton" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+</head>
+
+<script>
+    let isNavVisible = false;
+
+    function toggleNav() {
+        const navbar = document.querySelector(".navigationBar");
+        const navMenu = document.querySelector(".nav-menu");
+        const menuIcon = document.querySelector(".menu-icon");
+
+        isNavVisible = !isNavVisible;
+
+        if (isNavVisible) {
+            navbar.classList.add("nav-open");
+            navMenu.classList.add("open");
+            menuIcon.innerHTML = "<i class='bx bx-window-close' ></i>";
+        } else {
+            navbar.classList.remove("nav-open");
+            navMenu.classList.remove("open");
+            menuIcon.innerHTML = "<i class='bx bx-menu'></i>";
+        }
+    }
+</script>
+
+<body>
+    <div id="loader">
+        <img src="Nirmaan GROUP 2023 FINAL.png" />
+        <!-- <p class="method-2 " >You Dream We Build</p> -->
+    </div>
+
+    <!-- <a href="" class="btn-whatsapp-pulse btn-whatsapp-pulse-border">
+        <i class="fab fa-whatsapp"></i>
+    </a> -->
+    <div class="navigationBar">
+        <div class="logo-container">
+            <a href="/">
+                <img src="./Nirmaan GROUP 2023 FINAL.png" alt="Logo" />
+            </a>
+        </div>
+
+        <div class="nav-menu">
+
+            <div class="overlay"></div>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./nirmaan-about.html">About Us</a></li>
+                <li><a href="./nirmaan-projects.html">Projects</a></li>
+                <li><a href="./nirmaan-contact.html">Contact Us</a></li>
+            </ul>
+
+        </div>
+        <button class="nav-toggler" onclick="toggleNav()" style="border-radius: 8px">
+            <i class="bx bx-menu" style="color: white"></i>
+        </button>
+
+
+    </div>
+    <!-- <div class="TopBackContainerProjectPage" style="height: 80vh">
+        <div class="OverlayBack" style="height: 80vh">
+            <h1 style="
+          z-index: 5;
+          position: relative;
+          top: 50%;
+          text-align: center;
+          color: white;
+          font-size: 50px;
+     
+        ">
+                PROJECT DETAILS </h1>
+        </div>
+    </div> -->
+    <div class="swiper projectImageSlider">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide projectImageSlider-slide">
+                <img src="projects-images/Ivory Orchards/12.jpeg" alt="VIBGYOR-img">
+            </div>
+            <div class="swiper-slide projectImageSlider-slide">
+                <img src="projects-images/Ivory Orchards/13.jpeg" alt="VIBGYOR-img">
+            </div>
+            <div class="swiper-slide projectImageSlider-slide">
+                <img src="projects-images/Ivory Orchards/14.jpeg" alt="VIBGYOR-img">
+            </div>
+            <div class="swiper-slide projectImageSlider-slide">
+                <img src="projects-images/Ivory Orchards/10.jpeg" alt="VIBGYOR-img">
+            </div>
+            <div class="swiper-slide projectImageSlider-slide">
+                <img src="projects-images/Ivory Orchards/07.jpeg" alt="VIBGYOR-img">
+            </div>
+            <div class="swiper-slide projectImageSlider-slide">
+                <img src="projects-images/Ivory Orchards/10.jpeg" alt="VIBGYOR-img">
+            </div>
+        </div>
+    </div>
+    <div class="flex projectImageSlider-bottom">
+        <div class="cell small">
+            <div class="projectImageSlider-button-prev swiper-button-prev" id="swiper-button-prev"></div>
+            <div class="projectImageSlider-button-next swiper-button-next" id="swiper-button-next"></div>
+        </div>
+    </div>
+    </div>
+
+    <section class="ftco-section" id="back-overlay">
+        <section style="background-color: transparent;">
+            <div class="section-padding"></div>
+            <div class="container">
+                <div id="single-project-title">
+                    <h1>Ivory <span>Orchards</span>
+                    </h1>
+                </div>
+                <!-- <div class="section-padding"></div>  -->
+
+
+            </div>
+        </section>
+        <div class="section-padding"></div>
+        <div class="Project-container">
+            <div class="container">
+                <div id="Section-title">
+                    <h1>Project <span>Gallery</span></h1>
+                    <hr />
+                </div>
+                <!--h2 class="Project-title">Project <span>Gallery</span></h2-->
+                <br>
+                <div class="gallery-container">
+                    <div class="gallery-item" data-index="1">
+                        <img src="projects-images/Ivory Orchards/01.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="2">
+                        <img src="projects-images/Ivory Orchards/02.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="3">
+                        <img src="projects-images/Ivory Orchards/03.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="4">
+                        <img src="projects-images/Ivory Orchards/04.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="5">
+                        <img src="projects-images/Ivory Orchards/05.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="6">
+                        <img src="projects-images/Ivory Orchards/06.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="7">
+                        <img src="projects-images/Ivory Orchards/07.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="8">
+                        <img src="projects-images/Ivory Orchards/08.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="9">
+                        <img src="projects-images/Ivory Orchards/09.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="10">
+                        <img src="projects-images/Ivory Orchards/10.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="11">
+                        <img src="projects-images/Ivory Orchards/11.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="12">
+                        <img src="projects-images/Ivory Orchards/12.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="13">
+                        <img src="projects-images/Ivory Orchards/13.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="14">
+                        <img src="projects-images/Ivory Orchards/14.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="15">
+                        <img src="projects-images/Ivory Orchards/15.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="16">
+                        <img src="projects-images/Ivory Orchards/16.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="17">
+                        <img src="projects-images/Ivory Orchards/17.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="18">
+                        <img src="projects-images/Ivory Orchards/18.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="19">
+                        <img src="projects-images/Ivory Orchards/19.jpeg" alt="VIBGYOR-img">
+                    </div>
+                    <div class="gallery-item" data-index="20">
+                        <img src="projects-images/Ivory Orchards/20.jpeg" alt="VIBGYOR-img">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <!--div id="Section-title"><h1>Project <span>Details</span></h1><hr/></div-->
+                <!--h2 id="Section-title">Project<span>Details</span></h2-->
+                <div class="ftco-section ftco-no-pt ftco-no-pb ftco-services-2" id="project-details">
+                    <!-- <div class="container"> -->
+                    <div class="row m-0" id="project-detail-box">
+                        <div class="col-lg-4" style="background-color: #000000a3; display: flex; align-items: center;">
+                            <div class="container">
+                                <h4 class="project-box-title"><span>I</span>vory Orchards</h4>
+                                <hr
+                                    style="background-color: rgb(0,129,199); border: 2px solid rgb(0,129,199); opacity: 1; width: 40px;">
+                                <span class="text-white">Residential + Commercial
+                                </span>
+                                <p class="text-white">Ivory Orchards is more than an address; it's a
+                                    community of like-minded individuals who appreciate
+                                    the finer aspects of life. Engage in cultural events, build
+                                    friendships in communal spaces, or find serenity in
+                                    the lush community gardens. Here, connections are
+                                    nurtured, and memories are woven.</p>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-8" style="padding: 0px; background-color: #2d2d2dd4; padding: 15px 15px;">
+                            <div class="row no-gutters d-flex">
+                                <div class="col-lg-6 d-flex align-self-stretch ftco-animate">
+                                    <div class="media block-6 services services-1 d-flex w-100 ">
+                                        <div class="icon justify-content-center align-items-center d-flex">
+                                            <div class="icon justify-content-center align-items-center d-flex">
+                                                <img src="projects-images/office-1.png" alt="icon1"
+                                                    style="width:40%; height:50px;">
+                                            </div>
+                                        </div>
+                                        <div class="media-body ms-4">
+                                            <h3 class="heading mb-3">No. of Stories</h3>
+                                            <p>11</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-flex align-self-stretch ftco-animate">
+                                    <div class="media block-6 services services-2 d-flex w-100 ">
+                                        <div class="icon justify-content-center align-items-center d-flex">
+                                            <div class="icon justify-content-center align-items-center d-flex">
+                                                <img src="projects-images/residential-1.png" alt="icon1"
+                                                    style="width:40%; height:50px;">
+                                            </div>
+                                        </div>
+                                        <div class="media-body ms-4">
+                                            <h3 class="heading mb-3">No. of Flats</h3>
+                                            <p>308+13</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-flex align-self-stretch ftco-animate">
+                                    <div class="media block-6 services services-2 d-flex w-100 ">
+                                        <div class="icon justify-content-center align-items-center d-flex">
+                                            <div class="icon justify-content-center align-items-center d-flex">
+                                                <img src="projects-images/club-1.png" alt="icon1"
+                                                    style="width:40%; height:50px;">
+                                            </div>
+                                        </div>
+                                        <div class="media-body ms-4">
+                                            <h3 class="heading mb-3">Type of Flat</h3>
+                                            <p>2bhk + 3bhk + shops
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-flex align-self-stretch ftco-animate">
+                                    <div class="media block-6 services services-1 d-flex w-100 ">
+                                        <div class="icon justify-content-center align-items-center d-flex">
+                                            <div class="icon justify-content-center align-items-center d-flex">
+                                                <img src="projects-images/house-1.png" alt="icon1"
+                                                    style="width:40%; height:50px;">
+                                            </div>
+                                        </div>
+                                        <div class="media-body ms-4">
+                                            <h3 class="heading mb-3">No. of Blocks</h3>
+                                            <p>7</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-4 d-flex align-self-stretch ftco-animate">
+                                            <div class="media block-6 services d-flex w-100">
+                                                <div class="icon justify-content-center align-items-center d-flex"><span
+                                                        class="flaticon-engineer"></span></div>
+                                                <div class="media-body pl-4">
+                                                    <h3 class="heading mb-3">Uska Title</h3>
+                                                    <p>Uska Description.</p>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="container">
+                <div id="Section-title">
+                    <h1>Project <span>Plan</span></h1>
+                    <hr />
+                </div>
+                <!--h2 class="Project-title">Our <span>Plans</span></h2-->
+                <div class="floor-plan-section">
+
+
+                    <br>
+                    <div id="exTab3">
+
+                        <div class="row m-0" style="background-color: #000000a3; ">
+
+
+                            <div class="col-lg-4 col-sm-6" style="border-radius: 5px;">
+                                <ul class="nav nav-pills">
+
+                                    <a href="#1b" data-toggle="tab" style="background-color: rgb(0, 129, 199); text-decoration: none;
+                                            color: white;" class="active" onclick="changeColor(this)">Floor Plans</a>
+                                    <a href="#2b" data-toggle="tab" onclick="changeColor(this)"
+                                        style="text-decoration: none;color: white;">Ground Floor Plan</a>
+                                    <a href="#3b" data-toggle="tab" onclick="changeColor(this)" style="text-decoration: none;
+                                            color: white;">Ground Floor Shops</a>
+                                    <a href="#4b" data-toggle="tab" onclick="changeColor(this)" style="text-decoration: none;
+                                            color: white;">First Floor Terrace Plan</a>
+                                    <a href="#5b" data-toggle="tab" onclick="changeColor(this)" style="text-decoration: none;
+                                            color: white;">Unit Plan Type 1 Tower A B C</a>
+                                    <a href="#6b" data-toggle="tab" onclick="changeColor(this)" style="text-decoration: none;
+                                            color: white;">Unit Plan Type 2 Tower D</a>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-8 col-sm-6 p-0">
+                                <div class="tab-content clearfix">
+                                    <div class="tab-pane active" id="1b">
+                                        <img src="projects-images/Ivory Orchards/Brochure/28.jpg"
+                                            style="width:80%;height:30%;" />
+                                    </div>
+                                    <div class="tab-pane" id="2b">
+                                        <img src="projects-images/Ivory Orchards/Brochure/29.jpg"
+                                            style="width:80%;height:30%;" />
+                                    </div>
+                                    <div class="tab-pane" id="3b">
+                                        <img src="projects-images/Ivory Orchards/Brochure/30.jpg"
+                                            style="width:80%;height:30%;" />
+                                    </div>
+                                    <div class=" tab-pane" id="4b">
+                                        <img src="projects-images/Ivory Orchards/Brochure/31.jpg"
+                                            style="width:80%;height:30%;" />
+                                    </div>
+                                    <div class="tab-pane" id="5b">
+                                        <img src="projects-images/Ivory Orchards/Brochure/34.jpg"
+                                            style="width:80%;height:30%;" />
+                                    </div>
+                                    <div class="tab-pane" id="6b">
+                                        <img src="projects-images/Ivory Orchards/Brochure/35.jpg"
+                                            style="width:80%;height:30%;" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+            <br>
+
+            <div class="container">
+                <!--h2 class="Project-title">Project <span>Ameneties</span></h2-->
+                <div id="Section-title">
+                    <h1>Project <span>Amenities</span></h1>
+                    <hr />
+                </div>
+
+                <br>
+            </div>
+            <!-- <div class="row m-0">
+                    <div class="col-lg-6">t</div>
+                    <div class="col-lg-6">t</div>
+                </div>
+                <div class="row m-0" style="background-color: #000000a3;padding: 7px;">
+                    <div class="col-lg-4 col-md-6"
+                        style="display: flex; justify-content: center; align-items: center; padding: 0px;">
+                        <div class="Ameneties-card">
+                            <span>Swimming Pool</span>
+                            <img src="projects-images/swimming.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6"
+                        style="display: flex; justify-content: center; align-items: center; padding: 0px;">
+                        <div class="Ameneties-card">
+                            <span>Gym</span>
+                            <img src="projects-images/gym.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6"
+                        style="display: flex; justify-content: center; align-items: center; padding: 0px;">
+                        <div class="Ameneties-card">
+                            <span>Banquet hall</span>
+                            <img src="projects-images/banquet hall.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6"
+                        style="display: flex; justify-content: center; align-items: center; padding: 0px;">
+                        <div class="Ameneties-card">
+                            <span>Badminton</span>
+                            <img src="projects-images/badminton.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6"
+                        style="display: flex; justify-content: center; align-items: center; padding: 0px;">
+                        <div class="Ameneties-card">
+                            <span>Parking</span>
+                            <img src="projects-images/parking.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6"
+                        style="display: flex; justify-content: center; align-items: center; padding: 0px;">
+                        <div class="Ameneties-card">
+                            <span>Seating Area</span>
+                            <img src="projects-images/seating area.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                </div> -->
+            <div class="row-w-100 amenities-row">
+                <div class="col-lg-4">
+                    <div class="swiper info-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide info-slide">
+                                <p>Swimming Pool</p>
+                            </div>
+                            <div class="swiper-slide info-slide">
+                                <p>Party Lounge</p>
+                            </div>
+                            <div class="swiper-slide info-slide">
+                                <p>Fully Equipped Library</p>
+                            </div>
+                            <div class="swiper-slide info-slide">
+                                <p>Senior Citizen Sitouts</p>
+                            </div>
+                            <div class="swiper-slide info-slide">
+                                <p>Green Lawns</p>
+                            </div>
+                            <div class="swiper-slide info-slide">
+                                <p>Yoga Studio</p>
+                            </div>
+                            <div class="swiper-slide info-slide">
+                                <p>Indoor Game Zone</p>
+                            </div>
+                            <div class="swiper-slide info-slide">
+                                <p>No Vehicle Play Zone</p>
+                            </div>
+                            <div class="swiper-slide info-slide">
+                                <p>Box Cricket</p>
+                            </div>
+
+                        </div>
+                        <div class="amenities-buttons">
+                            <div class="swiper-button-prev amenities-slide-prev" id="amenPrev"></div>
+                            <div class="swiper-button-next amenities-slide-next" id="amenNext"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="swiper image-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide amenities-slide">
+                                <img src="projects-images/Ivory Orchards/08.jpeg" alt="Image 1">
+                            </div>
+                            <div class="swiper-slide amenities-slide">
+                                <img src="projects-images/Ivory Orchards/16.jpeg" alt="Image 2">
+                            </div>
+                            <div class="swiper-slide amenities-slide">
+                                <img src="projects-images/Ivory Orchards/04.jpeg" alt="Image 3">
+                            </div>
+                            <div class="swiper-slide amenities-slide">
+                                <img src="projects-images/Ivory Orchards/06.jpeg" alt="Image 4">
+                            </div>
+                            <div class="swiper-slide amenities-slide">
+                                <img src="projects-images/Ivory Orchards/07.jpeg" alt="Image 5">
+                            </div>
+                            <div class="swiper-slide amenities-slide">
+                                <img src="projects-images/Ivory Orchards/03.jpeg" alt="Image 6">
+                            </div>
+                            <div class="swiper-slide amenities-slide">
+                                <img src="projects-images/Ivory Orchards/02.jpeg" alt="Image 7">
+                            </div>
+                            <div class="swiper-slide amenities-slide">
+                                <img src="projects-images/Ivory Orchards/Brochure/20.jpg" alt="Image 8">
+                            </div>
+                        </div>
+                        <!-- Navigation Buttons -->
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Include Swiper JS -->
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+            <script>
+                // Initialize the info (text) Swiper
+                const infoSwiper = new Swiper('.info-swiper', {
+                    loop: true,
+                    allowTouchMove: false, // Disable swiping for text slider, only control with buttons
+                    autoplay: {
+                        delay: 3000, // Increased delay for smooth viewing
+                        disableOnInteraction: false, // Continue autoplay after interaction
+                    },
+                    navigation: {
+                        nextEl: '.amenities-slide-next',
+                        prevEl: '.amenities-slide-prev',
+                    },
+                });
+
+                // Initialize the image Swiper
+                const imageSwiper = new Swiper('.image-swiper', {
+                    loop: true,
+                    allowTouchMove: false, // Disable swiping for text slider, only control with buttons
+
+                    autoplay: {
+                        delay: 3000, // Increased delay for smooth viewing
+                        disableOnInteraction: false, // Continue autoplay after interaction
+                    },
+                    navigation: {
+                        nextEl: '.amenities-slide-next',
+                        prevEl: '.amenities-slide-prev',
+                    },
+                });
+
+                // // Sync the two Swipers
+                // imageSwiper.on('slideChange', function () {
+                //     infoSwiper.slideTo(imageSwiper.realIndex);
+                // });
+
+                // infoSwiper.on('slideChange', function () {
+                //     imageSwiper.slideTo(infoSwiper.realIndex);
+                // });
+            </script>
+
+
+
+            <br>
+
+            <div class="container">
+                <!--h2 class="Project-title">Project <span>Ameneties</span></h2-->
+                <div id="Section-title">
+                    <h1>Location<span></span></h1>
+                    <hr />
+                </div>
+                <br>
+            </div>
+            <div style="width: 100%;">
+                <div class="col-lg-12">
+                    <div class="MapContainer">
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7768039.7443597!2d69.80340417573295!3d18.072103013095344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b41075f2993%3A0xe35f3492ece83dba!2sIvory%20Orchard!5e0!3m2!1sen!2sin!4v1728974621665!5m2!1sen!2sin"
+                            style="border:0;width: 100%;height:100%;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="container">
+                <div id="Section-title">
+                    <h1>Enquire <span>Now</span></h1>
+                    <hr />
+                </div>
+                <!--h2 class="Project-title">Know More About <span>Project</span></h2-->
+                <br>
+                <div class="row contact-container m-0" style="background-color: black;">
+                    <div class="col-lg-6 border-related">
+                        <div class="project-contact-icon">
+                            <a href="tel:9825324480"><i class='bx bxs-phone-call'>-9825324480</i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" style="display: flex; justify-content: center; align-items: center;">
+
+                        <a href="./IO-Brochure.pdf" download class="download-btn">Download Brochure</a>
+
+                    </div>
+                </div>
+                <div class="section-padding"></div>
+
+            </div>
+
+            <br><br>
+            <div style="display:flex;justify-content:center">
+                <a href="./nirmaan-projects.html" class="download-btn">View More Projects</a>
+            </div>
+
+        </div>
+        <div class="section-padding"></div>
+        <div class="section-padding"></div>
+    </section>
+    <footer>
+        <div id="Footer">
+            <!-- <div class="section-padding"></div>
+                <div class="section-padding"></div> -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-logo">
+                            <a href="./index.html"><img src="./Nirmaan GROUP 2023 FINAL.png" alt="" /></a>
+                        </div>
+                        <div class="Footer-social-links">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./nirmaan-about.html">About Us</a></li>
+                            <li><a href="./nirmaan-projects.html">Projects</a></li>
+                            <li><a href="./nirmaan-contact.html">Contact Us</a></li>
+
+                        </div>
+
+                        <div class="social-links">
+                            <li>
+                                <a href=""><i class="bx bxl-instagram-alt"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="bx bxl-meta"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="bx bxl-linkedin-square"></i></a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <!-- <div class="section-padding"></div> -->
+                <br />
+                <div class="copyright-text">
+                    <span>Copyright © All rights reserved by<a href="https://outleadsolutions.com/" target="_blank">
+                            Outlead solution.</a></span>
+                </div>
+            </div>
+            <!-- <div class="section-padding"></div> -->
+        </div>
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Delay showing content for 10 seconds
+        setTimeout(function () {
+            // Hide loader
+            document.getElementById("loader").style.display = "none";
+
+            // Show content
+            document.getElementById("content").style.display = "block";
+        }, 2000); // 10 seconds delay
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Delay showing content for 10 seconds
+        setTimeout(function () {
+            // Hide loader
+            document.getElementById("loader").style.display = "none";
+
+            // Show content
+            document.getElementById("content").style.display = "block";
+        }, 2000); // 10 seconds delay
+    });
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+<script src="./script.js"></script>
+<script src="./script.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="./script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const swiperQuiz = new Swiper(".projectImageSlider", {
+            // Optional parameters
+            // effect: "slide",
+            effect: "slide",
+            // crossfade:"false",
+            loop: true,
+            speed: 800, // Moderate speed for smooth transitions
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000, // Increased delay for smooth viewing
+                disableOnInteraction: false, // Continue autoplay after interaction
+            },
+            pagination: {
+                el: ".animeslide-pagination",
+                type: "custom",
+                renderCustom: function (swiper, current, total) {
+                    let indT = total >= 5 ? total : `${total}`;
+                    let indC = current >= 5 ? current : `${current}`;
+                    return `<b>${indC}</b><span>/</span>${indT}`;
+                }
+            },
+            navigation: {
+                nextEl: ".projectImageSlider-button-next",
+                prevEl: ".projectImageSlider-button-prev"
+            },
+            scrollbar: {
+                el: ".animeslide-scrollbar",
+                draggable: true
+            },
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false
+            },
+            runCallbacksOnInit: true,
+            grabCursor: true, // Provides a better user experience with smooth interaction
+            slidesPerView: 'auto', // Ensures smooth sliding by dynamically adjusting the view
+            // spaceBetween: 30, // Adds space between slides for smoothness
+
+        });
+    })
+
+    // setTimeout(() => {
+    //     swiperQuiz.update(); // Refresh Swiper to recalculate sizes
+    // }, 100);
+
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const galleryItems = document.querySelectorAll(".gallery-item");
+        const lightBoxContainer = document.createElement("div");
+        const lightBoxContent = document.createElement("div");
+        const lightBoxImg = document.createElement("img");
+        const lightBoxPrev = document.createElement("div");
+        const lightBoxNext = document.createElement("div");
+
+        lightBoxContainer.classList.add("lightbox");
+        lightBoxContent.classList.add("lightbox-content");
+        lightBoxPrev.classList.add("fa", "fa-angle-left", "lightbox-prev");
+        lightBoxNext.classList.add("fa", "fa-angle-right", "lightbox-next");
+
+        lightBoxContainer.appendChild(lightBoxContent);
+        lightBoxContent.appendChild(lightBoxImg);
+        lightBoxContent.appendChild(lightBoxPrev);
+        lightBoxContent.appendChild(lightBoxNext);
+
+        document.body.appendChild(lightBoxContainer);
+
+        let currentIndex = 0;
+
+        function showLightBox(index) {
+            if (index < 0 || index >= galleryItems.length) {
+                return;
+            }
+            const imageSrc = galleryItems[index].querySelector("img").getAttribute("src");
+            lightBoxImg.setAttribute("src", imageSrc);
+            currentIndex = index;
+            lightBoxContainer.style.display = "block";
+        }
+
+        function closeLightBox() {
+            lightBoxContainer.style.display = "none";
+        }
+
+        function prevImage() {
+            showLightBox(currentIndex - 1);
+        }
+
+        function nextImage() {
+            showLightBox(currentIndex + 1);
+        }
+
+        galleryItems.forEach(function (item, index) {
+            item.addEventListener("click", function () {
+                showLightBox(index);
+            });
+        });
+
+        lightBoxContainer.addEventListener("click", function (event) {
+            if (event.target === lightBoxContainer || event.target === lightBoxPrev || event.target === lightBoxNext) {
+                closeLightBox();
+            }
+        });
+
+        lightBoxPrev.addEventListener("click", prevImage);
+        lightBoxNext.addEventListener("click", nextImage);
+    });
+
+
+</script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> -->
+
+
+</html>
