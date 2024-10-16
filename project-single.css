@@ -649,6 +649,16 @@
   display: flex;
   justify-content: center;
 }
+.amenities-rows .col-lg-4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info-swiper{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
 /* @media (max-width: 576px) {
   .info-slide {
     width: 80% !important;
@@ -657,6 +667,18 @@
     width: 100% !important;
   }
 } */
+@media (max-width: 992px) {
+  .amenities-row {
+      flex-direction: column-reverse;
+      padding: 10px;
+  }
+  .image-swiper{
+    margin: 10px 0;
+  }
+  
+
+
+}
 /* Mobile Styles for Swipers */
 @media (max-width: 576px) {
   .amenities-row {
