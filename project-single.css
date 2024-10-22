@@ -421,10 +421,7 @@
   font-weight: 500;
   transition: 0.5s;
 }
-.swiper {
-  /* width: 100%; */
-  /* height: 100vh; */
-}
+
 @media (min-width:1200px){
   .projectImageSlider{
     height: 100vh;
