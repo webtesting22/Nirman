@@ -293,6 +293,7 @@ figure.snip1163.hover figcaption p {
   background-image: url("./projects-images/our\ project\ back.jpg");
   background-size: cover;
   width: 100%;
+  padding: 2rem 0;
 }
 
 /* #project-section{
@@ -1138,7 +1139,7 @@ input[type="checkbox"] {
   padding: 5px 20px;
   border-radius: 3px;
   /* font-family: "Titillium Web", sans-serif; */
-  font-weight: 500;
+  /* font-weight: 500; */
 
   transition: background-color 0.3s, color 0.3s;
 }
@@ -2347,7 +2348,7 @@ button {
   background: transparent;
   border: 2px solid #0081c7;
   font-weight: 600;
-  color: white;
+  color: white ;
   padding: 10px 25px;
   border-radius: 50px;
   cursor: pointer;
@@ -2356,6 +2357,7 @@ button {
 }
 .ContactUsBtn a {
   text-decoration: none;
+  color: white;
 }
 .ContactUsBtn:hover {
   transform: scale(1.1) !important;
@@ -2367,7 +2369,9 @@ button {
 
   color: #fff;
 }
-
+.teamSection{
+  padding: 2rem 0rem 0rem 0rem;
+}
 @media (max-width: 576px) {
   .ContentContainer {
     font-size: 1.4rem;
@@ -2383,7 +2387,8 @@ button {
     /* min-height: 430px; */
   }
   .qualitiesCards {
-    padding: 30px 40px;
+    /* padding: 30px 40px; */
+    padding: 2rem 0rem;
   }
 }
 @media (max-width: 768px) {
@@ -2442,7 +2447,9 @@ a:not([href]):not([tabindex]):hover {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  background-color: #343434;
+  padding: 2rem 0rem;
+  /* background-color: #343434; */
+  background-color: rgb(21,21,21);
 }
 .contact-form, .contact-details {
   margin: 15px 30px;
