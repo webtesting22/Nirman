@@ -497,6 +497,9 @@
   justify-content: center !important;
   align-items: center !important;
 }
+.info-slide p{
+  margin: 10px;
+}
 .prev {
   left: 15px;
 }
