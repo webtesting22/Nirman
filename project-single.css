@@ -614,8 +614,8 @@
 
   .lightbox-content {
     width: 80%;
-    height: 60%;
-    margin: 15% auto;
+    /* height: 60%; */
+    margin: 50% auto;
   }
 
   .gallery-heading {
@@ -625,12 +625,13 @@
 
 @media (max-width: 480px) {
   .gallery-item {
-    flex-basis: 100%;
+    /* flex-basis: 100%; */
     margin-bottom: 1px;
   }
 
   .lightbox-content {
     width: 90%;
+    height: auto;
     margin: 32% auto;
   }
 }

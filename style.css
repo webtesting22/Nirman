@@ -1115,7 +1115,7 @@ input[type="checkbox"] {
     opacity: 0;
   }
 }
-.tab-content{
+.tab-content {
   margin: 10px;
 }
 #exTab2 .nav-tabs,
@@ -1135,7 +1135,8 @@ input[type="checkbox"] {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
-  background-color: #000000;
+  background: transparent;
+  /* background-color: #000000; */
   padding: 5px 20px;
   border-radius: 3px;
   /* font-family: "Titillium Web", sans-serif; */
@@ -1143,7 +1144,9 @@ input[type="checkbox"] {
 
   transition: background-color 0.3s, color 0.3s;
 }
-
+#exTab2 .nav-tabs li a:hover {
+  background-color: rgba(141, 139, 139, 0.12);
+}
 #exTab2 .tab-content,
 #exTab1 .tab-content {
   /* margin: 2rem 0rem; */
@@ -1157,28 +1160,28 @@ input[type="checkbox"] {
   color: #fff;
 }
 
-
 #next,
 #prev {
   position: static;
   /* background-color: white; */
   background-color: #383838;
-  border-radius: 10px;
+  border-radius: 5px;
   /* color: rgb(0, 0, 0); */
   color: white;
-  padding: 20px 70px;
+  /* padding: 20px 70px; */
+  padding: 18px;
   transition: 0.5s;
   margin: 10px;
-} 
+}
 
- #next:hover,
+#next:hover,
 #prev:hover {
   position: static;
   /* background-color: rgb(0, 0, 0); */
   background-color: #252525;
   border-radius: 3px;
   color: rgb(255, 255, 255);
-  padding: 20px 70px;
+  /* padding: 20px 70px; */
   transition: 0.5s;
 }
 /* .control {
@@ -1216,7 +1219,7 @@ input[type="checkbox"] {
 #next::after,
 #prev::after {
   content: "";
-}  
+}
 
 .swiper-slide {
   background-color: transparent;
@@ -1847,8 +1850,6 @@ input[type="checkbox"] {
   }
 }
 
-
-
 .form-horizontal {
   /*float: left;*/
   max-width: 400px;
@@ -1888,7 +1889,6 @@ textarea {
 .alt-send-button:hover {
   transform: translate3d(0px, -29px, 0px);
 }
-
 
 @media (max-width: 1090px) {
   .wrapper ul {
@@ -2239,16 +2239,15 @@ button {
   position: absolute;
   top: 0px;
 }
-.TopBackContainerContact{
+.TopBackContainerContact {
   height: 80vh;
   background-image: url(./projects-images/contact-back.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
   position: relative;
-
 }
-.OverlayBackContact{
+.OverlayBackContact {
   height: 80vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.532);
@@ -2290,7 +2289,7 @@ button {
   padding: 30px;
   border-radius: 10px;
   text-align: center;
-  min-height: 350px;
+  min-height: 400px;
   /* width: 500px; */
 }
 .qualityCard h4 {
@@ -2348,7 +2347,7 @@ button {
   background: transparent;
   border: 2px solid #0081c7;
   font-weight: 600;
-  color: white ;
+  color: white;
   padding: 10px 25px;
   border-radius: 50px;
   cursor: pointer;
@@ -2369,7 +2368,7 @@ button {
 
   color: #fff;
 }
-.teamSection{
+.teamSection {
   padding: 2rem 0rem 0rem 0rem;
 }
 @media (max-width: 576px) {
@@ -2449,9 +2448,10 @@ a:not([href]):not([tabindex]):hover {
   gap: 10px;
   padding: 2rem 0rem;
   /* background-color: #343434; */
-  background-color: rgb(21,21,21);
+  background-color: rgb(21, 21, 21);
 }
-.contact-form, .contact-details {
+.contact-form,
+.contact-details {
   margin: 15px 30px;
   padding: 10px;
   /* border: 1px solid #ccc; */
@@ -2463,7 +2463,7 @@ a:not([href]):not([tabindex]):hover {
 .contact-form {
   flex-basis: 47%;
 }
-.contact-details{
+.contact-details {
   flex-basis: 45%;
 }
 
@@ -2503,25 +2503,51 @@ a:not([href]):not([tabindex]):hover {
   background-color: #5186c28a;
 }
 
-
 .contact-details h2 {
   text-align: center;
   color: white;
 }
-.contact-details p{
+.contact-details p {
   color: white;
 }
-.map{
+.map {
   width: 100vw;
   height: 400px;
 }
-.contact-details a{
+.contact-details a {
   color: white;
 }
-.contact-details{
+.contact-details {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
-.contact-details-container{
+.contact-details-container {
   padding: 20px 0;
+}
+#prev::after {
+  content: "prev";
+  font-size: 10px;
+}
+#next::after {
+  content: "next";
+  font-size: 10px;
+}
+@media (max-width:576px){
+  #exTab2 .nav-tabs li a, #exTab1 .nav-tabs li a {
+    font-size: 1rem;
+  }
+  .copyright-text{
+    font-size: 0.8rem;
+  }
+  .modal{
+    top: 20% !important;
+  }
+  .col-lg-6{
+    width: 100%;
+  }
+}
+@media (max-width:500px) {
+  .copyright-text{
+    font-size: 0.7rem;
+  }
 }
