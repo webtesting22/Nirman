@@ -2568,6 +2568,9 @@ a:not([href]):not([tabindex]):hover {
 }
 
 @media (max-width: 769px) {
+  .animeslide-slide{
+    background-repeat: no-repeat;
+  }
   .TopBackContainer {
     height: 50vh;
   }
@@ -2592,10 +2595,10 @@ a:not([href]):not([tabindex]):hover {
   #exTab1 .nav-tabs li a {
     font-size: 1rem;
   }
-  .projectImageSlider 
+   
   #single-project-title {
-    /* display: none !important; */
-    margin-top: 70px;
+    display: none !important;
+    /* margin-top: 70px; */
   }
   .projectImageSlider {
     top: 70px;
