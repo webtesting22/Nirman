@@ -2658,9 +2658,36 @@ a:not([href]):not([tabindex]):hover {
   .container {
     padding: 0;
   }
+ 
 }
 @media (max-width: 500px) {
   .copyright-text {
     font-size: 0.7rem;
+  }
+  .nav-toggler{
+    margin-right: 40px;
+  }
+  .logo-container{
+    padding-left: 20px;
+  }
+}
+@media (max-width:400px){
+  .nav-toggler{
+    margin-right: 170px;
+  }
+  .nav-menu.open li a{
+    font-size: 12px;
+  }
+  
+}
+@media (max-width:350px)
+{
+  .logo-container img{
+    width: 70px;
+  }
+}
+@media (max-width:300px){
+  .nav-menu.open li a {
+    font-size: 9px;
   }
 }
