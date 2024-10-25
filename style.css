@@ -12,7 +12,7 @@ html {
 body {
   padding: 0px;
   margin: 0px;
-  background-color: black;
+  background-color: black !important;
   overflow: auto;
   font-family: "Raleway", sans-serif;
   /* font-family: "Zekton Rg", sans-serif !important; */
@@ -300,7 +300,7 @@ figure.snip1163.hover figcaption p {
     background-color: black;;
 }
  */
-.animeslide{
+.animeslide {
   height: 100vh;
 }
 .animeslide .swiper-slide {
@@ -2002,6 +2002,7 @@ textarea {
   top: 0;
   z-index: 10;
   height: 70px;
+
   /* transition: background-color 0.5s ease; */
 }
 
@@ -2202,7 +2203,7 @@ button {
   width: 100%;
   position: relative;
 }
-.TopBackContainerProject{
+.TopBackContainerProject {
   height: 80vh;
 }
 .OverlayBack {
@@ -2470,6 +2471,9 @@ a:not([href]):not([tabindex]):hover {
 }
 .contact-details {
   flex-basis: 45%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .contact-form h2 {
@@ -2546,7 +2550,7 @@ a:not([href]):not([tabindex]):hover {
 }
 .mapContainer iframe {
   aspect-ratio: 3/2;
-  
+
   width: 100%;
   /* height: 100%; */
 }
@@ -2559,27 +2563,27 @@ a:not([href]):not([tabindex]):hover {
   content: "next";
   font-size: 10px;
 }
-.TopBackContainer
-.TopBackContainer h1{
+.TopBackContainer .TopBackContainer h1 {
   font-size: 50px;
 }
-@media (max-width:769px){
-  .TopBackContainer{
+
+@media (max-width: 769px) {
+  .TopBackContainer {
     height: 50vh;
   }
-  .TopBackContainerProject{
+  .TopBackContainerProject {
     height: 50vh;
   }
-  .TopBackContainerContact{
+  .TopBackContainerContact {
     height: 50vh;
   }
-  .OverlayBack{
+  .OverlayBack {
     height: 50vh;
   }
-  .animeslide{
+  .animeslide {
     height: 50vh;
   }
-  .animeslide-slide{
+  .animeslide-slide {
     background-size: contain;
   }
 }
@@ -2588,6 +2592,21 @@ a:not([href]):not([tabindex]):hover {
   #exTab1 .nav-tabs li a {
     font-size: 1rem;
   }
+  .projectImageSlider 
+  #single-project-title {
+    /* display: none !important; */
+    margin-top: 70px;
+  }
+  .projectImageSlider {
+    top: 70px;
+  }
+  .projectImageSlider-button-prev,
+  .projectImageSlider-button-next {
+    display: none !important  ;
+  }
+  .animeslide-button-next,.animeslide-button-prev{
+    display: none !important;
+  }
   .copyright-text {
     font-size: 0.8rem;
   }
@@ -2595,33 +2614,46 @@ a:not([href]):not([tabindex]):hover {
     top: 20% !important;
   }
   .col-lg-6 {
-    width: 100%;
+    width: 100% !important;
   }
-  .address,.num,.mail{
+  .address,
+  .num,
+  .mail {
     font-size: 13px;
   }
-  .TopBackContainer{
+  .TopBackContainer {
     height: 30vh;
   }
-  .TopBackContainerProject{
+  .TopBackContainerProject {
     height: 30vh;
   }
-  .TopBackContainerContact{
+  .TopBackContainerContact {
     height: 30vh;
   }
-  .animeslide{
+  .animeslide {
     height: 30vh;
   }
-  .OverlayBack{
+  .OverlayBack {
     height: 30vh;
   }
-  .OverlayBack h1{
+  .OverlayBack h1 {
     font-size: 35px;
   }
-  .animeslide-slide{
+  .animeslide-slide {
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100px;
+  }
+  .contact-details,
+  .contact-form {
+    padding: 10px 15px;
+  }
+  .contactUs-container {
+    padding: 2rem 0rem;
+  }
+
+  .container {
+    padding: 0;
   }
 }
 @media (max-width: 500px) {

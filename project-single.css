@@ -703,7 +703,7 @@
     margin-top: 20px; /* Add spacing between the sliders */
   }
   .projectImageSlider {
-    height: 30vh;
+    /* height: 30vh; */
   }
 
   /* Navigation buttons for Swipers */
