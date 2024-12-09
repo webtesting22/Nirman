@@ -607,12 +607,13 @@ input[type="checkbox"] {
   /* justify-content: space-between; */
   padding: 10px 45px;
   color: white;
-  min-height: 490px;
+  height: 100%;
+  /* min-height: 490px; */
   border-radius: 10px;
 }
 @media (max-width: 1200px) and (min-width: 989px) {
   .Team-member-main {
-    min-height: 550px;
+    /* min-height: 550px; */
   }
 }
 @media (max-width: 990px) and (min-width: 610px) {
@@ -629,7 +630,7 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
-    padding: 10px 13px;
+    padding: 10px 20px;
     margin: 10px 0px;
     color: white;
     border-radius: 10px;
@@ -1727,12 +1728,23 @@ input[type="checkbox"] {
   font-weight: 400;
   margin-bottom: 0;
 }
-
+#our-team .col-lg-12 {
+  margin-top: 20px;
+}
+#our-team .col-lg-6 {
+  margin-top: 20px;
+}
 @media (max-width: 768px) {
   #our-team .col-lg-6 {
     padding: 0px;
+    margin-top: 0px;
+    height: 100%;
   }
-
+  #our-team .col-lg-12 {
+    margin-top: 0;
+    padding: 0px;
+    height: 100%;
+  }
   .timeline .timeline-continue::after {
     left: 40px;
   }
@@ -2568,7 +2580,7 @@ a:not([href]):not([tabindex]):hover {
 }
 
 @media (max-width: 769px) {
-  .animeslide-slide{
+  .animeslide-slide {
     background-repeat: no-repeat;
   }
   .TopBackContainer {
@@ -2595,7 +2607,7 @@ a:not([href]):not([tabindex]):hover {
   #exTab1 .nav-tabs li a {
     font-size: 1rem;
   }
-   
+
   #single-project-title {
     display: none !important;
     /* margin-top: 70px; */
@@ -2607,7 +2619,8 @@ a:not([href]):not([tabindex]):hover {
   .projectImageSlider-button-next {
     display: none !important  ;
   }
-  .animeslide-button-next,.animeslide-button-prev{
+  .animeslide-button-next,
+  .animeslide-button-prev {
     display: none !important;
   }
   .copyright-text {
@@ -2658,35 +2671,32 @@ a:not([href]):not([tabindex]):hover {
   .container {
     padding: 0;
   }
- 
 }
 @media (max-width: 500px) {
   .copyright-text {
     font-size: 0.7rem;
   }
-  .nav-toggler{
+  .nav-toggler {
     margin-right: 40px;
   }
-  .logo-container{
+  .logo-container {
     padding-left: 20px;
   }
 }
-@media (max-width:400px){
-  .nav-toggler{
+@media (max-width: 400px) {
+  .nav-toggler {
     margin-right: 170px;
   }
-  .nav-menu.open li a{
+  .nav-menu.open li a {
     font-size: 12px;
   }
-  
 }
-@media (max-width:350px)
-{
-  .logo-container img{
+@media (max-width: 350px) {
+  .logo-container img {
     width: 70px;
   }
 }
-@media (max-width:300px){
+@media (max-width: 300px) {
   .nav-menu.open li a {
     font-size: 9px;
   }
