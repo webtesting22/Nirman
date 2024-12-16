@@ -457,8 +457,18 @@
                 // Initialize the info (text) Swiper
                 const infoSwiper = new Swiper('.info-swiper', {
                     loop: true,
-                    slidesPerView: 3,
+                    centeredSlides: true,
+                    breakpoints: {
+                        // When the viewport is less than or equal to 768px (mobile screens)
+                        768: {
+                            slidesPerView: 1,
+                        },
+                        // For larger screens
+                        769: {
+                            slidesPerView: 3,
+                        },
 
+                    },
                     autoplay: {
                         delay: 3000, // Increased delay for smooth viewing
                         disableOnInteraction: false, // Continue autoplay after interaction
