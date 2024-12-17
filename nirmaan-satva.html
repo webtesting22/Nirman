@@ -400,18 +400,33 @@
                     <div class="swiper info-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide info-slide">
-                                <p>Senior Citizen Sit-Out</p>
+                                <div class="infoSlideIconContainer">
+                                    <img src="./projects-images/Icons/lounge_blue.png" />
+                                </div>
+                                <p>Senior Citizen Sitout Area</p>
                             </div>
                             <div class="swiper-slide info-slide">
+                                <div class="infoSlideIconContainer">
+                                    <img src="./projects-images/Icons/playing_blue.png" />
+                                </div>
                                 <p>Children Play Area</p>
                             </div>
                             <div class="swiper-slide info-slide">
+                                <div class="infoSlideIconContainer">
+                                    <img src="./projects-images/Icons/golf-club_blue.png" />
+                                </div>
                                 <p>Club House</p>
                             </div>
                             <div class="swiper-slide info-slide">
+                                <div class="infoSlideIconContainer">
+                                    <img src="./projects-images/Icons/farm_blue.png" />
+                                </div>
                                 <p>Landscape</p>
                             </div>
                             <div class="swiper-slide info-slide">
+                                <div class="infoSlideIconContainer">
+                                    <img src="./projects-images/Icons/cricket_blue.png" />
+                                </div>
                                 <p>Cricket Pitch</p>
                             </div>
 
@@ -457,7 +472,7 @@
                 // Initialize the info (text) Swiper
                 const infoSwiper = new Swiper('.info-swiper', {
                     loop: true,
-                    centeredSlides: true,
+                    // centeredSlides: true,
                     breakpoints: {
                         // When the viewport is less than or equal to 768px (mobile screens)
                         768: {
@@ -465,7 +480,7 @@
                         },
                         // For larger screens
                         769: {
-                            slidesPerView: 3,
+                            slidesPerView: 4,
                         },
 
                     },

@@ -93,22 +93,23 @@
         <div class="swiper-wrapper">
 
             <div class="swiper-slide projectImageSlider-slide">
-                <img src="projects-images/Final_Render_aerial_view-2-1.jpg" alt="VIBGYOR-img">
+                <!-- <img src="projects-images/Final_Render_aerial_view-2-1.jpg" alt="VIBGYOR-img"> -->
+                <video src="projects-images/Videos/Nirman Rejoice-3.mp4" / autoplay muted>
             </div>
             <div class="swiper-slide projectImageSlider-slide">
-                <img src="projects-images/Final_Render_commercial_Front-1.jpg" alt="VIBGYOR-img">
+                <video src="projects-images/Videos/Nirman Rejoice-4.mp4" / autoplay muted>
             </div>
             <div class="swiper-slide projectImageSlider-slide">
-                <img src="projects-images/Final_Render_Dusk_View.jpg" alt="VIBGYOR-img">
+                <video src="projects-images/Videos/Nirman Rejoice-5.mp4" / autoplay muted>
+            </div>
+            <!-- <div class="swiper-slide projectImageSlider-slide">
+                <video src="projects-images/Videos/Nirman Rejoice-6.mp4" / autoplay muted>
+            </div> -->
+            <div class="swiper-slide projectImageSlider-slide">
+                <video src="projects-images/Videos/Nirman Rejoice-7.mp4" / autoplay muted>
             </div>
             <div class="swiper-slide projectImageSlider-slide">
-                <img src="projects-images/Final_Render_Garden_View_revised-1.jpg" alt="VIBGYOR-img">
-            </div>
-            <div class="swiper-slide projectImageSlider-slide">
-                <img src="projects-images/Final_Render_street_revised-1.jpg" alt="VIBGYOR-img">
-            </div>
-            <div class="swiper-slide projectImageSlider-slide">
-                <img src="projects-images/Final_Render_Entry_View_Revised.jpg.jpg" alt="VIBGYOR-img">
+                <video src="projects-images/Videos/Nirman Rejoice-1.mp4" / autoplay muted>
             </div>
         </div>
     </div>
@@ -259,6 +260,24 @@
                     <div class="gallery-item" data-index="6">
                         <img src="projects-images/Final_Render_Entry_View_Revised.jpg.jpg" alt="VIBGYOR-img">
                     </div>
+                    <!-- <div class="gallery-item" data-index="7">
+                        <video src="projects-images/Videos/Nirman Rejoice-3.mp4" muted controls />
+                    </div>
+                    <div class="gallery-item" data-index="8">
+                        <video src="projects-images/Videos/Nirman Rejoice-4.mp4" muted controls />
+                    </div>
+                    <div class="gallery-item" data-index="9">
+                        <video src="projects-images/Videos/Nirman Rejoice-5.mp4" muted controls />
+                    </div>
+                    <div class="gallery-item" data-index="10">
+                        <video src="projects-images/Videos/Nirman Rejoice-7.mp4" muted controls />
+                    </div>
+                    <div class="gallery-item" data-index="11">
+                        <video src="projects-images/Videos/Nirman Rejoice-1.mp4" muted controls />
+                    </div>
+                    <div class="gallery-item" data-index="12">
+                        <video src="projects-images/Videos/Nirman Rejoice-2.mp4" muted controls />
+                    </div> -->
                 </div>
             </div>
 
@@ -393,21 +412,39 @@
                     <div class="swiper info-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide info-slide">
+                                <div class="infoSlideIconContainer">
+                                    <img src="./projects-images/Icons/playing_blue.png" />
+                                </div>
                                 <p>Children Play Area</p>
                             </div>
                             <div class="swiper-slide info-slide">
+                                <div class="infoSlideIconContainer">
+                                    <img src="./projects-images/Icons/lounge_blue.png" />
+                                </div>
                                 <p>Senior Citizen Sitout Area</p>
                             </div>
                             <div class="swiper-slide info-slide">
+                                <div class="infoSlideIconContainer">
+                                    <img src="./projects-images/Icons/gym_blue.png" />
+                                </div>
                                 <p>Gym</p>
                             </div>
                             <div class="swiper-slide info-slide">
+                                <div class="infoSlideIconContainer">
+                                    <img src="./projects-images/Icons/table-tennis_blue.png" />
+                                </div>
                                 <p>Indoor Games</p>
                             </div>
                             <div class="swiper-slide info-slide">
+                                <div class="infoSlideIconContainer">
+                                    <img src="./projects-images/Icons/lounge (1)_blue.png" />
+                                </div>
                                 <p>Club House</p>
                             </div>
                             <div class="swiper-slide info-slide">
+                                <div class="infoSlideIconContainer">
+                                    <img src="./projects-images/Icons/farm_blue.png" />
+                                </div>
                                 <p>Landscape Garden</p>
                             </div>
 
@@ -445,11 +482,11 @@
                     },
                     // For larger screens
                     769: {
-                        slidesPerView: 3,
+                        slidesPerView: 4,
                     },
-                    
+
                 },
-                centeredSlides: true,
+                // centeredSlides: true,
 
                 allowTouchMove: false, // Disable swiping for text slider, only control with buttons
                 autoplay: {
@@ -639,49 +676,46 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const swiperQuiz = new Swiper(".projectImageSlider", {
-            // Optional parameters
-            // effect: "slide",
-            effect: "slide",
-            // crossfade:"false",
-            loop: true,
-            speed: 800, // Moderate speed for smooth transitions
-            centeredSlides: true,
-            autoplay: {
-                delay: 3000, // Increased delay for smooth viewing
-                disableOnInteraction: false, // Continue autoplay after interaction
-            },
-            pagination: {
-                el: ".animeslide-pagination",
-                type: "custom",
-                renderCustom: function (swiper, current, total) {
-                    let indT = total >= 5 ? total : `${total}`;
-                    let indC = current >= 5 ? current : `${current}`;
-                    return `<b>${indC}</b><span>/</span>${indT}`;
-                }
-            },
+            loop: true, // Enable looping
+            speed: 800, // Slide transition speed
+            autoplay: false, // Disable autoplay
             navigation: {
                 nextEl: ".projectImageSlider-button-next",
-                prevEl: ".projectImageSlider-button-prev"
+                prevEl: ".projectImageSlider-button-prev",
             },
-            scrollbar: {
-                el: ".animeslide-scrollbar",
-                draggable: true
+            on: {
+                slideChangeTransitionEnd: function () {
+                    handleVideoPlayback(this);
+                },
             },
-            keyboard: {
-                enabled: true,
-                onlyInViewport: false
-            },
-            runCallbacksOnInit: true,
-            grabCursor: true, // Provides a better user experience with smooth interaction
-            slidesPerView: 'auto', // Ensures smooth sliding by dynamically adjusting the view
-            // spaceBetween: 30, // Adds space between slides for smoothness
-
         });
-    })
 
-    // setTimeout(() => {
-    //     swiperQuiz.update(); // Refresh Swiper to recalculate sizes
-    // }, 100);
+        // Function to handle video playback on the active slide
+        function handleVideoPlayback(swiper) {
+            const currentSlide = swiper.slides[swiper.activeIndex];
+            const video = currentSlide.querySelector("video");
+
+            // Pause any video playing in other slides
+            swiper.slides.forEach(slide => {
+                const otherVideo = slide.querySelector("video");
+                if (otherVideo && otherVideo !== video) {
+                    otherVideo.pause();
+                    otherVideo.currentTime = 0; // Reset to start
+                }
+            });
+
+            if (video) {
+                video.play();
+                video.onended = () => {
+                    // Move to the next slide when the video ends
+                    swiperQuiz.slideNext();
+                };
+            }
+        }
+
+        // Trigger the function for the initial slide
+        handleVideoPlayback(swiperQuiz);
+    });
 
 </script>
 <script>

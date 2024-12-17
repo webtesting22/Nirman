@@ -373,12 +373,10 @@
 .border-related {
   border-right: 1px solid gray;
 }
-.project-contact-icon{
+.project-contact-icon {
   text-align: center;
 }
 .project-contact-icon i {
-  
-  
   color: white;
   font-size: 1.6rem;
   background-color: black;
@@ -422,8 +420,8 @@
   transition: 0.5s;
 }
 
-@media (min-width:1200px){
-  .projectImageSlider{
+@media (min-width: 1200px) {
+  .projectImageSlider {
     height: 100vh;
   }
 }
@@ -439,7 +437,7 @@
   height: 100%;
   /* height: auto; */
   /* object-fit: cover; */
-  
+
   /* object-fit: contain ; */
   aspect-ratio: 3/2 !important;
 }
@@ -496,8 +494,19 @@
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+  flex-direction: column;
 }
-.info-slide p{
+.infoSlideIconContainer {
+  width: 100px;
+  /* object-fit: cover; */
+  /* aspect-ratio: 3/2; */
+  /* border-radius: 50%; */
+  /* padding: 10px; */
+}
+.info-slide img {
+  width: 100%;
+}
+.info-slide p {
   margin: 10px;
 }
 .prev {
@@ -517,7 +526,7 @@
   .closeBtn {
     font-size: 24px;
   }
-  .border-related{
+  .border-related {
     border: none;
   }
 }
@@ -549,7 +558,11 @@
   height: 100%;
   object-fit: cover;
 }
-
+.gallery-item video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .gallery-content {
   font-size: 0.8em;
 }
@@ -644,14 +657,13 @@
 .amenities-buttons {
   display: flex;
   justify-content: center;
-  
 }
-.amenities-rows .col-lg-4{
+.amenities-rows .col-lg-4 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.info-swiper{
+.info-swiper {
   /* padding: 0 100px !important; */
   height: 100%;
   display: flex;
@@ -667,15 +679,12 @@
 } */
 @media (max-width: 992px) {
   .amenities-row {
-      flex-direction: column-reverse;
-      padding: 10px;
+    flex-direction: column-reverse;
+    padding: 10px;
   }
-  .image-swiper{
+  .image-swiper {
     margin: 10px 0;
   }
-  
-
-
 }
 /* Mobile Styles for Swipers */
 @media (max-width: 576px) {
@@ -688,7 +697,6 @@
   /* Info slider adjustments */
   .info-swiper {
     width: 100%; /* Full width for mobile */
-    
   }
 
   .info-slide {
@@ -773,5 +781,5 @@
 #amenNext::after {
   font-size: 16px;
   /* color: black; */
-  color:#007bff;
+  color: #007bff;
 }

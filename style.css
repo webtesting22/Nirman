@@ -2209,7 +2209,8 @@ button {
 }
 .TopBackContainer {
   height: 80vh;
-  background-image: url(./projects-images/bg3.jpg);
+  background-image: url("./projects-images/Nirman\ Rejoice.jpg");
+  /* background-image: url(./projects-images/bg3.jpg); */
   /* background-image: url("https://images.unsplash.com/photo-1638519922476-50688bb1f318?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
   background-size: cover;
   background-position: center;
@@ -2231,8 +2232,8 @@ button {
 }
 .TopBackContainerProject {
   height: 80vh;
-
-  background-image: url(./projects-images//projectbg.avif);
+  background-image: url("./projects-images/Nirman-Lifestyle.jpg");
+  /* background-image: url(./projects-images//projectbg.avif); */
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -2260,7 +2261,8 @@ button {
 }
 .TopBackContainerContact {
   height: 80vh;
-  background-image: url(./projects-images/contact-back.jpg);
+  background-image: url("./projects-images/Nirman\ Tower.jpg");
+  /* background-image: url(./projects-images/contact-back.jpg); */
   background-size: cover;
   background-position: center;
   width: 100%;
