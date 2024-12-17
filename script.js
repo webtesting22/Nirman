@@ -51,7 +51,7 @@ var swiper = new Swiper("#js-swiper-hotels", {
       slidesPerView: 2,
     },
   },
-  
+
 });
 
 
@@ -111,48 +111,48 @@ $('#number2').jQuerySimpleCounter({ end: 1500, duration: 6000 });
 //     }, false)
 //   })
 // })()
-const swiperQuiz = new Swiper(".animeslide", {
-  // Optional parameters
-  // effect: "slide",
-  effect:"slide",
-  // crossfade:"false",
-  loop: true,
-  speed: 800, // Moderate speed for smooth transitions
-  centeredSlides: true,
-  autoplay: {
-    delay: 4000, // Increased delay for smooth viewing
-    disableOnInteraction: false, // Continue autoplay after interaction
-  },
-  pagination: {
-    el: ".animeslide-pagination",
-    type: "custom",
-    renderCustom: function (swiper, current, total) {
-      let indT = total >= 5 ? total : `${total}`;
-      let indC = current >= 5 ? current : `${current}`;
-      return `<b>${indC}</b><span>/</span>${indT}`;
-    }
-  },
-  navigation: {
-    nextEl: ".animeslide-button-next",
-    prevEl: ".animeslide-button-prev"
-  },
-  scrollbar: {
-    el: ".animeslide-scrollbar",
-    draggable: true
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false
-  },
-  runCallbacksOnInit: true,
-  grabCursor: true, // Provides a better user experience with smooth interaction
-  slidesPerView: 'auto', // Ensures smooth sliding by dynamically adjusting the view
-  spaceBetween: 30, // Adds space between slides for smoothness
+document.addEventListener("DOMContentLoaded", function () {
+  const swiperQuiz = new Swiper(".animeslide", {
+    loop: true, // Enable looping
+    speed: 800, // Slide transition speed
+    autoplay: false, // Disable autoplay
+    navigation: {
+      nextEl: ".animeslide-button-next",
+      prevEl: ".animeslide-button-prev",
+    },
+    on: {
+      slideChangeTransitionEnd: function () {
+        handleVideoPlayback(this); // Play video when slide changes
+      },
+    },
+  });
 
+  // Function to handle video playback on the active slide
+  function handleVideoPlayback(swiper) {
+    const currentSlide = swiper.slides[swiper.activeIndex];
+    const video = currentSlide.querySelector("video");
+
+    // Pause all videos in other slides and reset them
+    swiper.slides.forEach(slide => {
+      const otherVideo = slide.querySelector("video");
+      if (otherVideo && otherVideo !== video) {
+        otherVideo.pause();
+        otherVideo.currentTime = 0; // Reset video to the start
+      }
+    });
+
+    // Play the video in the current active slide
+    if (video) {
+      video.play();
+      video.onended = () => {
+        swiper.slideNext(); // Move to the next slide when the video ends
+      };
+    }
+  }
+
+  // Start playing video on the first slide initially
+  handleVideoPlayback(swiperQuiz);
 });
-setTimeout(() => {
-  swiperQuiz.update(); // Refresh Swiper to recalculate sizes
-}, 100);
 
 function changeColor(element) {
   // Remove background color from all anchor links

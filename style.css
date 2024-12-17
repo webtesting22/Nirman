@@ -931,11 +931,16 @@ input[type="checkbox"] {
 
 .animeslide-slide {
   position: relative;
-  padding: 15px 0;
+  /* padding: 15px 0; */
   min-height: 500px;
   background-size: cover;
   background-position: center;
   width: 100%;
+}
+.animeslide-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* .animeslide-slide .container {
@@ -2622,10 +2627,7 @@ a:not([href]):not([tabindex]):hover {
   .projectImageSlider-button-next {
     display: none !important  ;
   }
-  .animeslide-button-next,
-  .animeslide-button-prev {
-    display: none !important;
-  }
+ 
   .copyright-text {
     font-size: 0.8rem;
   }
@@ -2650,6 +2652,7 @@ a:not([href]):not([tabindex]):hover {
     height: 30vh;
   }
   .animeslide {
+    margin-top: 70px;
     height: 30vh;
   }
   .OverlayBack {

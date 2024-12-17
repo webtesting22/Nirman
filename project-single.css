@@ -688,6 +688,9 @@
 }
 /* Mobile Styles for Swipers */
 @media (max-width: 576px) {
+  .col-lg-12{
+    width: 100%;
+  }
   .amenities-row {
     display: flex;
     flex-direction: column-reverse; /* Stack sliders vertically */
@@ -711,9 +714,13 @@
     margin-top: 20px; /* Add spacing between the sliders */
   }
   .projectImageSlider {
-    /* height: 30vh; */
+    height: 30vh;
   }
-
+  .projectImageSlider video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   /* Navigation buttons for Swipers */
   .amenities-buttons {
     display: flex;
