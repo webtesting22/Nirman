@@ -143,9 +143,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Play the video in the current active slide
     if (video) {
-      video.play();
+      video.muted = true; // Ensure muted video for autoplay compatibility
+      video.play().catch(error => {
+        console.error("Video playback error:", error);
+      });
+
+      // Move to the next slide when the video ends
       video.onended = () => {
-        swiper.slideNext(); // Move to the next slide when the video ends
+        swiper.slideNext();
       };
     }
   }

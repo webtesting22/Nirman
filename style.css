@@ -2111,6 +2111,9 @@ textarea {
 
 /* Responsive styling */
 @media (max-width: 576px) {
+  .animeslide-bottom {
+    padding: 0;
+  }
   .nav-toggler {
     width: 50px;
   }
@@ -2627,7 +2630,7 @@ a:not([href]):not([tabindex]):hover {
   .projectImageSlider-button-next {
     display: none !important  ;
   }
- 
+
   .copyright-text {
     font-size: 0.8rem;
   }
@@ -2653,7 +2656,7 @@ a:not([href]):not([tabindex]):hover {
   }
   .animeslide {
     margin-top: 70px;
-    height: 30vh;
+    height: 40vh;
   }
   .OverlayBack {
     height: 30vh;
@@ -2709,15 +2712,15 @@ a:not([href]):not([tabindex]):hover {
 }
 #projectImageCarousel .carousel-control-prev,
 #projectImageCarousel .carousel-control-next {
-    height: 50px; /* Set a specific height */
-    width: 50px; /* Set a specific width */
-    border-radius: 50%; /* Optional: Make them circular */
-    top: 50%; /* Position them vertically in the middle */
-    transform: translateY(-50%); /* Adjust for perfect centering */
+  height: 50px; /* Set a specific height */
+  width: 50px; /* Set a specific width */
+  border-radius: 50%; /* Optional: Make them circular */
+  top: 50%; /* Position them vertically in the middle */
+  transform: translateY(-50%); /* Adjust for perfect centering */
 }
 
 #projectImageCarousel .carousel-control-prev-icon,
 #projectImageCarousel .carousel-control-next-icon {
-    height: 20px; /* Icon height */
-    width: 20px; /* Icon width */
+  height: 20px; /* Icon height */
+  width: 20px; /* Icon width */
 }
