@@ -83,7 +83,12 @@
             var projectYear = $(this).data("project-year");
             var projectSize = $(this).data("project-size");
             var projectValue = $(this).data("project-value");
-            var projectImages = $(this).data("project-images"); // Get image URLs (if any)
+            var projectImages = $(this).data("project-images")
+                ? $(this).data("project-images").split(",")
+                : [];
+            var projectVideos = $(this).data("project-videos")
+                ? $(this).data("project-videos").split(",")
+                : [];
 
             // Ensure that the modal updates with the right data
             $("#modalProjectName").text(projectName);
@@ -93,40 +98,46 @@
             $("#modalProjectSize").text(projectSize);
             $("#modalProjectValue").text(projectValue);
 
-            // Check if there are images
-            if (projectImages && projectImages.length > 0) {
-                // Clear existing carousel images
-                $("#carouselImages").empty();
+            const carouselImages = document.getElementById("carouselImages");
+            carouselImages.innerHTML = ""; // Clear old content
 
-                // Split the images if they are passed as a comma-separated string
-                var imagesArray = projectImages.split(",");
+            let activeClassAdded = false; // To set the first slide as active
 
-                // Add images to the carousel dynamically
-                imagesArray.forEach(function (image, index) {
-                    var isActive = index === 0 ? "active" : ""; // Make the first image active
-                    var carouselItem = `
-                    <div class="carousel-item ${isActive}">
-                        <img src="${image}" class="d-block w-100" alt="Project Image">
-                    </div>
-                `;
-                    $("#carouselImages").append(carouselItem);
-                });
+            // Add videos if provided
+            projectVideos.forEach((videoSrc, index) => {
+                const videoElement = `
+                <div class="carousel-item ${!activeClassAdded ? "active" : ""}">
+                    <video controls style="width: 100%; height: auto;" muted >
+                        <source src="${videoSrc}" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>`;
+                carouselImages.innerHTML += videoElement;
+                activeClassAdded = true; // Set active only for the first item
+            });
 
-                // Show the carousel only if there are images
+            // Add images if provided
+            projectImages.forEach((imageSrc, index) => {
+                const imageElement = `
+                <div class="carousel-item ${!activeClassAdded ? "active" : ""}">
+                    <img src="${imageSrc}" class="d-block w-100" alt="Project Image" />
+                </div>`;
+                carouselImages.innerHTML += imageElement;
+                activeClassAdded = true; // Set active only for the first item
+            });
+
+            // Show or hide the carousel based on content
+            if (projectImages.length > 0 || projectVideos.length > 0) {
                 $("#projectImageCarousel").show();
-
-                // Disable carousel buttons if there is only one image
-                if (imagesArray.length === 1) {
-                    $(".carousel-control-prev").hide(); // Hide the "prev" button
-                    $(".carousel-control-next").hide(); // Hide the "next" button
-                } else {
-                    $(".carousel-control-prev").show(); // Show the "prev" button
-                    $(".carousel-control-next").show(); // Show the "next" button
-                }
             } else {
-                // Hide the carousel if no images are provided
                 $("#projectImageCarousel").hide();
             }
+        });
+
+        // Reset modal content when closed
+        $("#projectModal").on("hidden.bs.modal", function () {
+            const carouselImages = document.getElementById("carouselImages");
+            carouselImages.innerHTML = "";
         });
     });
 </script>
@@ -302,7 +313,7 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./projects-images/Nirman-Lifestyle.jpg"
+                                                    <img src="./projects-images/Nirman LifeStyle.jpg"
                                                         class="card-img-top" alt="Project Image" />
                                                 </div>
                                                 <div class="card-body">
@@ -310,16 +321,20 @@
                                                         Nirmaan <span>Lifestyle</span>
                                                     </h5>
                                                     <p class="card-text">Chenpur</p>
-
+                                                    <!-- Button for modal trigger -->
+                                                    <!-- Uncomment if needed -->
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-project-location="Chenpur" data-target="#projectModal"
                                                         data-project-name="Nirmaan Lifestyle"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-year="2013"
                                                         data-project-size="120 flats and 30 shops"
-                                                        data-project-value="50 Crores"
-                                                        data-project-images="./projects-images/Nirman-Lifestyle.jpg">Read
-                                                        More</a>
+                                                        data-project-images="./projects-images/Nirman LifeStyle.jpg"
+                                                        data-project-videos="./projects-images/Videos/Nirman LifeStyle.mp4,
+                                                        ./projects-images/Videos/Nirman LifeStyle-2.mp4,
+                                                        ./projects-images/Videos/Nirman LifeStyle-3.mp4,
+                                                        ./projects-images/Videos/Nirman LifeStyle-4.mp4"
+                                                        data-project-value="50 Crores">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -339,7 +354,10 @@
                                                         data-project-type="Residential, Commercial"
                                                         data-project-location="Sattadhar" data-project-year="2002"
                                                         data-project-size="100 flats" data-project-value="35 Crores"
-                                                        data-project-images="./projects-images/Nirman Homes.jpg">Read
+                                                        data-project-images="./projects-images/Nirman Homes.jpg"
+                                                        data-project-videos="./projects-images/Videos/Nirman Homes-1.mp4,
+                                                        ./projects-images/Videos/Nirman Homes-2.mp4,
+                                                        ./projects-images/Videos/Nirman Homes-3.mp4">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -361,7 +379,11 @@
                                                         data-project-year="2003" data-project-location="Chanakyapuri"
                                                         data-project-size="400 flats and 40 shops"
                                                         data-project-value="25 Crores"
-                                                        data-project-images="./projects-images/Nirman Complex-1.jpg,./projects-images/Nirman Complex-2.jpg,./projects-images/Nirman Complex-3.jpg,./projects-images/Nirman Complex-4.jpg">
+                                                        data-project-images="./projects-images/Nirman Complex-1.jpg,./projects-images/Nirman Complex-2.jpg,./projects-images/Nirman Complex-3.jpg,./projects-images/Nirman Complex-4.jpg"
+                                                        data-project-videos="./projects-images/Videos/Nirman Complex.mp4,
+                                                        ./projects-images/Videos/Nirman Complex-2.mp4,
+                                                        ./projects-images/Videos/Nirman Complex-3.mp4
+                                                        ">
                                                         Read
                                                         More</a>
                                                 </div>
@@ -405,6 +427,7 @@
                                                         data-project-location="Sattadhar"
                                                         data-project-size="78 flats and 12 shops"
                                                         data-project-value="15 Crores" data-project-year="1995"
+                                                        data-project-videos="./projects-images/Videos/Nirman Tower.mp4,./projects-images/Videos/Nirman Tower-2.mp4"
                                                         data-project-images="./projects-images/Nirman Tower.jpg">Read
                                                         More</a>
                                                 </div>
@@ -459,7 +482,7 @@
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
-                                                        Sandipani <span>Hostel</span>
+                                                        Nirmaan <span>Hostel</span>
                                                     </h5>
                                                     <p class="card-text">Gota</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
@@ -467,7 +490,8 @@
                                                         data-project-type="Residential" data-project-location="Gota"
                                                         data-project-value="12 Crores" data-project-size="-"
                                                         data-project-year="2005"
-                                                        data-project-images="./projects-images/Nirman Hostel.jpg">Read
+                                                        data-project-images="./projects-images/Nirman Hostel.jpg"
+                                                        data-project-videos="./projects-images/Videos/Nirman Hostel.mp4">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -607,14 +631,16 @@
                                                     <h5 class="card-title">
                                                         Nirmaan <span>Row House</span>
                                                     </h5>
-                                                    <p class="card-text">Location Not Available</p>
+                                                    <p class="card-text">Chandlodiya</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal"
                                                         data-project-name="Nirmaan Row House"
                                                         data-project-type="Residential, Commercial"
-                                                        data-project-location="-" data-project-size="-"
+                                                        data-project-location="Chandlodiya" data-project-size="-"
                                                         data-project-images="./projects-images/Nirman Row House.jpg,./projects-images/Nirman Row House-2.jpg"
-                                                        data-project-value="Not available" data-project-year="-">Read
+                                                        data-project-value="Not available" data-project-year="-"
+                                                        data-project-videos="./projects-images/Videos/Nirman Row House.mp4,
+                                                        ./projects-images/Videos/Nirman Row House-2.mp4">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -629,13 +655,15 @@
                                                     <h5 class="card-title">
                                                         Nirmaan <span>Twin Bungalows</span>
                                                     </h5>
-                                                    <p class="card-text">Location Not Available</p>
+                                                    <p class="card-text">Ghatlodia</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal"
                                                         data-project-name="Nirmaan Twin Bungalows "
-                                                        data-project-type="Residential, Commercial"
-                                                        data-project-location="-" data-project-size="-"
+                                                        data-project-type="Residential" data-project-location="Ghatlodia"
+                                                        data-project-size="-"
                                                         data-project-images="./projects-images/Nirman Twin Bungalow-1.jpg,./projects-images/Nirman Twin Bungalow-2.jpg"
+                                                        data-project-videos="./projects-images/Videos/Nirman Twin Bungalow.mp4,
+                                                        ./projects-images/Videos/Nirman Twin Bungalow-2.mp4"
                                                         data-project-value="Not available" data-project-year="-">Read
                                                         More</a>
                                                 </div>
@@ -654,11 +682,13 @@
                                                     <p class="card-text">Location Not Available</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal"
-                                                        data-project-name="Nirmaan Twin Bungalows "
+                                                        data-project-name="Nirmaan Tenaments "
                                                         data-project-type="Residential" data-project-location="-"
                                                         data-project-size="-"
                                                         data-project-images="./projects-images/Nirman Tenaments-1.jpg,./projects-images/Nirman Tenaments-2.jpg"
-                                                        data-project-value="Not available" data-project-year="-">Read
+                                                        data-project-value="Not available" data-project-year="-"
+                                                        data-project-videos="./projects-images/Videos/Nirman Tenaments-1.mp4,
+                                                        ./projects-images/Videos/Nirman Tenaments-2.mp4">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -694,10 +724,10 @@
                                                     <h5 class="card-title">
                                                         Jay Veer <span>House</span>
                                                     </h5>
-                                                    <p class="card-text">Location Not Available</p>
+                                                    <p class="card-text">Navrangpura</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal" data-project-name="Jay Veer House"
-                                                        data-project-type="Residential" data-project-location="-"
+                                                        data-project-type="Residential" data-project-location="Navrangpura"
                                                         data-project-size="-"
                                                         data-project-images="./projects-images/Jay Veer House.jpg"
                                                         data-project-value="-" data-project-year="-">Read
@@ -736,13 +766,14 @@
                                                     <h5 class="card-title">
                                                         Nirmaan <span>Heights</span>
                                                     </h5>
-                                                    <p class="card-text">Location Not Available</p>
+                                                    <p class="card-text">Chandlodiya</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal" data-project-name="Nirmaan Heights"
-                                                        data-project-type="Residential" data-project-location="-"
+                                                        data-project-type="Residential" data-project-location="Chandlodiya"
                                                         data-project-size="-"
                                                         data-project-images="./projects-images/Nirman Heights-1.jpg,./projects-images/Nirman Heights-2.jpg"
-                                                        data-project-value="-" data-project-year="-">Read
+                                                        data-project-value="-" data-project-year="-"
+                                                        data-project-videos="./projects-images/Videos/Nirman Heights-1.mp4,./projects-images/Videos/Nirman Heights-2.mp4">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -938,17 +969,6 @@
                                                     <p class="card-text">Jagatpur</p>
                                                     <a class="btn project-card-btn" href="./nirmaan-rejoice.html">Read
                                                         More</a>
-                                                    <!-- <a class="btn project-card-btn" data-toggle="modal"
-                                                        data-target="#projectModal" data-project-name="Nirmaan Rejoice"
-                                                        data-project-type="Residential, Commercial"
-                                                        data-project-year="2018" data-project-location="Jagatpur"
-                                                        data-project-size="210 flats and 20 shops" data-project-images="./projects-images/Final_Render_aerial_view-2-1.jpg,
-                                                        ./projects-images/Final_Render_commercial_Front-1.jpg,
-                                                        ./projects-images/Final_Render_Dusk_View.jpg,
-                                                        ./projects-images/Final_Render_Entry_View_Revised.jpg.jpg,
-                                                        ./projects-images/Final_Render_Garden_View_revised-1.jpg,
-                                                        ./projects-images/Final_Render_street_revised-1.jpg">Read
-                                                        More</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -973,6 +993,10 @@
                                                         data-project-year="2013"
                                                         data-project-size="120 flats and 30 shops"
                                                         data-project-images="./projects-images/Nirman LifeStyle.jpg"
+                                                        data-project-videos="./projects-images/Videos/Nirman LifeStyle.mp4,
+                                                        ./projects-images/Videos/Nirman LifeStyle-2.mp4,
+                                                        ./projects-images/Videos/Nirman LifeStyle-3.mp4,
+                                                        ./projects-images/Videos/Nirman LifeStyle-4.mp4"
                                                         data-project-value="50 Crores">Read More</a>
                                                 </div>
                                             </div>
@@ -993,7 +1017,10 @@
                                                         data-project-type="Residential, Commercial"
                                                         data-project-location="Sattadhar" data-project-year="2002"
                                                         data-project-size="100 flats" data-project-value="35 Crores"
-                                                        data-project-images="./projects-images/Nirman Homes.jpg">Read
+                                                        data-project-images="./projects-images/Nirman Homes.jpg"
+                                                        data-project-videos="./projects-images/Videos/Nirman Homes-1.mp4,
+                                                        ./projects-images/Videos/Nirman Homes-2.mp4,
+                                                        ./projects-images/Videos/Nirman Homes-3.mp4">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -1015,7 +1042,11 @@
                                                         data-project-year="2003" data-project-location="Chanakyapuri"
                                                         data-project-size="400 flats and 40 shops"
                                                         data-project-value="25 Crores"
-                                                        data-project-images="./projects-images/Nirman Complex-1.jpg,./projects-images/Nirman Complex-2.jpg,./projects-images/Nirman Complex-3.jpg,./projects-images/Nirman Complex-4.jpg">
+                                                        data-project-images="./projects-images/Nirman Complex-1.jpg,./projects-images/Nirman Complex-2.jpg,./projects-images/Nirman Complex-3.jpg,./projects-images/Nirman Complex-4.jpg"
+                                                        data-project-videos="./projects-images/Videos/Nirman Complex.mp4,
+                                                        ./projects-images/Videos/Nirman Complex-2.mp4,
+                                                        ./projects-images/Videos/Nirman Complex-3.mp4
+                                                        ">
                                                         Read
                                                         More</a>
                                                 </div>
@@ -1039,6 +1070,7 @@
                                                         data-project-location="Sattadhar"
                                                         data-project-size="78 flats and 12 shops"
                                                         data-project-value="15 Crores" data-project-year="1995"
+                                                        data-project-videos="./projects-images/Videos/Nirman Tower.mp4,./projects-images/Videos/Nirman Tower-2.mp4"
                                                         data-project-images="./projects-images/Nirman Tower.jpg">Read
                                                         More</a>
                                                 </div>
@@ -1139,7 +1171,7 @@
                                                         data-target="#projectModal" data-project-name="Akshay Apartment"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-location="-" data-project-size="-"
-                                                        data-project-images="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                        data-project-images="./projects-images/Akshay Apartment & Navrang Apartment.jpg"
                                                         data-project-value="Not available" data-project-year="-">Read
                                                         More</a>
                                                 </div>
@@ -1161,7 +1193,7 @@
                                                         data-project-name="Navrang Apartment"
                                                         data-project-type="Residential, Commercial"
                                                         data-project-location="-" data-project-size="-"
-                                                        data-project-images="https://images.unsplash.com/photo-1435575653489-b0873ec954e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                        data-project-images="./projects-images/Navrang Apartment & Akshay Apartment.jpg"
                                                         data-project-value="Not available" data-project-year="-">Read
                                                         More</a>
                                                 </div>
@@ -1177,14 +1209,16 @@
                                                     <h5 class="card-title">
                                                         Nirmaan <span>Row House</span>
                                                     </h5>
-                                                    <p class="card-text">Location Not Available</p>
+                                                    <p class="card-text">Chandlodiya</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal"
                                                         data-project-name="Nirmaan Row House"
                                                         data-project-type="Residential, Commercial"
-                                                        data-project-location="-" data-project-size="-"
+                                                        data-project-location="Chandlodiya" data-project-size="-"
                                                         data-project-images="./projects-images/Nirman Row House.jpg,./projects-images/Nirman Row House-2.jpg"
-                                                        data-project-value="Not available" data-project-year="-">Read
+                                                        data-project-value="Not available" data-project-year="-"
+                                                        data-project-videos="./projects-images/Videos/Nirman Row House.mp4,
+                                                        ./projects-images/Videos/Nirman Row House-2.mp4">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -1199,13 +1233,15 @@
                                                     <h5 class="card-title">
                                                         Nirmaan <span>Twin Bungalows</span>
                                                     </h5>
-                                                    <p class="card-text">Location Not Available</p>
+                                                    <p class="card-text">Ghatlodia</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal"
                                                         data-project-name="Nirmaan Twin Bungalows "
-                                                        data-project-type="Residential, Commercial"
-                                                        data-project-location="-" data-project-size="-"
+                                                        data-project-type="Residential" data-project-location="Ghatlodia"
+                                                        data-project-size="-"
                                                         data-project-images="./projects-images/Nirman Twin Bungalow-1.jpg,./projects-images/Nirman Twin Bungalow-2.jpg"
+                                                        data-project-videos="./projects-images/Videos/Nirman Twin Bungalow.mp4,
+                                                        ./projects-images/Videos/Nirman Twin Bungalow-2.mp4"
                                                         data-project-value="Not available" data-project-year="-">Read
                                                         More</a>
                                                 </div>
@@ -1224,11 +1260,13 @@
                                                     <p class="card-text">Location Not Available</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal"
-                                                        data-project-name="Nirmaan Twin Bungalows "
+                                                        data-project-name="Nirmaan Tenaments "
                                                         data-project-type="Residential" data-project-location="-"
                                                         data-project-size="-"
                                                         data-project-images="./projects-images/Nirman Tenaments-1.jpg,./projects-images/Nirman Tenaments-2.jpg"
-                                                        data-project-value="Not available" data-project-year="-">Read
+                                                        data-project-value="Not available" data-project-year="-"
+                                                        data-project-videos="./projects-images/Videos/Nirman Tenaments-1.mp4,
+                                                        ./projects-images/Videos/Nirman Tenaments-2.mp4">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -1257,17 +1295,17 @@
                                         <div class="swiper-slide">
                                             <div class="card" style="width: 100%">
                                                 <div style="overflow: hidden">
-                                                    <img src="./projects-images/Niti Apartment.jpg" class="card-img-top"
+                                                    <img src="./projects-images/Jay Veer House.jpg" class="card-img-top"
                                                         alt="..." />
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
                                                         Jay Veer <span>House</span>
                                                     </h5>
-                                                    <p class="card-text">Location Not Available</p>
+                                                    <p class="card-text">Navrangpura</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal" data-project-name="Jay Veer House"
-                                                        data-project-type="Residential" data-project-location="-"
+                                                        data-project-type="Residential,Commercial" data-project-location="Navrangpura"
                                                         data-project-size="-"
                                                         data-project-images="./projects-images/Jay Veer House.jpg"
                                                         data-project-value="-" data-project-year="-">Read
@@ -1306,13 +1344,14 @@
                                                     <h5 class="card-title">
                                                         Nirmaan <span>Heights</span>
                                                     </h5>
-                                                    <p class="card-text">Location Not Available</p>
+                                                    <p class="card-text">Chandlodiya</p>
                                                     <a class="btn project-card-btn" data-toggle="modal"
                                                         data-target="#projectModal" data-project-name="Nirmaan Heights"
-                                                        data-project-type="Residential" data-project-location="-"
+                                                        data-project-type="Residential" data-project-location="Chandlodiya"
                                                         data-project-size="-"
                                                         data-project-images="./projects-images/Nirman Heights-1.jpg,./projects-images/Nirman Heights-2.jpg"
-                                                        data-project-value="-" data-project-year="-">Read
+                                                        data-project-value="-" data-project-year="-"
+                                                        data-project-videos="./projects-images/Videos/Nirman Heights-1.mp4,./projects-images/Videos/Nirman Heights-2.mp4">Read
                                                         More</a>
                                                 </div>
                                             </div>
@@ -1383,7 +1422,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div id="projectImageCarousel" class="carousel slide" data-ride="carousel" style="display: none">
+                    <div id="projectImageCarousel" class="carousel slide" style="display: none">
                         <div class="carousel-inner" id="carouselImages"></div>
                         <a class="carousel-control-prev" href="#projectImageCarousel" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

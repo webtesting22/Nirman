@@ -2704,3 +2704,17 @@ a:not([href]):not([tabindex]):hover {
     font-size: 9px;
   }
 }
+#projectImageCarousel .carousel-control-prev,
+#projectImageCarousel .carousel-control-next {
+    height: 50px; /* Set a specific height */
+    width: 50px; /* Set a specific width */
+    border-radius: 50%; /* Optional: Make them circular */
+    top: 50%; /* Position them vertically in the middle */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+}
+
+#projectImageCarousel .carousel-control-prev-icon,
+#projectImageCarousel .carousel-control-next-icon {
+    height: 20px; /* Icon height */
+    width: 20px; /* Icon width */
+}
