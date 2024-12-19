@@ -504,6 +504,7 @@
   /* padding: 10px; */
 }
 .info-slide img {
+  object-fit: contain !important;
   width: 100%;
 }
 .info-slide p {
